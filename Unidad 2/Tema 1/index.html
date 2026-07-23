@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVA: Técnicas de oratoria y expresión oral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-slate-50">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg flex-shrink-0 hidden md:flex md:flex-col">
+            <div class="p-4">
+                <div style="width: 150px; height: 150px;"
+                    class="p-2 mx-auto flex items-center justify-center bg-white rounded-full shadow-lg border-2 border-green-500 transition-shadow duration-300 hover:shadow-green-400">
+                    <img src="img/logo.webp" alt="Logo OVA" class="w-5/6 h-5/6 object-contain" loading="lazy">
+                </div>
+            </div>
+            <nav class="mt-6 flex-1">
+                <a href="#" class="sidebar-link active flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="introduccion"><span class="mr-3 text-xl">🚀</span> Introducción</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="objetivos"><span class="mr-3 text-xl">🎯</span> Objetivos</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="contenido"><span class="mr-3 text-xl">📚</span> Contenido</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="actividades"><span class="mr-3 text-xl">✍️</span> Actividades</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="evaluacion"><span class="mr-3 text-xl">✔️</span> Evaluación</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="recursos"><span class="mr-3 text-xl">📖</span> Recursos</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="bibliografia"><span class="mr-3 text-xl">📚</span> Bibliografía</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 sm:p-6 md:p-10 bg-gray-50">
+            <!-- Mobile Header -->
+            <div class="md:hidden mb-6 flex flex-col items-center">
+                <div style="width: 100px; height: 100px;"
+                    class="p-2 flex items-center justify-center bg-white rounded-full shadow-lg transition-shadow duration-300 hover:shadow-green-400 mb-2">
+                    <img src="img/logo.webp" alt="Logo OVA" class="w-5/6 h-5/6 object-contain" loading="lazy">
+                </div>
+                <select id="mobile-nav" class="w-full mt-2 p-2 border rounded-md bg-white shadow-sm">
+                    <option value="introduccion">🚀 Introducción</option>
+                    <option value="objetivos">🎯 Objetivos</option>
+                    <option value="contenido">📚 Contenido</option>
+                    <option value="actividades">✍️ Actividades</option>
+                    <option value="evaluacion">✔️ Evaluación</option>
+                    <option value="recursos">📖 Recursos</option>
+                    <option value="bibliografia">📚 Bibliografía</option>
+                </select>
+            </div>
+
+            <!-- Introducción -->
+            <div id="introduccion" class="content-pane active">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Habilidades de escucha activa
+                </h2>
+
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    En la vida cotidiana, escuchar parece una acción sencilla, pero en realidad es una de las
+                    habilidades comunicativas más complejas y menos practicadas. La escucha activa va más allá de oír
+                    palabras; implica comprender el mensaje, reconocer las emociones del interlocutor y responder de
+                    forma empática y pertinente. Escuchar activamente requiere atención consciente, disposición
+                    emocional y respeto por el otro.
+                    <br>
+                    <br>
+                    En contextos académicos, laborales o personales, esta habilidad fortalece las relaciones
+                    interpersonales, previene conflictos y mejora la colaboración, ya que permite construir puentes de
+                    comprensión mutua. A través de técnicas como la paráfrasis, las preguntas aclaratorias, el contacto
+                    visual y los gestos de interés, el oyente demuestra que realmente está presente en la conversación.
+                    <br>
+
+                </p>
+                <div class="mt-8 p-4 sm:p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+                    <p class="text-green-800">
+                        ✨ <strong>Dominar la escucha activa no solo potencia la comunicación, sino que también
+                            desarrolla la inteligencia emocional y la capacidad crítica, pues escuchar bien es el primer
+                            paso para pensar mejor y convivir mejor.</strong>
+                    </p>
+
+                </div>
+                <!-- Componente de síntesis de voz para introducción -->
+                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
+                    data-target="introduccion">
+                    <button
+                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
+                        <span class="mr-1">▶️</span> Leer
+                    </button>
+                    <button
+                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                        disabled>
+                        <span class="mr-1">⏸️</span> Pausar
+                    </button>
+                    <button
+                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                        disabled>
+                        <span class="mr-1">⏹️</span> Detener
+                    </button>
+                    <div class="flex items-center ml-2">
+                        <label for="speech-rate-introduccion" class="text-sm text-green-800 mr-2">Velocidad:</label>
+                        <input type="range" class="speech-rate" id="speech-rate-introduccion" min="0.5" max="2"
+                            step="0.1" value="1" class="w-24">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objetivos -->
+            <div id="objetivos" class="content-pane">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Objetivos de aprendizaje</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">🧠</span>
+                        <span>Comprender el concepto de la escucha activa y su impacto en la comunicación
+                            interpersonal.</span>
+                    </li>
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">🔍</span>
+                        <span>Reconocer los elementos que componen el proceso de escucha activa y su relación con los
+                            tipos de escucha.</span>
+                    </li>
+
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">📝</span>
+                        <span>Identificar barreras que dificultan la escucha activa en un proceso de comunicación
+                            interpersonal.</span>
+                    </li>
+                </ul>
+                <!-- Componente de síntesis de voz para Objetivos -->
+                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
+                    data-target="objetivos">
+                    <button
+                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
+                        <span class="mr-1">▶️</span> Leer
+                    </button>
+                    <button
+                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                        disabled>
+                        <span class="mr-1">⏸️</span> Pausar
+                    </button>
+                    <button
+                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                        disabled>
+                        <span class="mr-1">⏹️</span> Detener
+                    </button>
+                    <div class="flex items-center ml-2">
+                        <label for="speech-rate-objetivos" class="text-sm text-green-800 mr-2">Velocidad:</label>
+                        <input type="range" class="speech-rate" id="speech-rate-objetivos" min="0.5" max="2" step="0.1"
+                            value="1" class="w-24">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fundamentos Teóricos -->
+            <div id="contenido" class="content-pane">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Habilidades de escucha activa</h2>
+                <div class="w-full max-w-8xl mx-auto">
+                        <div class="space-y-8 text-slate-700 leading-relaxed">
+                            <div id="ecuaciones-intro" class="content-section">
+                                <h3 class="text-xl font-bold text-green-700 mb-2">¿Qué es la escucha activa?</h3>
+                                <!-- Modern card -->
+                                <div
+                                    class="rounded-2xl p-6 border border-slate-200 shadow-sm bg-gradient-to-br from-white to-slate-50">
+                                    <!-- Icon header -->
+                                    <div class="flex items-center mb-4">
+                                        <span
+                                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 mr-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+                                            </svg>
+                                        </span>
+                                        <h3 class="text-lg font-semibold text-slate-800">¿Qué es la escucha activa?</h3>
+                                    </div>
+
+                                    <!-- Content -->
+                                    <p class="text-slate-700 leading-relaxed">
+                                        <strong class="text-emerald-700">La escucha activa</strong> es una <span
+                                            class="font-semibold underline decoration-emerald-300">técnica de
+                                            comunicación</span> que consiste en <span
+                                            class="bg-amber-100 px-2 py-0.5 rounded-md">prestar toda la atención</span>
+                                        al <strong class="text-emerald-700">interlocutor</strong>.<br><br>
+
+                                        Esta atención debe ser <span class="font-semibold text-emerald-700">consciente y
+                                            completa</span> a lo que <strong class="text-emerald-700">otra
+                                            persona</strong> está diciendo.<br><br>
+
+                                        <span class="text-rose-500 font-semibold">¡No se trata solo de captar
+                                            sonidos!</span><br>
+                                        Se trata de <span
+                                            class="bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-lg font-semibold">entender,
+                                            procesar y responder</span> de manera <strong
+                                            class="text-emerald-700">adecuada</strong> al mensaje.<br><br>
+
+                                        <strong class="text-emerald-700">Escuchar activamente</strong> implica:
+                                    </p>
+
+                                    <!-- Feature list -->
+                                    <ul class="mt-4 space-y-2 text-slate-700">
+                                        <li class="flex items-start">
+                                            <span
+                                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 mr-2 mt-0.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </span>
+                                            <span><strong>Estar presente</strong> en la conversación</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span
+                                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 mr-2 mt-0.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </span>
+                                            <span><strong>Sin interrumpir</strong> ni distraerse</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span
+                                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 mr-2 mt-0.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </span>
+                                            <span><strong>Mostrar interés genuino</strong> por lo que el otro
+                                                dice</span>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Footer note -->
+                                    <p class="mt-4 text-slate-600 italic text-sm">
+                                        La escucha activa se asocia predominantemente con interacciones más <strong
+                                            class="text-emerald-700">interpersonales</strong>.
+                                    </p>
+                                </div>
+
+                                <!-- Controles de síntesis de voz para esta sección -->
+                                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
+                                    data-target="ecuaciones-intro">
+                                    <button
+                                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
+                                        <span class="mr-1">▶️</span> Leer
+                                    </button>
+                                    <button
+                                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                                        disabled>
+                                        <span class="mr-1">⏸️</span> Pausar
+                                    </button>
+                                    <button
+                                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                                        disabled>
+                                        <span class="mr-1">⏹️</span> Detener
+                                    </button>
+                                    <div class="flex items-center ml-2">
+                                        <label for="speech-rate-ecuaciones-intro"
+                                            class="text-sm text-green-800 mr-2">Velocidad:</label>
+                                        <input type="range" class="speech-rate" id="speech-rate-ecuaciones-intro"
+                                            min="0.5" max="2" step="0.1" value="1" class="w-24">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="ecuaciones-resolucion" class="content-section">
+                                <h2 class="text-xl font-bold text-green-700 mb-2">Tipos de escucha</h2>
+                                <div class="rounded-xl p-4 border border-green-200 shadow-sm">
+                                    <p class="text-green-800 font-medium mb-4">
+                                        Existen diferentes tipos de escucha, según la actitud que se tiene frente al
+                                        mensaje:
+                                    </p>
+
+                                    <div
+                                        class="w-full h-32 sm:h-48 md:h-64 xl:h-80 bg-white rounded flex items-center justify-center overflow-hidden image-container my-4">
+                                        <img src="img/1.png" alt="Imagen relacionada con tipos de escucha"
+                                            class="max-w-full max-h-full object-contain expandable-image"
+                                            style="object-fit:contain;" loading="lazy" />
+                                        <button class="expand-btn" data-img="img/1.png">🔍</button>
+                                    </div>
+
+                                    <!-- Consejos para superar barreras -->
+                                    <div class="bg-white rounded-lg p-4 border border-green-300 mb-4">
+                                        <h4 class="font-bold text-green-800 mb-2 flex items-center">
+                                            <span class="mr-2">💡</span> Ejemplo:
+                                        </h4>
+                                        <ul class="space-y-2">
+                                            <li class="flex items-center">
+                                                <span>Si mientras alguien habla tú estás viendo el celular, estás
+                                                    haciendo escucha pasiva o selectiva. Si dejas el celular y te
+                                                    concentras en lo que dice, estás haciendo escucha activa.</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="w-full h-32 sm:h-48 md:h-64 xl:h-80 bg-white rounded flex items-center justify-center overflow-hidden image-container my-4">
+                                            <img src="img/2.jpg" alt="Imagen relacionada con tipos de escucha"
+                                                class="max-w-full max-h-full object-contain expandable-image"
+                                                style="object-fit:contain;" loading="lazy" />
+                                            <button class="expand-btn" data-img="img/2.jpg">🔍</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controles de síntesis de voz para esta sección -->
+                                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
+                                    data-target="ecuaciones-resolucion">
+                                    <button
+                                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
+                                        <span class="mr-1">▶️</span> Leer
+                                    </button>
+                                    <button
+                                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                                        disabled>
+                                        <span class="mr-1">⏸️</span> Pausar
+                                    </button>
+                                    <button
+                                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
+                                        disabled>
+                                        <span class="mr-1">⏹️</span> Detener
+                                    </button>
+                                    <div class="flex items-center ml-2">
+                                        <label for="speech-rate-ecuaciones-resolucion"
+                                            class="text-sm text-green-800 mr-2">Velocidad:</label>
+                                        <input type="range" class="speech-rate" id="speech-rate-ecuaciones-resolucion"
+                                            min="0.5" max="2" step="0.1" value="1" class="w-24">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <h2 class="text-xl font-bold text-green-700 mb-2">Dimensiones de la escucha activa</h2>
+                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
+
+                                <div
+                                    class="w-full h-32 sm:h-48 md:h-64 xl:h-80 bg-white rounded flex items-center justify-center overflow-hidden image-container my-4">
+                                    <img src="img/3.png" alt="Imagen relacionada con tipos de escucha"
+                                        class="max-w-full max-h-full object-contain expandable-image"
+                                        style="object-fit:contain;" loading="lazy" />
+                                    <button class="expand-btn" data-img="img/3.png">🔍</button>
+                                </div>
+                            </div>
+
+                            <h2 class="text-xl font-bold text-green-700 mb-2">Elementos de la escucha activa</h2>
+                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
+                                <p class="text-slate-700 mb-4">
+                                    La escucha activa tiene seis elementos principales que la hacen efectiva. A
+                                    continuación los verás de forma clara y práctica:
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
+                                        <span class="text-green-600 text-xl mr-3">👀</span>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800">Atención</h4>
+                                            <p class="text-slate-700 text-sm">Concentrarse en lo que la otra persona
+                                                dice, evitando distracciones.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
+                                        <span class="text-green-600 text-xl mr-3">🤝</span>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800">Empatía</h4>
+                                            <p class="text-slate-700 text-sm">Ver el mundo como lo ve la otra persona y
+                                                comprender sus emociones y perspectivas.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
+                                        <span class="text-green-600 text-xl mr-3">⚖️</span>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800">No juzgar</h4>
+                                            <p class="text-slate-700 text-sm">Suspender el juicio para crear un espacio
+                                                seguro donde el otro pueda expresarse.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
+                                        <span class="text-green-600 text-xl mr-3">🤫</span>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800">Valorar el silencio</h4>
+                                            <p class="text-slate-700 text-sm">Permitir pausas para que la persona
+                                                procese sus ideas y emociones.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
+                                        <span class="text-green-600 text-xl mr-3">❓</span>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800">Clarificar</h4>
+                                            <p class="text-slate-700 text-sm">Asegurarse de entender el mensaje mediante
+                                                preguntas y confirmaciones.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
+                                        <span class="text-green-600 text-xl mr-3">💬</span>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800">Retroalimentar</h4>
+                                            <p class="text-slate-700 text-sm">Responder con respeto y claridad,
+                                                mostrando que se comprendió el mensaje (palabras o gestos).</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <h2 class="text-xl font-bold text-green-700 mb-2">Barreras en la escucha activa</h2>
+                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
+                                <div class="barriers-block">
+                                    <p class="barriers-intro">Las barreras son obstáculos que dificultan la escucha
+                                        activa. Algunas comunes son:</p>
+                                    <ul class="barriers-grid" role="list">
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/distraccion.png" alt="Icono paráfrasis"
+                                                    class="tech-icon-img" loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Distracciones</h4>
+                                                <p class="barrier-text">Ruido, celular, pensamientos ajenos a la
+                                                    conversación.</p>
+                                            </div>
+                                        </li>
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/sexismo.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Prejuicios</h4>
+                                                <p class="barrier-text">Juzgar antes de escuchar todo el mensaje.</p>
+                                            </div>
+                                        </li>
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/chat.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Interrumpir</h4>
+                                                <p class="barrier-text">Hablar sin dejar que el otro termine.</p>
+                                            </div>
+                                        </li>
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/burbuja.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Falta de empatía</h4>
+                                                <p class="barrier-text">No mostrar empatía o atención real.</p>
+                                            </div>
+                                        </li>
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/positividad.png" alt="Icono paráfrasis"
+                                                    class="tech-icon-img" loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Emociones</h4>
+                                                <p class="barrier-text">Estar enojado, ansioso o triste puede impedir
+                                                    una buena escucha.</p>
+                                            </div>
+                                        </li>
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/analisis.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Mucha información</h4>
+                                                <p class="barrier-text">Demasiada información por muchos canales al
+                                                    tiempo.</p>
+                                            </div>
+                                        </li>
+                                        <li class="barrier-item">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/no-hablar.png" alt="Icono paráfrasis"
+                                                    class="tech-icon-img" loading="lazy">
+                                            </div>
+                                            <div class="barrier-content">
+                                                <h4 class="barrier-title">Querer hablar siempre</h4>
+                                                <p class="barrier-text">Tendencia a hablar más que escuchar, lo que
+                                                    genera malentendidos y conflictos.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="barriers-example"><strong>Ejemplo:</strong> Si estás molesto y alguien te
+                                        habla, puedes no entender bien lo que dice porque estás enfocado en tus
+                                        emociones. Esa es una barrera emocional.</p>
+                                </div>
+                            </div>
+                            <!-- Técnicas de la escucha activa: nueva sección (insertada debajo del bloque de barreras) -->
+                            <section id="tecnicas-escucha" class="mt-8">
+                                <h2 class="text-xl font-bold text-green-700 mb-2">Técnicas de la escucha activa: paráfrasis, preguntas, contacto visual, gestos</h2>
+                                <p class="text-slate-700 leading-relaxed mb-4">
+                                    Estas técnicas ayudan a demostrar que
+                                    realmente estás escuchando y comprendiendo a la otra persona. Se utilizan en la
+                                    <strong class="text-green-800">escucha activa</strong> y mejoran la comunicación
+                                    interpersonal.
+                                </p>
+
+                                <div class="tech-grid">
+                                    <!-- Paráfrasis o reformulación -->
+                                    <article class="tech-card">
+                                        <div class="tech-header">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/icono1.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="tech-title">Paráfrasis o reformulación</h3>
+                                        </div>
+                                        <p class="tech-text">Es la técnica de repetir con tus propias palabras lo que el
+                                            interlocutor acaba de expresar. Su objetivo es demostrar que has escuchado y
+                                            comprendido el mensaje.</p>
+                                        <div class="tech-subcard">
+                                            <p class="tech-subtitle">Ejemplo:</p>
+                                            <ul class="tech-list">
+                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
+                                                            height="20" fill="none" viewBox="0 0 20 20">
+                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
+                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
+                                                                stroke-width="2" fill="none" />
+                                                        </svg></span>Tu compañero/a dice: "Estoy muy estresado por los
+                                                    exámenes y no tengo tiempo para salir con mis amigos."</li>
+                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
+                                                            height="20" fill="none" viewBox="0 0 20 20">
+                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
+                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
+                                                                stroke-width="2" fill="none" />
+                                                        </svg></span>Tú respondes: "Parece que te sientes abrumado con
+                                                    todo lo que tienes que estudiar, ¿cierto?"</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <!-- Preguntas aclaratorias (clarificación) -->
+                                    <article class="tech-card">
+                                        <div class="tech-header">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/icono2.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="tech-title">Preguntas aclaratorias (clarificación)</h3>
+                                        </div>
+                                        <p class="tech-text">Consiste en hacer preguntas específicas y generalmente
+                                            abiertas después de que el interlocutor ha terminado de hablar. Buscan
+                                            profundizar en la conversación o aclarar un punto que no se entendió
+                                            completamente.</p>
+                                        <div class="tech-subcard">
+                                            <p class="tech-subtitle">Ejemplo:</p>
+                                            <ul class="tech-list">
+                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
+                                                            height="20" fill="none" viewBox="0 0 20 20">
+                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
+                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
+                                                                stroke-width="2" fill="none" />
+                                                        </svg></span>Tu compañero/a dice: "Mi jefe me dijo que cambiara
+                                                    el enfoque del proyecto, pero no sé por dónde empezar."</li>
+                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
+                                                            height="20" fill="none" viewBox="0 0 20 20">
+                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
+                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
+                                                                stroke-width="2" fill="none" />
+                                                        </svg></span>Tú preguntas: "¿A qué te refieres exactamente con
+                                                    'cambiar el enfoque'?" o "¿Qué te motivó a tomar esa opción?"</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <!-- Contacto visual -->
+                                    <article class="tech-card">
+                                        <div class="tech-header">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/icono3.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="tech-title">Contacto visual</h3>
+                                        </div>
+                                        <p class="tech-text">Es la herramienta no verbal más útil y fundamental, que
+                                            implica mirar regularmente a la cara y los ojos de la persona con la que
+                                            hablas. Demuestra que estás en "modo escucha", prestando atención y
+                                            mostrando interés, lo cual ayuda a generar confianza.</p>
+                                        <div class="tech-subcard">
+                                            <p class="tech-subtitle">Recomendación:</p>
+                                            <ul class="tech-list">
+                                                <li>Mientras escuchas: Mantener el contacto visual de manera regular
+                                                    (con breves pausas para que no sea intimidante) para indicarle al
+                                                    interlocutor que estás receptivo.</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <!-- Gestos -->
+                                    <article class="tech-card">
+                                        <div class="tech-header">
+                                            <div class="tech-icon" aria-hidden="true">
+                                                <img src="img/icono4.png" alt="Icono paráfrasis" class="tech-icon-img"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="tech-title">Gestos</h3>
+                                        </div>
+                                        <p class="tech-text">Son señales no verbales que refuerzan la atención y la
+                                            empatía. La postura debe ser abierta y receptiva (no cruzar los brazos), y
+                                            los gestos sirven como micro-respuestas para mantener el flujo de la
+                                            conversación.</p>
+                                        <div class="tech-subcard">
+                                            <p class="tech-subtitle">Recomendación:</p>
+                                            <ul class="tech-list">
+                                                <li>Mientras escuchas: Asentir con la cabeza de vez en cuando, mantener
+                                                    una sonrisa ligera y orientar el cuerpo hacia el hablante. Esto
+                                                    genera confianza y motiva a seguir hablando.</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                        </div>
+
+                        <br>
+                        <h2 class="text-xl font-bold text-green-700 mb-2">Escucha empática y escucha crítica: </h2>
+                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
+                                <p class="text-slate-700 mb-4">
+                                    Existen diferentes formas de escuchar según el propósito. Dos muy importantes son la escucha empática y la escucha crítica.
+                                </p>
+                                
+                                <!-- Tabla de conceptos -->
+                                <div class="mt-8 overflow-x-auto">
+                                    <table class="w-full border-collapse bg-white rounded-xl shadow-md overflow-hidden">
+                                        <thead class="bg-gradient-to-r from-green-500 to-green-600 text-white">
+                                            <tr>
+                                                <th class="px-4 py-3 text-left font-semibold">ASPECTO</th>
+                                                <th class="px-4 py-3 text-left font-semibold">ESCUCHA EMPÁTICA</th>
+                                                <th class="px-4 py-3 text-left font-semibold">ESCUCHA CRÍTICA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-slate-700">
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Propósito</td>
+                                                <td class="px-4 py-3">Comprender la experiencia emocional y la perspectiva del otro.</td>
+                                                <td class="px-4 py-3">Evaluar la calidad de la información y la solidez de los argumentos.</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Foco</td>
+                                                <td class="px-4 py-3">Emociones, necesidades, contexto personal.</td>
+                                                <td class="px-4 py-3">Evidencias, lógica, supuestos, coherencia.</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Actitud</td>
+                                                <td class="px-4 py-3">Acompañamiento, no juicio, validación.</td>
+                                                <td class="px-4 py-3">Distanciamiento analítico, escepticismo razonable.</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Preguntas típicas</td>
+                                                <td class="px-4 py-3">“¿Cómo te sientes?”, “¿Qué necesitas?”, “¿Qué piensas?”</td>
+                                                <td class="px-4 py-3">“¿Cuál es tu evidencia?”, “¿Qué argumentos consideraste?”</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Técnicas</td>
+                                                <td class="px-4 py-3">Paráfrasis, reflejo emocional, silencios, síntesis de acuerdos.</td>
+                                                <td class="px-4 py-3">Identificar falacias, pedir fuentes, preguntar datos, resumir argumentos.</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">¿Cómo saber si lo estoy haciendo bien?</td>
+                                                <td class="px-4 py-3">El emisor se siente comprendido, calma y apertura.</td>
+                                                <td class="px-4 py-3">Argumentos más claros, decisiones mejor informadas.</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Riesgos si la utilizo mucho</td>
+                                                <td class="px-4 py-3">Sobrecarga emocional, pérdida de límites en soluciones.</td>
+                                                <td class="px-4 py-3">Frialdad, confrontación, necesidad de diálogo.</td>
+                                            </tr>
+                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
+                                                <td class="px-4 py-3 font-medium text-green-700">Cuándo utilizar</td>
+                                                <td class="px-4 py-3">Conflictos, resolución de tensiones, apoyo socioemocional.</td>
+                                                <td class="px-4 py-3">Debates, decisiones, confrontación de ideas, informes/propuestas.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                    
+                            </div>
+                </div>
+            </div>
+
+
+
+            <!-- Actividades Prácticas -->
+            <div id="actividades" class="content-pane">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Actividades prácticas</h2>
+                
+                <!-- Actividad 1: Quiz de seguimiento -->
+                <div class="bg-white border-l-4 border-green-500 rounded-lg shadow-sm p-6 mb-8">
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Actividad 1: Quiz de seguimiento</h3>
+                    
+                    <!-- Pregunta 1 -->
+                    <div class="mb-6" data-activity="1">
+                        <p class="font-semibold text-slate-800 mb-3">Pregunta 1</p>
+                        <p class="text-slate-700 mb-4">La técnica de Paráfrasis es esencial en la escucha activa porque su principal objetivo es ____________________, ayudando al emisor a sentirse comprendido y permitiendo confirmar la interpretación.</p>
+                        <div class="space-y-2">
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
+                                <span class="font-medium">A.</span> dar una solución rápida.
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
+                                <span class="font-medium">B.</span> confirmar que has entendido el mensaje.
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
+                                <span class="font-medium">C.</span> evaluar la evidencia.
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
+                                <span class="font-medium">D.</span> distraer al interlocutor.
+                            </div>
+                        </div>
+                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="mb-6" data-activity="1">
+                        <p class="font-semibold text-slate-800 mb-3">Pregunta 2</p>
+                        <p class="text-slate-700 mb-4">¿Cuál pregunta está relacionada con escucha empática?</p>
+                        <div class="space-y-2">
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
+                                <span class="font-medium">A.</span> ¿Cómo te sentiste?
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
+                                <span class="font-medium">B.</span> ¿Por qué te quejas tanto?
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
+                                <span class="font-medium">C.</span> ¿Cuál es tu evidencia?
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
+                                <span class="font-medium">D.</span> ¿Por qué eres tan negativa?
+                            </div>
+                        </div>
+                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                    </div>
+
+                    <button id="check-activity-1-btn"
+                        class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Verificar respuestas</button>
+                    <div id="activity-1-result" class="mt-4 font-medium"></div>
+
+
+                    <!-- Actividad 2: Video de YouTube y pregunta -->
+                    <div class="mt-8 pt-8 border-t-2 border-slate-200">
+                        <h3 class="text-xl font-bold text-green-800 mb-4">Actividad 2: Análisis de escucha activa</h3>
+                        
+                        <!-- Video de YouTube -->
+                        <div class="mb-6">
+                            <p class="text-slate-700 mb-4">Mira el siguiente video sobre escucha activa antes de responder la pregunta:</p>
+                            <a href="https://www.youtube.com/watch?v=ksfwBqngdEU" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Ver video en YouTube
+                            </a>
+                            <p class="text-sm text-slate-600 mt-3"><em>El video se abrirá en una nueva pestaña</em></p>
+                        </div>
+
+                        <!-- Pregunta de selección múltiple -->
+                        <div class="mb-6" data-activity="2">
+                            <p class="font-semibold text-slate-800 mb-3">Pregunta de selección múltiple</p>
+                            <p class="text-slate-700 mb-4">¿Cuál es la principal razón por la que el comportamiento de Homero Simpson en la escena con Marge es un ejemplo de falta de escucha activa?</p>
+                            <div class="space-y-2">
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
+                                    <span class="font-medium">A.</span> Muestra una ausencia de atención plena, ya que está distraído y sus respuestas son genéricas y vacías.
+                                </div>
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
+                                    <span class="font-medium">B.</span> Se aleja e invalida la comunicación con Marge.
+                                </div>
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
+                                    <span class="font-medium">C.</span> Sobrecarga de información a Marge y no la deja hablar.
+                                </div>
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
+                                    <span class="font-medium">D.</span> Decide juzgar a Marge sobre su viaje sin consultarle previamente.
+                                </div>
+                            </div>
+                            <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                        </div>
+
+                        <button id="check-activity-2-btn"
+                            class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Validar respuesta</button>
+                        <div id="activity-2-result" class="mt-4 font-medium"></div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <!-- Evaluación -->
+            <div id="evaluacion" class="content-pane">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Evaluación</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-slate-600 mb-6">Comprueba lo que has aprendido. Selecciona la respuesta correcta para
+                        cada pregunta.</p>
+                    <div id="quiz-container"></div>
+                    <button id="submit-quiz-btn"
+                        class="mt-6 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Finalizar
+                        evaluación</button>
+                    <div id="quiz-result" class="mt-4 text-lg font-bold"></div>
+                </div>
+            </div>
+
+            <!-- Recursos -->
+            <div id="recursos" class="content-pane">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Recursos para profundizar</h2>
+                <p class="text-slate-700 leading-relaxed mb-6">Para ampliar tu conocimiento sobre ecuaciones y
+                    desigualdades, te recomendamos explorar los siguientes enlaces y documentos:</p>
+                <ul class="space-y-4">
+                    <!-- Recurso 1 -->
+                    <li
+                        class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-green-700">Juego interactivo de falso y verdadero sobre características de la escucha activa.</h3>
+                            <a href="https://wordwall.net/es/resource/23253204/escucha-activa" target="_blank"
+                                class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                        </div>
+                        <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
+                            <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
+                                style="width:2cm;height:2cm;">
+                                <img src="img/Qr1.png" alt="Solución ejercicio 1"
+                                    class="max-w-full max-h-full object-contain expandable-image"
+                                    style="object-fit:contain;" loading="lazy">
+                                <button class="expand-btn" data-img="img/Qr1.png">🔍</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Recurso 2 -->
+                    <li
+                        class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-green-700">Video explicativo: El poder de la escucha activa</h3>
+                            <a href="https://www.youtube.com/watch?v=JLi7dLJAEuU"
+                                target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                        </div>
+                        <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
+                            <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
+                                style="width:2cm;height:2cm;">
+                                <img src="img/Qr2.png" alt="Solución ejercicio 1"
+                                    class="max-w-full max-h-full object-contain expandable-image"
+                                    style="object-fit:contain;" loading="lazy">
+                                <button class="expand-btn" data-img="img/Qr2.png">🔍</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Recurso 3 -->
+                    <li
+                        class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-green-700">Sopa de letras </h3>
+                            <a href="https://es.educaplay.com/recursos-educativos/?q=escucha+activa"
+                                target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                        </div>
+                        <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
+                            <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
+                                style="width:2cm;height:2cm;">
+                                <img src="img/Qr3.png" alt="Solución ejercicio 1"
+                                    class="max-w-full max-h-full object-contain expandable-image"
+                                    style="object-fit:contain;" loading="lazy">
+                                <button class="expand-btn" data-img="img/Qr3.png">🔍</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Bibliografía -->
+            <div id="bibliografia" class="content-pane">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Bibliografía</h2>
+                <div class="space-y-6">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            López, A. (2015). <i>Comunicación y habilidades sociales</i>. ESIC.
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Ministerio de Educación Nacional de Colombia (MEN). (2010). <i>Competencias ciudadanas: Serie Guías No. 6</i>. Recuperado de <a href="https://www.mineducacion.gov.co/" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.mineducacion.gov.co/</a>
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Eficacia de los padres. (2017, junio). <i>Historia de la escucha activa por el doctor Thomas Gordon</i> [Vídeo]. YouTube. Obtenido de <a href="https://www.youtube.com/watch?v=pcwjbvA4i08" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.youtube.com/watch?v=pcwjbvA4i08</a>
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Gordillo, M. &amp; Sánchez, M. (2018). <i>Habilidades comunicativas para la vida</i>. Editorial Trillas.<br>
+                            <span class="text-slate-600 text-sm mt-1 block">Contiene explicaciones prácticas sobre técnicas de escucha, comunicación empática y crítica.</span>
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Ministerio de Educación Nacional de Colombia (MEN). (2004). <i>Estándares Básicos de Competencias en Lenguaje</i>. Disponible en: <a href="https://www.mineducacion.gov.co/" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.mineducacion.gov.co/</a><br>
+                            <span class="text-slate-600 text-sm mt-1 block">Explica el desarrollo de competencias comunicativas, incluyendo la comprensión oral y la escucha crítica en el entorno escolar.</span>
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Pérez, R. (2012). <i>Comunicación efectiva y habilidades sociales</i>. Editorial ESIC.<br>
+                            <span class="text-slate-600 text-sm mt-1 block">Un texto claro sobre estrategias para mejorar la interacción con los demás desde la escucha y el diálogo.</span>
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Robertson, K. (2005). <i>Escucha activa: algo más que prestar atención</i>. <i>Australian family physician</i>, 34(12), 1053.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Footer/Credits -->
+                <footer class="mt-12 pt-6 border-t-2 border-slate-200 text-center">
+                    <p class="text-slate-600 font-medium">Creado por:</p>
+                    <p class="text-green-800 font-bold text-lg">Centro de Innovación en TIC para el apoyo de la Docencia
+                        CINTIA</p>
+                    <p class="text-slate-500 text-sm">Universidad de Córdoba</p>
+                </footer>
+        </main>
+    </div>
+
+    <!-- Modal para ampliar imágenes -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Imagen ampliada">
+            <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+    </div>
+
+    <script src="js/speech.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/activities.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

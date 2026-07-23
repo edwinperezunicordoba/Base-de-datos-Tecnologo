@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVA: Técnicas de oratoria y expresión oral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://elens.ecodestudio.dev/elens.js"></script>
+</head>
+
+<body class="bg-slate-50">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg flex-shrink-0 hidden md:flex md:flex-col">
+            <div class="p-4">
+                <div style="width: 150px; height: 150px;"
+                    class="p-2 mx-auto flex items-center justify-center bg-white rounded-full shadow-lg border-2 border-green-500 transition-shadow duration-300 hover:shadow-green-400">
+                    <img src="img/logo.webp" alt="Logo OVA" class="w-5/6 h-5/6 object-contain" loading="lazy">
+                </div>
+            </div>
+            <nav class="mt-6 flex-1">
+                <a href="#" class="sidebar-link active flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="introduccion"><span class="mr-3 text-xl">🚀</span> Introducción</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="objetivos"><span class="mr-3 text-xl">🎯</span> Objetivos</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="contenido"><span class="mr-3 text-xl">📚</span> Contenido</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="actividades"><span class="mr-3 text-xl">✍️</span> Actividades</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="evaluacion"><span class="mr-3 text-xl">✔️</span> Evaluación</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="recursos"><span class="mr-3 text-xl">📖</span> Recursos</a>
+                <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700"
+                    data-target="bibliografia"><span class="mr-3 text-xl">📚</span> Bibliografía</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 sm:p-6 md:p-10 bg-gray-50 relative">
+            <!-- Mobile Header -->
+            <div class="md:hidden mb-6 flex flex-col items-center">
+                <div style="width: 100px; height: 100px;"
+                    class="p-2 flex items-center justify-center bg-white rounded-full shadow-lg transition-shadow duration-300 hover:shadow-green-400 mb-2">
+                    <img src="img/logo.webp" alt="Logo OVA" class="w-5/6 h-5/6 object-contain" loading="lazy">
+                </div>
+                <select id="mobile-nav" class="w-full mt-2 p-2 border rounded-md bg-white shadow-sm">
+                    <option value="introduccion">🚀 Introducción</option>
+                    <option value="objetivos">🎯 Objetivos</option>
+                    <option value="contenido">📚 Contenido</option>
+                    <option value="actividades">✍️ Actividades</option>
+                    <option value="evaluacion">✔️ Evaluación</option>
+                    <option value="recursos">📖 Recursos</option>
+                    <option value="bibliografia">📚 Bibliografía</option>
+                </select>
+            </div>
+
+            <!-- Introducción -->
+            <section id="introduccion" class="content-pane active pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Dato e información
+                </h2>
+                <p class="text-slate-700 leading-relaxed mb-4 text-justify gap-4">
+                    Todo sistema de información que un desarrollador construye una aplicación web, un sistema de inventario, una red social o un 
+                    aplicativo móvil necesita, en algún momento, almacenar y recuperar datos de manera confiable. Antes de aprender a 
+                    diseñar o consultar una base de datos, es indispensable comprender con precisión cuatro conceptos que se usan constantemente 
+                    en el mundo del desarrollo de software: <i class="font-bold ">dato</i>, <i class="font-bold ">información</i>, <i class="font-bold ">base de datos</i> y <i class="font-bold ">Sistema Gestor de Bases de Datos (SGBD)</i>. 
+                </p>
+                <p>
+                    <strong class="text-gray-400 my-2">
+                        Aunque en el lenguaje cotidiano suelen usarse como sinónimos, en el contexto técnico cada uno tiene un significado específico y una 
+                    función distinta dentro de la arquitectura de un sistema.
+                    </strong>
+                </p>
+                <div class="mt-8 p-4 sm:p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+                    <p class="text-green-800">
+                    ✨ <strong>Comprender estas diferencias no es un ejercicio meramente teórico de ello depende que el futuro 
+                    tecnólogo en desarrollo de software, tomes decisiones acertadas sobre qué información almacenar, cómo estructurarla y 
+                    qué herramienta tecnológica utilizar para gestionarla. Este tema es la puerta de entrada al resto del curso, ya que todos los
+                     conceptos posteriores (modelo entidad-relación, normalización, SQL) se construyen sobre esta base conceptual.</strong>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Objetivos -->
+            <section id="objetivos" class="content-pane pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Objetivos de aprendizaje</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">🧠</span>
+                        <span>Diferenciar los conceptos de dato, información, base de datos y Sistema Gestor de Bases de Datos (SGBD), 
+                            reconociendo la relación funcional entre ellos.</span>
+                    </li>
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">🔍</span>
+                        <span>Identificar el papel de cada uno de estos conceptos dentro del ciclo de vida del desarrollo de software.</span>
+                    </li>
+
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">📝</span>
+                        <span>Reconocer ejemplos de SGBD utilizados actualmente en la industria del desarrollo de aplicaciones.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Fundamentos Teóricos -->
+            <section id="contenido" class="content-pane pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Desarrollo del contenido</h2>
+                <div class="w-full max-w-8xl mx-auto">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="tab-button active rounded-t-lg border border-green-500 bg-green-600 px-4 py-2 text-sm font-semibold text-white" data-tab="tab-definicion">
+                            Dato e información
+                        </button>
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-base-de-datos">
+                            Bases de datos
+                        </button>
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-sgbd">
+                            Sistema Gestor de Bases de Datos (SGBD)
+                        </button>
+                    </div>
+                    <div id="tab-definicion" class="tab-panel rounded-b-lg border border-green-500 bg-white p-8 shadow-sm">
+                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                            En el desarrollo de software, esta distinción es constante los formularios capturan datos (lo que el usuario escribe en 
+                            cada campo), y el sistema, mediante su lógica de negocio, transforma esos datos en información significativa para el 
+                            usuario final, por ejemplo, un reporte de ventas o un historial de pedidos.
+                        </p>
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                            <article class="sm:my-6 flex-shrink-0">
+                                <div class="space-y-3">
+                                    <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-dato">
+                                        <span class="text-lg">➖</span>
+                                        <span class="font-semibold text-green-800">¿Qué es un dato?</span>
+                                    </button>
+                                    <div id="panel-dato" class="accordion-panel block rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                        <p class="text-slate-700 leading-relaxed">
+                                            Un dato es la unidad más básica y objetiva de representación de un hecho, un número, un texto, una fecha o un 
+                                            valor aislado que, por sí solo, no tiene un significado completo. Por ejemplo, el valor “19” o el texto “Pedro” 
+                                            son datos: existen, pero no comunican nada por sí mismos si no se sabe a qué corresponden.
+                                        </p>
+                                    </div>
+
+                                    <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-informacion">
+                                        <span class="text-lg">➕</span>
+                                        <span class="font-semibold text-green-800">¿Qué es la información?</span>
+                                    </button>
+                                    <div id="panel-informacion" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                        <p class="text-slate-700 leading-relaxed">
+                                            La información es el resultado de procesar, organizar y contextualizar datos para que adquieran significado y utilidad. 
+                                            Por ejemplo, si se sabe que el valor “19” corresponde a la edad de un usuario llamado “Pedro”, entonces se tiene información: 
+                                            “Pedro tiene 19 años”. La información permite tomar decisiones y comprender mejor la realidad, mientras que los datos son 
+                                            simplemente hechos aislados.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="sm:my-6 flex-shrink-0">
+                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                    <img src="img/Datos e Informacion.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/Datos e Informacion.png">🔍</button>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800">
+                            ✨ <strong>Además, es importante reconocer que los datos pueden clasificarse según su grado de organización. Los datos 
+                            estructurados son aquellos que siguen un formato fijo y predecible, como los campos de una tabla (nombre, edad, 
+                            correo electrónico); los datos semiestructurados poseen cierta organización, pero no un esquema rígido, como un 
+                            archivo JSON o XML y los datos no estructurados carecen de un formato predefinido, como una imagen, un audio o 
+                            un texto libre. Esta clasificación es relevante porque, más adelante en el curso, aprenderás que las bases de 
+                            datos relacionales están pensadas principalmente para gestionar datos estructurados.</strong>
+                            </p>
+                             <button class="expand-btn2" data-img="img/Diferencia entre datos.png">💡</button>
+                        </div>
+                    </div>
+                    <!-- Tab: Base de Datos -->
+                    <div id="tab-base-de-datos" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                            <div>
+                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                Una base de datos es un conjunto organizado y estructurado de datos relacionados entre sí, que se almacena de 
+                                forma persistente en un medio digital y que puede ser consultado, actualizado y gestionado de manera eficiente. 
+                                <br><br>A diferencia de un simple archivo de texto o una hoja de cálculo, una base de datos está diseñada para evitar 
+                                redundancia, mantener la integridad de la información y permitir el acceso simultáneo de múltiples usuarios o procesos.
+                                </p>
+                            </div>
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                    <img src="img/archivos vs base de datos.png" alt="Imagen que compara archivos y bases de datos"
+                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/archivos vs base de datos.png">🔍</button>
+                                </div>  
+                            </div>
+                        </section>
+                        <div class="max-w-full my-6">
+                            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gradient-to-r from-green-700 to-green-600">
+                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Aspecto</th>
+                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Sistema de archivos tradicional</th>
+                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Base de datos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Definición</td>
+                                    <td class="py-4 px-6 text-gray-700">Archivos planos independientes, gestionados directamente por cada programa</td>
+                                    <td class="py-4 px-6 text-gray-600">Conjunto organizado y estructurado de datos relacionados entre sí</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Almacenamiento</td>
+                                    <td class="py-4 px-6 text-gray-700">Disperso en archivos separados por programa</td>
+                                    <td class="py-4 px-6 text-gray-600">Centralizado, persistente en medio digital</td>
+                                    </tr>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Redundancia</td>
+                                    <td class="py-4 px-6 text-gray-700">Alta — la misma información se repite en varios archivos</td>
+                                    <td class="py-4 px-6 text-gray-600">Baja — diseñada para evitarla</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Consistencia</td>
+                                    <td class="py-4 px-6 text-gray-700">Propensa a inconsistencias (un dato se actualiza en un archivo pero no en otro)</td>
+                                    <td class="py-4 px-6 text-gray-600">Mantiene la integridad de la información</td>
+                                    </tr>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Acceso concurrente</td>
+                                    <td class="py-4 px-6 text-gray-700">Sin mecanismos adecuados para múltiples usuarios/procesos</td>
+                                    <td class="py-4 px-6 text-gray-600">Permite acceso simultáneo de múltiples usuarios o procesos</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Compartir información entre programas</td>
+                                    <td class="py-4 px-6 text-gray-700">Difícil</td>
+                                    <td class="py-4 px-6 text-gray-600">Facilitado por la gestión centralizada</td>
+                                    </tr>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Seguridad / control de acceso</td>
+                                    <td class="py-4 px-6 text-gray-700">Prácticamente ausente</td>
+                                    <td class="py-4 px-6 text-gray-600">Incluye mecanismos de gestión y control</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Gestión</td>
+                                    <td class="py-4 px-6 text-gray-700">Cada programa gestiona sus propios archivos</td>
+                                    <td class="py-4 px-6 text-gray-600">Delegada a un software especializado (SGBD)</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800 font-bold">
+                            ✨ <strong>Por ejemplo, en una aplicación de comercio electrónico, la base de datos almacena de forma organizada la 
+                                información de los clientes, los productos, los pedidos y los pagos, de manera que cada uno de estos conjuntos 
+                                de datos pueda relacionarse entre sí sin duplicar información innecesariamente.</strong>
+                            </p>
+                        </div>
+                        <section class="sm:my-6 flex-shrink-0">
+                            <div class="space-y-3" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-ejemplo" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Ejemplo</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-ejemplo" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                            Piensa en el proyecto de software que te gustaría desarrollar en un futuro (una app, un sistema web, un videojuego, etc.). 
+                                            Escribe una lista de al menos cuatro “conjuntos de datos” que dicho sistema necesitaría almacenar en una base de datos 
+                                            (por ejemplo: usuarios, productos, transacciones). No es necesario diseñar tablas todavía, solo identificar qué información 
+                                            se debería guardar. Adicionalmente, describe un problema que podría presentarse si esa información se manejara en 
+                                            archivos de Excel independientes en lugar de una base de datos.
+                                        </p>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/Ejemplo software clinica.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/Ejemplo software clinica.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab-sgbd" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                            <div>
+                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                Un Sistema Gestor de Bases de Datos (SGBD), conocido en inglés como DBMS (Database Management System), es el software especializado 
+                                que permite crear, administrar, consultar y proteger una base de datos. <br>El SGBD actúa como intermediario entre el usuario o la aplicación 
+                                y los datos físicamente almacenados, ofreciendo mecanismos para garantizar la seguridad, la integridad, la concurrencia y el rendimiento 
+                                en el acceso a la información. En otras palabras, ninguna aplicación accede “directamente” a los archivos donde reposan los datos 
+                                siempre lo hace a través del SGBD, que traduce las solicitudes del programa (generalmente escritas en SQL) en operaciones sobre el 
+                                almacenamiento físico.
+ 
+                                <br><br>Dado que este es uno de los conceptos más importantes del curso, a continuación, profundizaremos en sus funciones, su arquitectura, 
+                                los tipos de SGBD que existen y quiénes lo utilizan dentro de una organización.
+                                </p>
+                            </div>
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                    <img src="img/archivos vs base de datos.png" alt="Imagen que compara archivos y bases de datos"
+                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/archivos vs base de datos.png">🔍</button>
+                                </div>  
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </section>
+            <!-- Actividades Prácticas -->
+            <div id="actividades" class="content-pane pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Actividades prácticas</h2>
+                 <div class="max-w-full mx-auto mb-4 ">
+                    <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                        <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Sopa de Letras: Bases de Datos y SGBD</h1>
+                        <p class="text-green-600 mb-6 text-sm md:text-base">
+                            Arrastra el mouse sobre las letras (horizontal, vertical o diagonal) para encontrar las palabras.
+                        </p>
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <!-- Grid -->
+                            <div class="flex-1 flex justify-center">
+                            <div id="grid" class="inline-grid select-none border-2 border-green-300 rounded-lg overflow-hidden bg-green-100 p-1"></div>
+                            </div>
+                            <!-- Palabras -->
+                            <div class="w-full md:w-56 shrink-0">
+                            <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                                <p class="font-semibold text-green-800 mb-2">Palabras a encontrar</p>
+                                <ul id="wordList" class="space-y-1 text-sm text-gray-700"></ul>
+                                <p id="progress" class="mt-4 text-green-700 font-semibold text-sm"></p>
+                            </div>
+                            <button id="newGameBtn"
+                                class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-xl transition-colors duration-200">
+                                Nueva sopa de letras
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Actividad 1: Quiz de seguimiento -->
+                <div class="bg-white border-l-4 border-green-500 rounded-lg shadow-sm p-6 mb-8">
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Actividad 1: Quiz de seguimiento</h3>
+                    
+                    <!-- Pregunta 1 -->
+                    <div class="mb-6" data-activity="1">
+                        <p class="font-semibold text-slate-800 mb-3">Pregunta 1</p>
+                        <p class="text-slate-700 mb-4">La técnica de Paráfrasis es esencial en la escucha activa porque su principal objetivo es ____________________, ayudando al emisor a sentirse comprendido y permitiendo confirmar la interpretación.</p>
+                        <div class="space-y-2">
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
+                                <span class="font-medium">A.</span> dar una solución rápida.
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
+                                <span class="font-medium">B.</span> confirmar que has entendido el mensaje.
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
+                                <span class="font-medium">C.</span> evaluar la evidencia.
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
+                                <span class="font-medium">D.</span> distraer al interlocutor.
+                            </div>
+                        </div>
+                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="mb-6" data-activity="1">
+                        <p class="font-semibold text-slate-800 mb-3">Pregunta 2</p>
+                        <p class="text-slate-700 mb-4">¿Cuál pregunta está relacionada con escucha empática?</p>
+                        <div class="space-y-2">
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
+                                <span class="font-medium">A.</span> ¿Cómo te sentiste?
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
+                                <span class="font-medium">B.</span> ¿Por qué te quejas tanto?
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
+                                <span class="font-medium">C.</span> ¿Cuál es tu evidencia?
+                            </div>
+                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
+                                <span class="font-medium">D.</span> ¿Por qué eres tan negativa?
+                            </div>
+                        </div>
+                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                    </div>
+
+                    <button id="check-activity-1-btn"
+                        class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Verificar respuestas</button>
+                    <div id="activity-1-result" class="mt-4 font-medium"></div>
+
+
+                    <!-- Actividad 2: Video de YouTube y pregunta -->
+                    <div class="mt-8 pt-8 border-t-2 border-slate-200">
+                        <h3 class="text-xl font-bold text-green-800 mb-4">Actividad 2: Análisis de escucha activa</h3>
+                        
+                        <!-- Video de YouTube -->
+                        <div class="mb-6">
+                            <p class="text-slate-700 mb-4">Mira el siguiente video sobre escucha activa antes de responder la pregunta:</p>
+                            <a href="https://www.youtube.com/watch?v=ksfwBqngdEU" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Ver video en YouTube
+                            </a>
+                            <p class="text-sm text-slate-600 mt-3"><em>El video se abrirá en una nueva pestaña</em></p>
+                        </div>
+
+                        <!-- Pregunta de selección múltiple -->
+                        <div class="mb-6" data-activity="2">
+                            <p class="font-semibold text-slate-800 mb-3">Pregunta de selección múltiple</p>
+                            <p class="text-slate-700 mb-4">¿Cuál es la principal razón por la que el comportamiento de Homero Simpson en la escena con Marge es un ejemplo de falta de escucha activa?</p>
+                            <div class="space-y-2">
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
+                                    <span class="font-medium">A.</span> Muestra una ausencia de atención plena, ya que está distraído y sus respuestas son genéricas y vacías.
+                                </div>
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
+                                    <span class="font-medium">B.</span> Se aleja e invalida la comunicación con Marge.
+                                </div>
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
+                                    <span class="font-medium">C.</span> Sobrecarga de información a Marge y no la deja hablar.
+                                </div>
+                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
+                                    <span class="font-medium">D.</span> Decide juzgar a Marge sobre su viaje sin consultarle previamente.
+                                </div>
+                            </div>
+                            <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                        </div>
+
+                        <button id="check-activity-2-btn"
+                            class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Validar respuesta</button>
+                        <div id="activity-2-result" class="mt-4 font-medium"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evaluación -->
+            <div id="evaluacion" class="content-pane max-w-full mx-auto pb-28">
+                <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                    <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Evaluación</h1>
+                    <p class="text-green-600 mb-6">Responde las 10 preguntas y presiona "Enviar respuestas" para ver tu retroalimentación.</p>
+
+                    <form id="quizForm" class="space-y-6">
+                        <!-- Las preguntas se generan con JS -->
+                    </form>
+
+                    <div id="alertMsg" class="hidden mt-4 bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded-lg text-sm"></div>
+
+                    <button id="submitBtn" type="button"
+                        class="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-colors duration-200">
+                        Enviar respuestas
+                    </button>
+
+                    <div id="scoreBox" class="hidden mt-6 text-center bg-green-100 border border-green-300 rounded-xl py-4">
+                        <p class="text-green-800 font-bold text-lg" id="scoreText"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Recursos -->
+            <div id="recursos" class="content-pane pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Recursos para profundizar</h2>
+                <p class="text-slate-700 leading-relaxed mb-6">Para ampliar tu conocimiento sobre ecuaciones y
+                    desigualdades, te recomendamos explorar los siguientes enlaces y documentos:</p>
+                <ul class="space-y-4">
+                    <!-- Recurso 1 -->
+                    <li
+                        class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-green-700">Fundamentos de bases de datos.</h3>
+                            <a href="https://www.gob.mx/cms/uploads/attachment/file/1001638/Fundamentos-de-bases-de-datos_a.pdf" target="_blank"
+                                class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                        </div>
+                        <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
+                            <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
+                                style="width:2cm;height:2cm;">
+                                <img src="img/Qr1.png" alt="Solución ejercicio 1"
+                                    class="max-w-full max-h-full object-contain expandable-image"
+                                    style="object-fit:contain;" loading="lazy">
+                                <button class="expand-btn" data-img="img/Qr1.png">🔍</button>
+                            </div>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+
+            <!-- Bibliografía -->
+            <div id="bibliografia" class="content-pane pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Bibliografía</h2>
+                <div class="space-y-6">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            López, A. (2015). <i>Comunicación y habilidades sociales</i>. ESIC.
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Reis, J., & Housley, M. (2022). Fundamentals of data engineering: Plan and build robust data systems. O'Reilly Media.
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            PostgreSQL Global Development Group. (2026). PostgreSQL 18 documentation. Obtenido de <a href="https://www.postgresql.org/docs/current/" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.postgresql.org/docs/current/</a>
+                        </span>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                        <span class="block text-slate-700">
+                            Elmasri, R., & Navathe, S. B. (2017). Fundamentals of database systems (7.ª ed.). Pearson.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer/Credits -->
+            <footer class="w-full mt-12 pt-6 border-t-2 border-slate-200 text-center absolute bottom-10 left-0 ">
+                <p class="text-slate-600 font-medium">Creado por:</p>
+                <p class="text-green-800 font-bold text-lg">Centro de Innovación en TIC para el apoyo de la Docencia
+                    CINTIA</p>
+                <p class="text-slate-500 text-sm">Universidad de Córdoba</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Modal para ampliar imágenes -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Imagen ampliada">
+            <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+    </div>
+
+    <script src="js/flip-card.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/activities.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/sopaletra.js"></script>
+</body>
+
+</html>
