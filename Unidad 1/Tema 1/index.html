@@ -346,100 +346,32 @@
                         </div>
                     </div>
                 </div>
-                <!-- Actividad 1: Quiz de seguimiento -->
-                <div class="bg-white border-l-4 border-green-500 rounded-lg shadow-sm p-6 mb-8">
-                    <h3 class="text-xl font-bold text-green-700 mb-4">Actividad 1: Quiz de seguimiento</h3>
-                    
-                    <!-- Pregunta 1 -->
-                    <div class="mb-6" data-activity="1">
-                        <p class="font-semibold text-slate-800 mb-3">Pregunta 1</p>
-                        <p class="text-slate-700 mb-4">La técnica de Paráfrasis es esencial en la escucha activa porque su principal objetivo es ____________________, ayudando al emisor a sentirse comprendido y permitiendo confirmar la interpretación.</p>
-                        <div class="space-y-2">
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
-                                <span class="font-medium">A.</span> dar una solución rápida.
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
-                                <span class="font-medium">B.</span> confirmar que has entendido el mensaje.
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
-                                <span class="font-medium">C.</span> evaluar la evidencia.
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
-                                <span class="font-medium">D.</span> distraer al interlocutor.
-                            </div>
+
+                 <div class="max-w-full mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+
+                    <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Relaciona los Conceptos</h1>
+                    <p class="text-green-600 mb-6 text-sm md:text-base">
+                        Selecciona un concepto de la izquierda y luego su definición correcta a la derecha. Si aciertan, se conectan en verde; si no, se indicará que no coinciden.
+                    </p>
+
+                    <div id="feedbackMsg2" class="hidden mb-4 px-4 py-3 rounded-lg text-sm font-medium"></div>
+
+                    <div class="relative">
+                        <svg id="linesSvg2" class="absolute inset-0 w-full h-full pointer-events-none"></svg>
+
+                        <div class="grid grid-cols-2 gap-6 md:gap-16 relative z-10">
+                        <div id="colConcepts2" class="space-y-3"></div>
+                        <div id="colDefs2" class="space-y-3"></div>
                         </div>
-                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
                     </div>
 
-                    <!-- Pregunta 2 -->
-                    <div class="mb-6" data-activity="1">
-                        <p class="font-semibold text-slate-800 mb-3">Pregunta 2</p>
-                        <p class="text-slate-700 mb-4">¿Cuál pregunta está relacionada con escucha empática?</p>
-                        <div class="space-y-2">
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
-                                <span class="font-medium">A.</span> ¿Cómo te sentiste?
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
-                                <span class="font-medium">B.</span> ¿Por qué te quejas tanto?
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
-                                <span class="font-medium">C.</span> ¿Cuál es tu evidencia?
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
-                                <span class="font-medium">D.</span> ¿Por qué eres tan negativa?
-                            </div>
-                        </div>
-                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
-                    </div>
+                    <p id="progress2" class="mt-6 text-green-700 font-semibold text-sm"></p>
 
-                    <button id="check-activity-1-btn"
-                        class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Verificar respuestas</button>
-                    <div id="activity-1-result" class="mt-4 font-medium"></div>
-
-
-                    <!-- Actividad 2: Video de YouTube y pregunta -->
-                    <div class="mt-8 pt-8 border-t-2 border-slate-200">
-                        <h3 class="text-xl font-bold text-green-800 mb-4">Actividad 2: Análisis de escucha activa</h3>
-                        
-                        <!-- Video de YouTube -->
-                        <div class="mb-6">
-                            <p class="text-slate-700 mb-4">Mira el siguiente video sobre escucha activa antes de responder la pregunta:</p>
-                            <a href="https://www.youtube.com/watch?v=ksfwBqngdEU" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                                Ver video en YouTube
-                            </a>
-                            <p class="text-sm text-slate-600 mt-3"><em>El video se abrirá en una nueva pestaña</em></p>
-                        </div>
-
-                        <!-- Pregunta de selección múltiple -->
-                        <div class="mb-6" data-activity="2">
-                            <p class="font-semibold text-slate-800 mb-3">Pregunta de selección múltiple</p>
-                            <p class="text-slate-700 mb-4">¿Cuál es la principal razón por la que el comportamiento de Homero Simpson en la escena con Marge es un ejemplo de falta de escucha activa?</p>
-                            <div class="space-y-2">
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
-                                    <span class="font-medium">A.</span> Muestra una ausencia de atención plena, ya que está distraído y sus respuestas son genéricas y vacías.
-                                </div>
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
-                                    <span class="font-medium">B.</span> Se aleja e invalida la comunicación con Marge.
-                                </div>
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
-                                    <span class="font-medium">C.</span> Sobrecarga de información a Marge y no la deja hablar.
-                                </div>
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
-                                    <span class="font-medium">D.</span> Decide juzgar a Marge sobre su viaje sin consultarle previamente.
-                                </div>
-                            </div>
-                            <div class="activity-feedback mt-3 text-sm font-medium"></div>
-                        </div>
-
-                        <button id="check-activity-2-btn"
-                            class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Validar respuesta</button>
-                        <div id="activity-2-result" class="mt-4 font-medium"></div>
+                    <button id="newGameBtn2" type="button"
+                        class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-xl transition-colors duration-200">
+                        Nuevo juego
+                    </button>
                     </div>
                 </div>
             </div>
@@ -552,6 +484,7 @@
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/sopaletra.js"></script>
+    <script src="js/actividad2.js"></script>
 </body>
 
 </html>
