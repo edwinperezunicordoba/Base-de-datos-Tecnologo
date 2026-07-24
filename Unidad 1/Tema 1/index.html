@@ -326,28 +326,33 @@
                                                 Un SGBD no es simplemente un lugar donde se guardan datos es un software que cumple funciones muy específicas para garantizar que la información sea confiable, segura y esté siempre disponible. Las funciones más relevantes son:
                                             </p>
                                             <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li><strong>Definición de datos:</strong> 
-                                                    <p>Permite crear y modificar la estructura de la base de datos, definiendo tablas, campos, tipos de datos y relaciones.</p>
+                                                <li>
+                                                    <strong>Definición de datos:</strong> 
+                                                    <p>Permite crear y modificar la estructura de la base de datos (tablas, tipos de datos, relaciones) mediante un lenguaje de definición de datos (DDL).</p>
                                                 </li>
                                                 <li>
                                                     <strong>Manipulación de datos:</strong> 
-                                                    <p>Facilita la inserción, actualización, eliminación y consulta de los datos mediante un lenguaje específico (generalmente SQL).</p>
+                                                    <p>Permite insertar, consultar, actualizar y eliminar información mediante un lenguaje de manipulación de datos (DML), como SQL.</p>
                                                 </li>
                                                 <li>
                                                     <strong>Control de acceso y seguridad:</strong> 
-                                                    <p>Gestiona permisos y roles para garantizar que solo usuarios autorizados puedan acceder o modificar la información.</p>
+                                                    <p>Gestiona que múltiples usuarios o procesos puedan leer y escribir datos al mismo tiempo sin generar inconsistencias o pérdida de información.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Seguridad y control de acceso:</strong> 
+                                                    <p>Define qué usuarios pueden ver o modificar determinada información, mediante permisos y roles.</p>
                                                 </li>
                                                 <li>
                                                     <strong>Integridad de los datos:</strong> 
-                                                    <p>Implementa reglas y restricciones para asegurar que los datos sean consistentes y válidos.</p>
+                                                    <p>Aplica reglas y restricciones (como llaves primarias o valores obligatorios) para evitar datos incorrectos o inconsistentes.</p>
                                                 </li>
                                                 <li>
-                                                    <strong>Recuperación ante fallos:</strong> 
-                                                    <p>Proporciona mecanismos para respaldar y restaurar la base de datos en caso de errores o pérdidas de información.</p>
+                                                    <strong>Respaldo y recuperación:</strong> 
+                                                    <p>permite generar copias de seguridad y restaurar la información en caso de fallas del sistema, errores humanos o desastres.</p>
                                                 </li>
                                                 <li>
-                                                    <strong>Concurrencia:</strong> 
-                                                    <p>Permite que múltiples usuarios accedan y modifiquen la base de datos simultáneamente sin conflictos.</p>
+                                                    <strong>Independencia de los datos:</strong> 
+                                                    <p>Permite que los cambios en la estructura física de almacenamiento no afecten directamente a las aplicaciones que consultan la información.</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -370,9 +375,28 @@
                                 </button>
                                 <div id="panel-arquitectura" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                     <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                            Para lograr la independencia de los datos mencionada anteriormente, la mayoría de los SGBD se basan en la arquitectura de tres niveles propuesta por el estándar ANSI/SPARC, la cual organiza la base de datos en tres capas o niveles de abstracción.
-                                        </p>
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Para lograr la independencia de los datos mencionada anteriormente, la mayoría de los SGBD se basan en la arquitectura de tres niveles propuesta por el estándar ANSI/SPARC, la cual organiza la base de datos en tres capas o niveles de abstracción.
+                                            </p>
+                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
+                                                <li>
+                                                    <strong>Nivel interno (o físico):</strong> 
+                                                    <p>describe cómo se almacenan realmente los datos en el disco: archivos, índices, estructuras de almacenamiento. Es el nivel más 
+                                                        cercano al hardware.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Nivel conceptual (o lógico):</strong> 
+                                                    <p>Describe qué datos se almacenan y qué relaciones existen entre ellos, sin entrar en detalles de cómo se almacenan físicamente. 
+                                                        Es el nivel en el que trabajaremos principalmente durante este curso, mediante el modelo entidad-relación y el modelo relacional.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Nivel externo (o de vista del usuario):</strong> 
+                                                    <p>Describe cómo cada grupo de usuarios o aplicación específica “ve” una parte de la base de datos, de acuerdo con sus necesidades 
+                                                        (por ejemplo, un cajero solo ve la información de ventas, no la de nómina).</p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <article class="sm:my-6 flex-shrink-0">
                                             <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
                                                 <img src="img/arquitectura a 3 niveles.png" alt="Solucion al ejemplo de software de clínica"
@@ -391,9 +415,36 @@
                                 </button>
                                 <div id="panel-tipos" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                     <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                            No todos los SGBD organizan la información de la misma manera. Según el modelo de datos que utilizan para estructurar la información, se pueden clasificar en   .
-                                        </p>
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                No todos los SGBD organizan la información de la misma manera. Según el modelo de datos que utilizan para estructurar la información, se pueden clasificar en   .
+                                            </p>
+                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
+                                                <li>
+                                                    <strong>SGBD relacionales (RDBMS):</strong> 
+                                                    <p>
+                                                        Organizan la información en tablas compuestas por filas y columnas, relacionadas entre sí mediante llaves. Son el enfoque que 
+                                                        estudiaremos a profundidad en este curso. Ejemplos: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>SGBD NoSQL (“Not only SQL”):</strong> 
+                                                    <p>
+                                                        Surgieron para manejar grandes volúmenes de datos y estructuras más flexibles. Se dividen a su vez en varios subtipos documentales 
+                                                        (almacenan documentos tipo JSON, ejemplo: MongoDB), clave-valor (almacenan pares simples de clave y valor, ejemplo: Redis), columnares 
+                                                        (optimizados para grandes volúmenes analíticos, ejemplo: Cassandra) y de grafos (representan datos como nodos y relaciones, ejemplo: Neo4j).
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>SGBD jerárquicos y de red:</strong> 
+                                                    <p>
+                                                        Modelos más antiguos, hoy en desuso en nuevos desarrollos, que organizaban los datos en estructuras 
+                                                        de árbol o de red. Se mencionan por su valor histórico, ya que fueron el antecedente directo del modelo relacional.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
                                         <article class="sm:my-6 flex-shrink-0">
                                             <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
                                                 <img src="img/tipo de sgbd segun el modelo de datos.png" alt="Solucion al ejemplo de software de clínica"
