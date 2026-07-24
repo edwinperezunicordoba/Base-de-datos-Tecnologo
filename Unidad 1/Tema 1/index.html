@@ -294,7 +294,7 @@
                             <div>
                                 <p class="text-slate-700 leading-relaxed mb-4 text-justify">
                                 Un Sistema Gestor de Bases de Datos (SGBD), conocido en inglés como DBMS (Database Management System), es el software especializado 
-                                que permite crear, administrar, consultar y proteger una base de datos. <br>El SGBD actúa como intermediario entre el usuario o la aplicación 
+                                que permite crear, administrar, consultar y proteger una base de datos. <br> <br> El SGBD actúa como intermediario entre el usuario o la aplicación 
                                 y los datos físicamente almacenados, ofreciendo mecanismos para garantizar la seguridad, la integridad, la concurrencia y el rendimiento 
                                 en el acceso a la información. En otras palabras, ninguna aplicación accede “directamente” a los archivos donde reposan los datos 
                                 siempre lo hace a través del SGBD, que traduce las solicitudes del programa (generalmente escritas en SQL) en operaciones sobre el 
@@ -306,11 +306,104 @@
                             </div>
                             <div class="my-6 sm:my-0 flex-shrink-0">
                                 <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/archivos vs base de datos.png" alt="Imagen que compara archivos y bases de datos"
+                                    <img src="img/Funciones del SGBD.png" alt="Imagen que compara archivos y bases de datos"
                                         class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
                                         style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/archivos vs base de datos.png">🔍</button>
+                                    <button class="expand-btn" data-img="img/Funciones del SGBD.png">🔍</button>
                                 </div>  
+                            </div>
+                        </section>
+                        <section class="sm:my-6 flex-shrink-0">
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-funciones" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Funciones principales de un SGBD</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-funciones" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Un SGBD no es simplemente un lugar donde se guardan datos es un software que cumple funciones muy específicas para garantizar que la información sea confiable, segura y esté siempre disponible. Las funciones más relevantes son:
+                                            </p>
+                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
+                                                <li><strong>Definición de datos:</strong> 
+                                                    <p>Permite crear y modificar la estructura de la base de datos, definiendo tablas, campos, tipos de datos y relaciones.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Manipulación de datos:</strong> 
+                                                    <p>Facilita la inserción, actualización, eliminación y consulta de los datos mediante un lenguaje específico (generalmente SQL).</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Control de acceso y seguridad:</strong> 
+                                                    <p>Gestiona permisos y roles para garantizar que solo usuarios autorizados puedan acceder o modificar la información.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Integridad de los datos:</strong> 
+                                                    <p>Implementa reglas y restricciones para asegurar que los datos sean consistentes y válidos.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Recuperación ante fallos:</strong> 
+                                                    <p>Proporciona mecanismos para respaldar y restaurar la base de datos en caso de errores o pérdidas de información.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Concurrencia:</strong> 
+                                                    <p>Permite que múltiples usuarios accedan y modifiquen la base de datos simultáneamente sin conflictos.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/SGBD.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/SGBD.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-arquitectura" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Arquitectura de un SGBD</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-arquitectura" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                            Para lograr la independencia de los datos mencionada anteriormente, la mayoría de los SGBD se basan en la arquitectura de tres niveles propuesta por el estándar ANSI/SPARC, la cual organiza la base de datos en tres capas o niveles de abstracción.
+                                        </p>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/arquitectura a 3 niveles.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/arquitectura a 3 niveles.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-tipos" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Tipos de SGBD según el modelo de datos</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-tipos" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                            No todos los SGBD organizan la información de la misma manera. Según el modelo de datos que utilizan para estructurar la información, se pueden clasificar en   .
+                                        </p>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/tipo de sgbd segun el modelo de datos.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/tipo de sgbd segun el modelo de datos.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
