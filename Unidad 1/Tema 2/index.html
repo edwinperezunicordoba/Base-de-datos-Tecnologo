@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://elens.ecodestudio.dev/elens.js"></script>
 </head>
 
 <body class="bg-slate-50">
@@ -43,7 +43,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-4 sm:p-6 md:p-10 bg-gray-50">
+        <main class="flex-1 p-4 sm:p-6 md:p-10 bg-gray-50 relative">
             <!-- Mobile Header -->
             <div class="md:hidden mb-6 flex flex-col items-center">
                 <div style="width: 100px; height: 100px;"
@@ -62,756 +62,490 @@
             </div>
 
             <!-- Introducción -->
-            <div id="introduccion" class="content-pane active">
-                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Habilidades de escucha activa
+            <section id="introduccion" class="content-pane active pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Modelo entidad-relación
                 </h2>
-
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    En la vida cotidiana, escuchar parece una acción sencilla, pero en realidad es una de las
-                    habilidades comunicativas más complejas y menos practicadas. La escucha activa va más allá de oír
-                    palabras; implica comprender el mensaje, reconocer las emociones del interlocutor y responder de
-                    forma empática y pertinente. Escuchar activamente requiere atención consciente, disposición
-                    emocional y respeto por el otro.
-                    <br>
-                    <br>
-                    En contextos académicos, laborales o personales, esta habilidad fortalece las relaciones
-                    interpersonales, previene conflictos y mejora la colaboración, ya que permite construir puentes de
-                    comprensión mutua. A través de técnicas como la paráfrasis, las preguntas aclaratorias, el contacto
-                    visual y los gestos de interés, el oyente demuestra que realmente está presente en la conversación.
-                    <br>
-
+                <p class="text-slate-700 leading-relaxed mb-4 text-justify gap-4">
+                    Antes de crear una base de datos es necesario tener claridad sobre qué información se va a almacenar y cómo se relaciona entre sí. Sin embargo, pasar 
+                    directamente de una idea de negocio a una tabla en un <i class="font-bold ">SGBD</i> suele producir diseños desordenados, con datos duplicados o relaciones mal definidas. Por 
+                    esta razón, entre la idea inicial de un sistema y su implementación técnica existe una etapa intermedia fundamental el diseño conceptual, cuya principal 
+                    herramienta es <i class="font-bold ">el modelo entidad-relación</i> (o <i class="font-bold ">modelo E-R</i>).
+                </p>
+                <p>
+                    <strong class="text-gray-400 my-2">
+                        El modelo entidad-relación permite representar, de forma gráfica y comprensible tanto para el equipo técnico como para el cliente o usuario del sistema, 
+                        qué “cosas” importantes existen en un dominio (entidades), qué características las describen (atributos) y cómo se relacionan entre sí (relaciones).
+                    </strong>
                 </p>
                 <div class="mt-8 p-4 sm:p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
                     <p class="text-green-800">
-                        ✨ <strong>Dominar la escucha activa no solo potencia la comunicación, sino que también
-                            desarrolla la inteligencia emocional y la capacidad crítica, pues escuchar bien es el primer
-                            paso para pensar mejor y convivir mejor.</strong>
+                    ✨ <strong>Este modelo fue propuesto en 1976 por Peter Chen y, desde entonces, se ha convertido en el lenguaje universal para el diseño conceptual de 
+                        bases de datos, independientemente del SGBD que finalmente se utilice para implementarlas.</strong>
                     </p>
-
                 </div>
-                <!-- Componente de síntesis de voz para introducción -->
-                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
-                    data-target="introduccion">
-                    <button
-                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
-                        <span class="mr-1">▶️</span> Leer
-                    </button>
-                    <button
-                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                        disabled>
-                        <span class="mr-1">⏸️</span> Pausar
-                    </button>
-                    <button
-                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                        disabled>
-                        <span class="mr-1">⏹️</span> Detener
-                    </button>
-                    <div class="flex items-center ml-2">
-                        <label for="speech-rate-introduccion" class="text-sm text-green-800 mr-2">Velocidad:</label>
-                        <input type="range" class="speech-rate" id="speech-rate-introduccion" min="0.5" max="2"
-                            step="0.1" value="1" class="w-24">
-                    </div>
-                </div>
-            </div>
+            </section>
 
             <!-- Objetivos -->
-            <div id="objetivos" class="content-pane">
+            <section id="objetivos" class="content-pane pb-28">
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Objetivos de aprendizaje</h2>
                 <ul class="space-y-4">
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
                         <span class="text-green-700 mr-3 text-2xl">🧠</span>
-                        <span>Comprender el concepto de la escucha activa y su impacto en la comunicación
-                            interpersonal.</span>
+                        <span>Comprender el propósito del modelo entidad-relación como herramienta de diseño conceptual de bases de datos.</span>
                     </li>
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
                         <span class="text-green-700 mr-3 text-2xl">🔍</span>
-                        <span>Reconocer los elementos que componen el proceso de escucha activa y su relación con los
-                            tipos de escucha.</span>
+                        <span>Identificar correctamente entidades y sus atributos a partir de un contexto o requerimiento dado.</span>
                     </li>
 
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
                         <span class="text-green-700 mr-3 text-2xl">📝</span>
-                        <span>Identificar barreras que dificultan la escucha activa en un proceso de comunicación
-                            interpersonal.</span>
+                        <span>Reconocer los distintos tipos de atributos (simples, compuestos, monovaluados, multivaluados, derivados y clave) en situaciones aplicadas al desarrollo de software.</span>
+                    </li>
+
+                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-green-700 mr-3 text-2xl">🛠️</span>
+                        <span>Modelar relaciones básicas entre entidades utilizando la notación estándar del modelo entidad-relación.</span>
                     </li>
                 </ul>
-                <!-- Componente de síntesis de voz para Objetivos -->
-                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
-                    data-target="objetivos">
-                    <button
-                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
-                        <span class="mr-1">▶️</span> Leer
-                    </button>
-                    <button
-                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                        disabled>
-                        <span class="mr-1">⏸️</span> Pausar
-                    </button>
-                    <button
-                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                        disabled>
-                        <span class="mr-1">⏹️</span> Detener
-                    </button>
-                    <div class="flex items-center ml-2">
-                        <label for="speech-rate-objetivos" class="text-sm text-green-800 mr-2">Velocidad:</label>
-                        <input type="range" class="speech-rate" id="speech-rate-objetivos" min="0.5" max="2" step="0.1"
-                            value="1" class="w-24">
-                    </div>
-                </div>
-            </div>
+            </section>
 
             <!-- Fundamentos Teóricos -->
-            <div id="contenido" class="content-pane">
-                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Habilidades de escucha activa</h2>
+            <section id="contenido" class="content-pane pb-28">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Desarrollo del contenido</h2>
                 <div class="w-full max-w-8xl mx-auto">
-                        <div class="space-y-8 text-slate-700 leading-relaxed">
-                            <div id="ecuaciones-intro" class="content-section">
-                                <h3 class="text-xl font-bold text-green-700 mb-2">¿Qué es la escucha activa?</h3>
-                                <!-- Modern card -->
-                                <div
-                                    class="rounded-2xl p-6 border border-slate-200 shadow-sm bg-gradient-to-br from-white to-slate-50">
-                                    <!-- Icon header -->
-                                    <div class="flex items-center mb-4">
-                                        <span
-                                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 mr-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
-                                            </svg>
-                                        </span>
-                                        <h3 class="text-lg font-semibold text-slate-800">¿Qué es la escucha activa?</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="tab-button active rounded-t-lg border border-green-500 bg-green-600 px-4 py-2 text-sm font-semibold text-white" data-tab="tab-definicion">
+                            Dato e información
+                        </button>
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-base-de-datos">
+                            Bases de datos
+                        </button>
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-sgbd">
+                            Sistema Gestor de Bases de Datos (SGBD)
+                        </button>
+                    </div>
+                    <div id="tab-definicion" class="tab-panel rounded-b-lg border border-green-500 bg-white p-8 shadow-sm">
+                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                            En el desarrollo de software, esta distinción es constante los formularios capturan datos (lo que el usuario escribe en 
+                            cada campo), y el sistema, mediante su lógica de negocio, transforma esos datos en información significativa para el 
+                            usuario final, por ejemplo, un reporte de ventas o un historial de pedidos.
+                        </p>
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                            <article class="sm:my-6 flex-shrink-0">
+                                <div class="space-y-3">
+                                    <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-dato">
+                                        <span class="text-lg">➖</span>
+                                        <span class="font-semibold text-green-800">¿Qué es un dato?</span>
+                                    </button>
+                                    <div id="panel-dato" class="accordion-panel block rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                        <p class="text-slate-700 leading-relaxed">
+                                            Un dato es la unidad más básica y objetiva de representación de un hecho, un número, un texto, una fecha o un 
+                                            valor aislado que, por sí solo, no tiene un significado completo. Por ejemplo, el valor “19” o el texto “Pedro” 
+                                            son datos: existen, pero no comunican nada por sí mismos si no se sabe a qué corresponden.
+                                        </p>
                                     </div>
 
-                                    <!-- Content -->
-                                    <p class="text-slate-700 leading-relaxed">
-                                        <strong class="text-emerald-700">La escucha activa</strong> es una <span
-                                            class="font-semibold underline decoration-emerald-300">técnica de
-                                            comunicación</span> que consiste en <span
-                                            class="bg-amber-100 px-2 py-0.5 rounded-md">prestar toda la atención</span>
-                                        al <strong class="text-emerald-700">interlocutor</strong>.<br><br>
-
-                                        Esta atención debe ser <span class="font-semibold text-emerald-700">consciente y
-                                            completa</span> a lo que <strong class="text-emerald-700">otra
-                                            persona</strong> está diciendo.<br><br>
-
-                                        <span class="text-rose-500 font-semibold">¡No se trata solo de captar
-                                            sonidos!</span><br>
-                                        Se trata de <span
-                                            class="bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-lg font-semibold">entender,
-                                            procesar y responder</span> de manera <strong
-                                            class="text-emerald-700">adecuada</strong> al mensaje.<br><br>
-
-                                        <strong class="text-emerald-700">Escuchar activamente</strong> implica:
-                                    </p>
-
-                                    <!-- Feature list -->
-                                    <ul class="mt-4 space-y-2 text-slate-700">
-                                        <li class="flex items-start">
-                                            <span
-                                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 mr-2 mt-0.5">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M5 13l4 4L19 7" />
-                                                </svg>
-                                            </span>
-                                            <span><strong>Estar presente</strong> en la conversación</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <span
-                                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 mr-2 mt-0.5">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M5 13l4 4L19 7" />
-                                                </svg>
-                                            </span>
-                                            <span><strong>Sin interrumpir</strong> ni distraerse</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <span
-                                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 mr-2 mt-0.5">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M5 13l4 4L19 7" />
-                                                </svg>
-                                            </span>
-                                            <span><strong>Mostrar interés genuino</strong> por lo que el otro
-                                                dice</span>
-                                        </li>
-                                    </ul>
-
-                                    <!-- Footer note -->
-                                    <p class="mt-4 text-slate-600 italic text-sm">
-                                        La escucha activa se asocia predominantemente con interacciones más <strong
-                                            class="text-emerald-700">interpersonales</strong>.
-                                    </p>
-                                </div>
-
-                                <!-- Controles de síntesis de voz para esta sección -->
-                                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
-                                    data-target="ecuaciones-intro">
-                                    <button
-                                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
-                                        <span class="mr-1">▶️</span> Leer
+                                    <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-informacion">
+                                        <span class="text-lg">➕</span>
+                                        <span class="font-semibold text-green-800">¿Qué es la información?</span>
                                     </button>
-                                    <button
-                                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                                        disabled>
-                                        <span class="mr-1">⏸️</span> Pausar
-                                    </button>
-                                    <button
-                                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                                        disabled>
-                                        <span class="mr-1">⏹️</span> Detener
-                                    </button>
-                                    <div class="flex items-center ml-2">
-                                        <label for="speech-rate-ecuaciones-intro"
-                                            class="text-sm text-green-800 mr-2">Velocidad:</label>
-                                        <input type="range" class="speech-rate" id="speech-rate-ecuaciones-intro"
-                                            min="0.5" max="2" step="0.1" value="1" class="w-24">
+                                    <div id="panel-informacion" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                        <p class="text-slate-700 leading-relaxed">
+                                            La información es el resultado de procesar, organizar y contextualizar datos para que adquieran significado y utilidad. 
+                                            Por ejemplo, si se sabe que el valor “19” corresponde a la edad de un usuario llamado “Pedro”, entonces se tiene información: 
+                                            “Pedro tiene 19 años”. La información permite tomar decisiones y comprender mejor la realidad, mientras que los datos son 
+                                            simplemente hechos aislados.
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div id="ecuaciones-resolucion" class="content-section">
-                                <h2 class="text-xl font-bold text-green-700 mb-2">Tipos de escucha</h2>
-                                <div class="rounded-xl p-4 border border-green-200 shadow-sm">
-                                    <p class="text-green-800 font-medium mb-4">
-                                        Existen diferentes tipos de escucha, según la actitud que se tiene frente al
-                                        mensaje:
-                                    </p>
-
-                                    <div
-                                        class="w-full h-32 sm:h-48 md:h-64 xl:h-80 bg-white rounded flex items-center justify-center overflow-hidden image-container my-4">
-                                        <img src="img/1.png" alt="Imagen relacionada con tipos de escucha"
-                                            class="max-w-full max-h-full object-contain expandable-image"
-                                            style="object-fit:contain;" loading="lazy" />
-                                        <button class="expand-btn" data-img="img/1.png">🔍</button>
-                                    </div>
-
-                                    <!-- Consejos para superar barreras -->
-                                    <div class="bg-white rounded-lg p-4 border border-green-300 mb-4">
-                                        <h4 class="font-bold text-green-800 mb-2 flex items-center">
-                                            <span class="mr-2">💡</span> Ejemplo:
-                                        </h4>
-                                        <ul class="space-y-2">
-                                            <li class="flex items-center">
-                                                <span>Si mientras alguien habla tú estás viendo el celular, estás
-                                                    haciendo escucha pasiva o selectiva. Si dejas el celular y te
-                                                    concentras en lo que dice, estás haciendo escucha activa.</span>
-                                            </li>
-                                        </ul>
-
-                                        <div class="w-full h-32 sm:h-48 md:h-64 xl:h-80 bg-white rounded flex items-center justify-center overflow-hidden image-container my-4">
-                                            <img src="img/2.jpg" alt="Imagen relacionada con tipos de escucha"
-                                                class="max-w-full max-h-full object-contain expandable-image"
-                                                style="object-fit:contain;" loading="lazy" />
-                                            <button class="expand-btn" data-img="img/2.jpg">🔍</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Controles de síntesis de voz para esta sección -->
-                                <div class="speech-controls mb-4 p-3 bg-green-100 rounded-lg flex items-center flex-wrap gap-2 mt-4"
-                                    data-target="ecuaciones-resolucion">
-                                    <button
-                                        class="play-btn bg-green-600 hover:bg-green-700 text-white font-medium py-1 px-4 rounded-full flex items-center">
-                                        <span class="mr-1">▶️</span> Leer
-                                    </button>
-                                    <button
-                                        class="pause-btn bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                                        disabled>
-                                        <span class="mr-1">⏸️</span> Pausar
-                                    </button>
-                                    <button
-                                        class="stop-btn bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-4 rounded-full flex items-center"
-                                        disabled>
-                                        <span class="mr-1">⏹️</span> Detener
-                                    </button>
-                                    <div class="flex items-center ml-2">
-                                        <label for="speech-rate-ecuaciones-resolucion"
-                                            class="text-sm text-green-800 mr-2">Velocidad:</label>
-                                        <input type="range" class="speech-rate" id="speech-rate-ecuaciones-resolucion"
-                                            min="0.5" max="2" step="0.1" value="1" class="w-24">
-                                    </div>
+                            </article>
+                            <div class="sm:my-6 flex-shrink-0">
+                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                    <img src="img/Datos e Informacion.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/Datos e Informacion.png">🔍</button>
                                 </div>
                             </div>
-
-
-                            <h2 class="text-xl font-bold text-green-700 mb-2">Dimensiones de la escucha activa</h2>
-                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
-
-                                <div
-                                    class="w-full h-32 sm:h-48 md:h-64 xl:h-80 bg-white rounded flex items-center justify-center overflow-hidden image-container my-4">
-                                    <img src="img/3.png" alt="Imagen relacionada con tipos de escucha"
-                                        class="max-w-full max-h-full object-contain expandable-image"
-                                        style="object-fit:contain;" loading="lazy" />
-                                    <button class="expand-btn" data-img="img/3.png">🔍</button>
-                                </div>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-green-700 mb-2">Elementos de la escucha activa</h2>
-                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
-                                <p class="text-slate-700 mb-4">
-                                    La escucha activa tiene seis elementos principales que la hacen efectiva. A
-                                    continuación los verás de forma clara y práctica:
-                                </p>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
-                                        <span class="text-green-600 text-xl mr-3">👀</span>
-                                        <div>
-                                            <h4 class="font-semibold text-green-800">Atención</h4>
-                                            <p class="text-slate-700 text-sm">Concentrarse en lo que la otra persona
-                                                dice, evitando distracciones.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
-                                        <span class="text-green-600 text-xl mr-3">🤝</span>
-                                        <div>
-                                            <h4 class="font-semibold text-green-800">Empatía</h4>
-                                            <p class="text-slate-700 text-sm">Ver el mundo como lo ve la otra persona y
-                                                comprender sus emociones y perspectivas.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
-                                        <span class="text-green-600 text-xl mr-3">⚖️</span>
-                                        <div>
-                                            <h4 class="font-semibold text-green-800">No juzgar</h4>
-                                            <p class="text-slate-700 text-sm">Suspender el juicio para crear un espacio
-                                                seguro donde el otro pueda expresarse.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
-                                        <span class="text-green-600 text-xl mr-3">🤫</span>
-                                        <div>
-                                            <h4 class="font-semibold text-green-800">Valorar el silencio</h4>
-                                            <p class="text-slate-700 text-sm">Permitir pausas para que la persona
-                                                procese sus ideas y emociones.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
-                                        <span class="text-green-600 text-xl mr-3">❓</span>
-                                        <div>
-                                            <h4 class="font-semibold text-green-800">Clarificar</h4>
-                                            <p class="text-slate-700 text-sm">Asegurarse de entender el mensaje mediante
-                                                preguntas y confirmaciones.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start bg-white rounded-lg p-3 border border-slate-200">
-                                        <span class="text-green-600 text-xl mr-3">💬</span>
-                                        <div>
-                                            <h4 class="font-semibold text-green-800">Retroalimentar</h4>
-                                            <p class="text-slate-700 text-sm">Responder con respeto y claridad,
-                                                mostrando que se comprendió el mensaje (palabras o gestos).</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-green-700 mb-2">Barreras en la escucha activa</h2>
-                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
-                                <div class="barriers-block">
-                                    <p class="barriers-intro">Las barreras son obstáculos que dificultan la escucha
-                                        activa. Algunas comunes son:</p>
-                                    <ul class="barriers-grid" role="list">
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/distraccion.png" alt="Icono paráfrasis"
-                                                    class="tech-icon-img" loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Distracciones</h4>
-                                                <p class="barrier-text">Ruido, celular, pensamientos ajenos a la
-                                                    conversación.</p>
-                                            </div>
-                                        </li>
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/sexismo.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Prejuicios</h4>
-                                                <p class="barrier-text">Juzgar antes de escuchar todo el mensaje.</p>
-                                            </div>
-                                        </li>
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/chat.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Interrumpir</h4>
-                                                <p class="barrier-text">Hablar sin dejar que el otro termine.</p>
-                                            </div>
-                                        </li>
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/burbuja.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Falta de empatía</h4>
-                                                <p class="barrier-text">No mostrar empatía o atención real.</p>
-                                            </div>
-                                        </li>
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/positividad.png" alt="Icono paráfrasis"
-                                                    class="tech-icon-img" loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Emociones</h4>
-                                                <p class="barrier-text">Estar enojado, ansioso o triste puede impedir
-                                                    una buena escucha.</p>
-                                            </div>
-                                        </li>
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/analisis.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Mucha información</h4>
-                                                <p class="barrier-text">Demasiada información por muchos canales al
-                                                    tiempo.</p>
-                                            </div>
-                                        </li>
-                                        <li class="barrier-item">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/no-hablar.png" alt="Icono paráfrasis"
-                                                    class="tech-icon-img" loading="lazy">
-                                            </div>
-                                            <div class="barrier-content">
-                                                <h4 class="barrier-title">Querer hablar siempre</h4>
-                                                <p class="barrier-text">Tendencia a hablar más que escuchar, lo que
-                                                    genera malentendidos y conflictos.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <p class="barriers-example"><strong>Ejemplo:</strong> Si estás molesto y alguien te
-                                        habla, puedes no entender bien lo que dice porque estás enfocado en tus
-                                        emociones. Esa es una barrera emocional.</p>
-                                </div>
-                            </div>
-                            <!-- Técnicas de la escucha activa: nueva sección (insertada debajo del bloque de barreras) -->
-                            <section id="tecnicas-escucha" class="mt-8">
-                                <h2 class="text-xl font-bold text-green-700 mb-2">Técnicas de la escucha activa: paráfrasis, preguntas, contacto visual, gestos</h2>
-                                <p class="text-slate-700 leading-relaxed mb-4">
-                                    Estas técnicas ayudan a demostrar que
-                                    realmente estás escuchando y comprendiendo a la otra persona. Se utilizan en la
-                                    <strong class="text-green-800">escucha activa</strong> y mejoran la comunicación
-                                    interpersonal.
-                                </p>
-
-                                <div class="tech-grid">
-                                    <!-- Paráfrasis o reformulación -->
-                                    <article class="tech-card">
-                                        <div class="tech-header">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/icono1.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <h3 class="tech-title">Paráfrasis o reformulación</h3>
-                                        </div>
-                                        <p class="tech-text">Es la técnica de repetir con tus propias palabras lo que el
-                                            interlocutor acaba de expresar. Su objetivo es demostrar que has escuchado y
-                                            comprendido el mensaje.</p>
-                                        <div class="tech-subcard">
-                                            <p class="tech-subtitle">Ejemplo:</p>
-                                            <ul class="tech-list">
-                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
-                                                            height="20" fill="none" viewBox="0 0 20 20">
-                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
-                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
-                                                                stroke-width="2" fill="none" />
-                                                        </svg></span>Tu compañero/a dice: "Estoy muy estresado por los
-                                                    exámenes y no tengo tiempo para salir con mis amigos."</li>
-                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
-                                                            height="20" fill="none" viewBox="0 0 20 20">
-                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
-                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
-                                                                stroke-width="2" fill="none" />
-                                                        </svg></span>Tú respondes: "Parece que te sientes abrumado con
-                                                    todo lo que tienes que estudiar, ¿cierto?"</li>
-                                            </ul>
-                                        </div>
-                                    </article>
-
-                                    <!-- Preguntas aclaratorias (clarificación) -->
-                                    <article class="tech-card">
-                                        <div class="tech-header">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/icono2.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <h3 class="tech-title">Preguntas aclaratorias (clarificación)</h3>
-                                        </div>
-                                        <p class="tech-text">Consiste en hacer preguntas específicas y generalmente
-                                            abiertas después de que el interlocutor ha terminado de hablar. Buscan
-                                            profundizar en la conversación o aclarar un punto que no se entendió
-                                            completamente.</p>
-                                        <div class="tech-subcard">
-                                            <p class="tech-subtitle">Ejemplo:</p>
-                                            <ul class="tech-list">
-                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
-                                                            height="20" fill="none" viewBox="0 0 20 20">
-                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
-                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
-                                                                stroke-width="2" fill="none" />
-                                                        </svg></span>Tu compañero/a dice: "Mi jefe me dijo que cambiara
-                                                    el enfoque del proyecto, pero no sé por dónde empezar."</li>
-                                                <li><span class="tech-list-icon" aria-hidden="true"><svg width="20"
-                                                            height="20" fill="none" viewBox="0 0 20 20">
-                                                            <circle cx="10" cy="10" r="10" fill="#e6f4ea" />
-                                                            <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#2e8b57"
-                                                                stroke-width="2" fill="none" />
-                                                        </svg></span>Tú preguntas: "¿A qué te refieres exactamente con
-                                                    'cambiar el enfoque'?" o "¿Qué te motivó a tomar esa opción?"</li>
-                                            </ul>
-                                        </div>
-                                    </article>
-
-                                    <!-- Contacto visual -->
-                                    <article class="tech-card">
-                                        <div class="tech-header">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/icono3.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <h3 class="tech-title">Contacto visual</h3>
-                                        </div>
-                                        <p class="tech-text">Es la herramienta no verbal más útil y fundamental, que
-                                            implica mirar regularmente a la cara y los ojos de la persona con la que
-                                            hablas. Demuestra que estás en "modo escucha", prestando atención y
-                                            mostrando interés, lo cual ayuda a generar confianza.</p>
-                                        <div class="tech-subcard">
-                                            <p class="tech-subtitle">Recomendación:</p>
-                                            <ul class="tech-list">
-                                                <li>Mientras escuchas: Mantener el contacto visual de manera regular
-                                                    (con breves pausas para que no sea intimidante) para indicarle al
-                                                    interlocutor que estás receptivo.</li>
-                                            </ul>
-                                        </div>
-                                    </article>
-
-                                    <!-- Gestos -->
-                                    <article class="tech-card">
-                                        <div class="tech-header">
-                                            <div class="tech-icon" aria-hidden="true">
-                                                <img src="img/icono4.png" alt="Icono paráfrasis" class="tech-icon-img"
-                                                    loading="lazy">
-                                            </div>
-                                            <h3 class="tech-title">Gestos</h3>
-                                        </div>
-                                        <p class="tech-text">Son señales no verbales que refuerzan la atención y la
-                                            empatía. La postura debe ser abierta y receptiva (no cruzar los brazos), y
-                                            los gestos sirven como micro-respuestas para mantener el flujo de la
-                                            conversación.</p>
-                                        <div class="tech-subcard">
-                                            <p class="tech-subtitle">Recomendación:</p>
-                                            <ul class="tech-list">
-                                                <li>Mientras escuchas: Asentir con la cabeza de vez en cuando, mantener
-                                                    una sonrisa ligera y orientar el cuerpo hacia el hablante. Esto
-                                                    genera confianza y motiva a seguir hablando.</li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </div>
-                            </section>
+                        </section>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800">
+                            ✨ <strong>Además, es importante reconocer que los datos pueden clasificarse según su grado de organización. Los datos 
+                            estructurados son aquellos que siguen un formato fijo y predecible, como los campos de una tabla (nombre, edad, 
+                            correo electrónico); los datos semiestructurados poseen cierta organización, pero no un esquema rígido, como un 
+                            archivo JSON o XML y los datos no estructurados carecen de un formato predefinido, como una imagen, un audio o 
+                            un texto libre. Esta clasificación es relevante porque, más adelante en el curso, aprenderás que las bases de 
+                            datos relacionales están pensadas principalmente para gestionar datos estructurados.</strong>
+                            </p>
+                             <button class="expand-btn2" data-img="img/Diferencia entre datos.png">💡</button>
                         </div>
-
-                        <br>
-                        <h2 class="text-xl font-bold text-green-700 mb-2">Escucha empática y escucha crítica: </h2>
-                            <div class="rounded-xl p-4 border border-green-200 shadow-sm">
-                                <p class="text-slate-700 mb-4">
-                                    Existen diferentes formas de escuchar según el propósito. Dos muy importantes son la escucha empática y la escucha crítica.
+                    </div>
+                    <!-- Tab: Base de Datos -->
+                    <div id="tab-base-de-datos" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                            <div>
+                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                Una base de datos es un conjunto organizado y estructurado de datos relacionados entre sí, que se almacena de 
+                                forma persistente en un medio digital y que puede ser consultado, actualizado y gestionado de manera eficiente. 
+                                <br><br>A diferencia de un simple archivo de texto o una hoja de cálculo, una base de datos está diseñada para evitar 
+                                redundancia, mantener la integridad de la información y permitir el acceso simultáneo de múltiples usuarios o procesos.
                                 </p>
-                                
-                                <!-- Tabla de conceptos -->
-                                <div class="mt-8 overflow-x-auto">
-                                    <table class="w-full border-collapse bg-white rounded-xl shadow-md overflow-hidden">
-                                        <thead class="bg-gradient-to-r from-green-500 to-green-600 text-white">
-                                            <tr>
-                                                <th class="px-4 py-3 text-left font-semibold">ASPECTO</th>
-                                                <th class="px-4 py-3 text-left font-semibold">ESCUCHA EMPÁTICA</th>
-                                                <th class="px-4 py-3 text-left font-semibold">ESCUCHA CRÍTICA</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-slate-700">
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Propósito</td>
-                                                <td class="px-4 py-3">Comprender la experiencia emocional y la perspectiva del otro.</td>
-                                                <td class="px-4 py-3">Evaluar la calidad de la información y la solidez de los argumentos.</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Foco</td>
-                                                <td class="px-4 py-3">Emociones, necesidades, contexto personal.</td>
-                                                <td class="px-4 py-3">Evidencias, lógica, supuestos, coherencia.</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Actitud</td>
-                                                <td class="px-4 py-3">Acompañamiento, no juicio, validación.</td>
-                                                <td class="px-4 py-3">Distanciamiento analítico, escepticismo razonable.</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Preguntas típicas</td>
-                                                <td class="px-4 py-3">“¿Cómo te sientes?”, “¿Qué necesitas?”, “¿Qué piensas?”</td>
-                                                <td class="px-4 py-3">“¿Cuál es tu evidencia?”, “¿Qué argumentos consideraste?”</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Técnicas</td>
-                                                <td class="px-4 py-3">Paráfrasis, reflejo emocional, silencios, síntesis de acuerdos.</td>
-                                                <td class="px-4 py-3">Identificar falacias, pedir fuentes, preguntar datos, resumir argumentos.</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">¿Cómo saber si lo estoy haciendo bien?</td>
-                                                <td class="px-4 py-3">El emisor se siente comprendido, calma y apertura.</td>
-                                                <td class="px-4 py-3">Argumentos más claros, decisiones mejor informadas.</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Riesgos si la utilizo mucho</td>
-                                                <td class="px-4 py-3">Sobrecarga emocional, pérdida de límites en soluciones.</td>
-                                                <td class="px-4 py-3">Frialdad, confrontación, necesidad de diálogo.</td>
-                                            </tr>
-                                            <tr class="border-b border-green-100 hover:bg-green-50 transition-colors">
-                                                <td class="px-4 py-3 font-medium text-green-700">Cuándo utilizar</td>
-                                                <td class="px-4 py-3">Conflictos, resolución de tensiones, apoyo socioemocional.</td>
-                                                <td class="px-4 py-3">Debates, decisiones, confrontación de ideas, informes/propuestas.</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                    
                             </div>
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                    <img src="img/archivos vs base de datos.png" alt="Imagen que compara archivos y bases de datos"
+                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/archivos vs base de datos.png">🔍</button>
+                                </div>  
+                            </div>
+                        </section>
+                        <div class="max-w-full my-6">
+                            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gradient-to-r from-green-700 to-green-600">
+                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Aspecto</th>
+                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Sistema de archivos tradicional</th>
+                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Base de datos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Definición</td>
+                                    <td class="py-4 px-6 text-gray-700">Archivos planos independientes, gestionados directamente por cada programa</td>
+                                    <td class="py-4 px-6 text-gray-600">Conjunto organizado y estructurado de datos relacionados entre sí</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Almacenamiento</td>
+                                    <td class="py-4 px-6 text-gray-700">Disperso en archivos separados por programa</td>
+                                    <td class="py-4 px-6 text-gray-600">Centralizado, persistente en medio digital</td>
+                                    </tr>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Redundancia</td>
+                                    <td class="py-4 px-6 text-gray-700">Alta — la misma información se repite en varios archivos</td>
+                                    <td class="py-4 px-6 text-gray-600">Baja — diseñada para evitarla</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Consistencia</td>
+                                    <td class="py-4 px-6 text-gray-700">Propensa a inconsistencias (un dato se actualiza en un archivo pero no en otro)</td>
+                                    <td class="py-4 px-6 text-gray-600">Mantiene la integridad de la información</td>
+                                    </tr>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Acceso concurrente</td>
+                                    <td class="py-4 px-6 text-gray-700">Sin mecanismos adecuados para múltiples usuarios/procesos</td>
+                                    <td class="py-4 px-6 text-gray-600">Permite acceso simultáneo de múltiples usuarios o procesos</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Compartir información entre programas</td>
+                                    <td class="py-4 px-6 text-gray-700">Difícil</td>
+                                    <td class="py-4 px-6 text-gray-600">Facilitado por la gestión centralizada</td>
+                                    </tr>
+                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Seguridad / control de acceso</td>
+                                    <td class="py-4 px-6 text-gray-700">Prácticamente ausente</td>
+                                    <td class="py-4 px-6 text-gray-600">Incluye mecanismos de gestión y control</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
+                                    <td class="py-4 px-6 font-semibold text-gray-800">Gestión</td>
+                                    <td class="py-4 px-6 text-gray-700">Cada programa gestiona sus propios archivos</td>
+                                    <td class="py-4 px-6 text-gray-600">Delegada a un software especializado (SGBD)</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800 font-bold">
+                            ✨ <strong>Por ejemplo, en una aplicación de comercio electrónico, la base de datos almacena de forma organizada la 
+                                información de los clientes, los productos, los pedidos y los pagos, de manera que cada uno de estos conjuntos 
+                                de datos pueda relacionarse entre sí sin duplicar información innecesariamente.</strong>
+                            </p>
+                        </div>
+                        <section class="sm:my-6 flex-shrink-0">
+                            <div class="space-y-3" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-ejemplo" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Ejemplo</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-ejemplo" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                            Piensa en el proyecto de software que te gustaría desarrollar en un futuro (una app, un sistema web, un videojuego, etc.). 
+                                            Escribe una lista de al menos cuatro “conjuntos de datos” que dicho sistema necesitaría almacenar en una base de datos 
+                                            (por ejemplo: usuarios, productos, transacciones). No es necesario diseñar tablas todavía, solo identificar qué información 
+                                            se debería guardar. Adicionalmente, describe un problema que podría presentarse si esa información se manejara en 
+                                            archivos de Excel independientes en lugar de una base de datos.
+                                        </p>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/Ejemplo software clinica.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/Ejemplo software clinica.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab-sgbd" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                            <div>
+                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                Un Sistema Gestor de Bases de Datos (SGBD), conocido en inglés como DBMS (Database Management System), es el software especializado 
+                                que permite crear, administrar, consultar y proteger una base de datos. <br> <br> El SGBD actúa como intermediario entre el usuario o la aplicación 
+                                y los datos físicamente almacenados, ofreciendo mecanismos para garantizar la seguridad, la integridad, la concurrencia y el rendimiento 
+                                en el acceso a la información. En otras palabras, ninguna aplicación accede “directamente” a los archivos donde reposan los datos 
+                                siempre lo hace a través del SGBD, que traduce las solicitudes del programa (generalmente escritas en SQL) en operaciones sobre el 
+                                almacenamiento físico.
+ 
+                                <br><br>Dado que este es uno de los conceptos más importantes del curso, a continuación, profundizaremos en sus funciones, su arquitectura, 
+                                los tipos de SGBD que existen y quiénes lo utilizan dentro de una organización.
+                                </p>
+                            </div>
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                    <img src="img/Funciones del SGBD.png" alt="Imagen que compara archivos y bases de datos"
+                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/Funciones del SGBD.png">🔍</button>
+                                </div>  
+                            </div>
+                        </section>
+                        <section class="sm:my-6 flex-shrink-0">
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-funciones" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Funciones principales de un SGBD</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-funciones" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Un SGBD no es simplemente un lugar donde se guardan datos es un software que cumple funciones muy específicas para garantizar que la información sea confiable, segura y esté siempre disponible. Las funciones más relevantes son:
+                                            </p>
+                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
+                                                <li>
+                                                    <strong>Definición de datos:</strong> 
+                                                    <p>Permite crear y modificar la estructura de la base de datos (tablas, tipos de datos, relaciones) mediante un lenguaje de definición de datos (DDL).</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Manipulación de datos:</strong> 
+                                                    <p>Permite insertar, consultar, actualizar y eliminar información mediante un lenguaje de manipulación de datos (DML), como SQL.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Control de acceso y seguridad:</strong> 
+                                                    <p>Gestiona que múltiples usuarios o procesos puedan leer y escribir datos al mismo tiempo sin generar inconsistencias o pérdida de información.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Seguridad y control de acceso:</strong> 
+                                                    <p>Define qué usuarios pueden ver o modificar determinada información, mediante permisos y roles.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Integridad de los datos:</strong> 
+                                                    <p>Aplica reglas y restricciones (como llaves primarias o valores obligatorios) para evitar datos incorrectos o inconsistentes.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Respaldo y recuperación:</strong> 
+                                                    <p>permite generar copias de seguridad y restaurar la información en caso de fallas del sistema, errores humanos o desastres.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Independencia de los datos:</strong> 
+                                                    <p>Permite que los cambios en la estructura física de almacenamiento no afecten directamente a las aplicaciones que consultan la información.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/SGBD.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/SGBD.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-arquitectura" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Arquitectura de un SGBD</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-arquitectura" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Para lograr la independencia de los datos mencionada anteriormente, la mayoría de los SGBD se basan en la arquitectura de tres niveles propuesta por el estándar ANSI/SPARC, la cual organiza la base de datos en tres capas o niveles de abstracción.
+                                            </p>
+                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
+                                                <li>
+                                                    <strong>Nivel interno (o físico):</strong> 
+                                                    <p>describe cómo se almacenan realmente los datos en el disco: archivos, índices, estructuras de almacenamiento. Es el nivel más 
+                                                        cercano al hardware.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Nivel conceptual (o lógico):</strong> 
+                                                    <p>Describe qué datos se almacenan y qué relaciones existen entre ellos, sin entrar en detalles de cómo se almacenan físicamente. 
+                                                        Es el nivel en el que trabajaremos principalmente durante este curso, mediante el modelo entidad-relación y el modelo relacional.</p>
+                                                </li>
+                                                <li>
+                                                    <strong>Nivel externo (o de vista del usuario):</strong> 
+                                                    <p>Describe cómo cada grupo de usuarios o aplicación específica “ve” una parte de la base de datos, de acuerdo con sus necesidades 
+                                                        (por ejemplo, un cajero solo ve la información de ventas, no la de nómina).</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/arquitectura a 3 niveles.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/arquitectura a 3 niveles.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-tipos" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Tipos de SGBD según el modelo de datos</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-tipos" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                No todos los SGBD organizan la información de la misma manera. Según el modelo de datos que utilizan para estructurar la información, se pueden clasificar en   .
+                                            </p>
+                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
+                                                <li>
+                                                    <strong>SGBD relacionales (RDBMS):</strong> 
+                                                    <p>
+                                                        Organizan la información en tablas compuestas por filas y columnas, relacionadas entre sí mediante llaves. Son el enfoque que 
+                                                        estudiaremos a profundidad en este curso. Ejemplos: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>SGBD NoSQL (“Not only SQL”):</strong> 
+                                                    <p>
+                                                        Surgieron para manejar grandes volúmenes de datos y estructuras más flexibles. Se dividen a su vez en varios subtipos documentales 
+                                                        (almacenan documentos tipo JSON, ejemplo: MongoDB), clave-valor (almacenan pares simples de clave y valor, ejemplo: Redis), columnares 
+                                                        (optimizados para grandes volúmenes analíticos, ejemplo: Cassandra) y de grafos (representan datos como nodos y relaciones, ejemplo: Neo4j).
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>SGBD jerárquicos y de red:</strong> 
+                                                    <p>
+                                                        Modelos más antiguos, hoy en desuso en nuevos desarrollos, que organizaban los datos en estructuras 
+                                                        de árbol o de red. Se mencionan por su valor histórico, ya que fueron el antecedente directo del modelo relacional.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/tipo de sgbd segun el modelo de datos.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/tipo de sgbd segun el modelo de datos.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-            </div>
 
-
-
+            </section>
             <!-- Actividades Prácticas -->
-            <div id="actividades" class="content-pane">
+            <div id="actividades" class="content-pane pb-28">
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Actividades prácticas</h2>
-                
-                <!-- Actividad 1: Quiz de seguimiento -->
-                <div class="bg-white border-l-4 border-green-500 rounded-lg shadow-sm p-6 mb-8">
-                    <h3 class="text-xl font-bold text-green-700 mb-4">Actividad 1: Quiz de seguimiento</h3>
-                    
-                    <!-- Pregunta 1 -->
-                    <div class="mb-6" data-activity="1">
-                        <p class="font-semibold text-slate-800 mb-3">Pregunta 1</p>
-                        <p class="text-slate-700 mb-4">La técnica de Paráfrasis es esencial en la escucha activa porque su principal objetivo es ____________________, ayudando al emisor a sentirse comprendido y permitiendo confirmar la interpretación.</p>
-                        <div class="space-y-2">
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
-                                <span class="font-medium">A.</span> dar una solución rápida.
+                 <div class="max-w-full mx-auto mb-4 ">
+                    <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                        <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Sopa de Letras: Bases de Datos y SGBD</h1>
+                        <p class="text-green-600 mb-6 text-sm md:text-base">
+                            Arrastra el mouse sobre las letras (horizontal, vertical o diagonal) para encontrar las palabras.
+                        </p>
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <!-- Grid -->
+                            <div class="flex-1 flex justify-center">
+                            <div id="grid" class="inline-grid select-none border-2 border-green-300 rounded-lg overflow-hidden bg-green-100 p-1"></div>
                             </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
-                                <span class="font-medium">B.</span> confirmar que has entendido el mensaje.
+                            <!-- Palabras -->
+                            <div class="w-full md:w-56 shrink-0">
+                            <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                                <p class="font-semibold text-green-800 mb-2">Palabras a encontrar</p>
+                                <ul id="wordList" class="space-y-1 text-sm text-gray-700"></ul>
+                                <p id="progress" class="mt-4 text-green-700 font-semibold text-sm"></p>
                             </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
-                                <span class="font-medium">C.</span> evaluar la evidencia.
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
-                                <span class="font-medium">D.</span> distraer al interlocutor.
+                            <button id="newGameBtn"
+                                class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-xl transition-colors duration-200">
+                                Nueva sopa de letras
+                            </button>
                             </div>
                         </div>
-                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                    </div>
+                </div>
+
+                 <div class="max-w-full mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+
+                    <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Relaciona los Conceptos</h1>
+                    <p class="text-green-600 mb-6 text-sm md:text-base">
+                        Selecciona un concepto de la izquierda y luego su definición correcta a la derecha. Si aciertan, se conectan en verde; si no, se indicará que no coinciden.
+                    </p>
+
+                    <div id="feedbackMsg2" class="hidden mb-4 px-4 py-3 rounded-lg text-sm font-medium"></div>
+
+                    <div class="relative">
+                        <svg id="linesSvg2" class="absolute inset-0 w-full h-full pointer-events-none"></svg>
+
+                        <div class="grid grid-cols-2 gap-6 md:gap-16 relative z-10">
+                        <div id="colConcepts2" class="space-y-3"></div>
+                        <div id="colDefs2" class="space-y-3"></div>
+                        </div>
                     </div>
 
-                    <!-- Pregunta 2 -->
-                    <div class="mb-6" data-activity="1">
-                        <p class="font-semibold text-slate-800 mb-3">Pregunta 2</p>
-                        <p class="text-slate-700 mb-4">¿Cuál pregunta está relacionada con escucha empática?</p>
-                        <div class="space-y-2">
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
-                                <span class="font-medium">A.</span> ¿Cómo te sentiste?
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
-                                <span class="font-medium">B.</span> ¿Por qué te quejas tanto?
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
-                                <span class="font-medium">C.</span> ¿Cuál es tu evidencia?
-                            </div>
-                            <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
-                                <span class="font-medium">D.</span> ¿Por qué eres tan negativa?
-                            </div>
-                        </div>
-                        <div class="activity-feedback mt-3 text-sm font-medium"></div>
+                    <p id="progress2" class="mt-6 text-green-700 font-semibold text-sm"></p>
+
+                    <button id="newGameBtn2" type="button"
+                        class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-xl transition-colors duration-200">
+                        Nuevo juego
+                    </button>
                     </div>
-
-                    <button id="check-activity-1-btn"
-                        class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Verificar respuestas</button>
-                    <div id="activity-1-result" class="mt-4 font-medium"></div>
-
-
-                    <!-- Actividad 2: Video de YouTube y pregunta -->
-                    <div class="mt-8 pt-8 border-t-2 border-slate-200">
-                        <h3 class="text-xl font-bold text-green-800 mb-4">Actividad 2: Análisis de escucha activa</h3>
-                        
-                        <!-- Video de YouTube -->
-                        <div class="mb-6">
-                            <p class="text-slate-700 mb-4">Mira el siguiente video sobre escucha activa antes de responder la pregunta:</p>
-                            <a href="https://www.youtube.com/watch?v=ksfwBqngdEU" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                                Ver video en YouTube
-                            </a>
-                            <p class="text-sm text-slate-600 mt-3"><em>El video se abrirá en una nueva pestaña</em></p>
-                        </div>
-
-                        <!-- Pregunta de selección múltiple -->
-                        <div class="mb-6" data-activity="2">
-                            <p class="font-semibold text-slate-800 mb-3">Pregunta de selección múltiple</p>
-                            <p class="text-slate-700 mb-4">¿Cuál es la principal razón por la que el comportamiento de Homero Simpson en la escena con Marge es un ejemplo de falta de escucha activa?</p>
-                            <div class="space-y-2">
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="A">
-                                    <span class="font-medium">A.</span> Muestra una ausencia de atención plena, ya que está distraído y sus respuestas son genéricas y vacías.
-                                </div>
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="B">
-                                    <span class="font-medium">B.</span> Se aleja e invalida la comunicación con Marge.
-                                </div>
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="C">
-                                    <span class="font-medium">C.</span> Sobrecarga de información a Marge y no la deja hablar.
-                                </div>
-                                <div class="activity-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-green-300 transition-colors" data-value="D">
-                                    <span class="font-medium">D.</span> Decide juzgar a Marge sobre su viaje sin consultarle previamente.
-                                </div>
-                            </div>
-                            <div class="activity-feedback mt-3 text-sm font-medium"></div>
-                        </div>
-
-                        <button id="check-activity-2-btn"
-                            class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Validar respuesta</button>
-                        <div id="activity-2-result" class="mt-4 font-medium"></div>
-                    </div>
-
-                    
                 </div>
             </div>
 
             <!-- Evaluación -->
-            <div id="evaluacion" class="content-pane">
-                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Evaluación</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-slate-600 mb-6">Comprueba lo que has aprendido. Selecciona la respuesta correcta para
-                        cada pregunta.</p>
-                    <div id="quiz-container"></div>
-                    <button id="submit-quiz-btn"
-                        class="mt-6 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors">Finalizar
-                        evaluación</button>
-                    <div id="quiz-result" class="mt-4 text-lg font-bold"></div>
+            <div id="evaluacion" class="content-pane max-w-full mx-auto pb-28">
+                <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                    <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Evaluación</h1>
+                    <p class="text-green-600 mb-6">Responde las 10 preguntas y presiona "Enviar respuestas" para ver tu retroalimentación.</p>
+
+                    <form id="quizForm" class="space-y-6">
+                        <!-- Las preguntas se generan con JS -->
+                    </form>
+
+                    <div id="alertMsg" class="hidden mt-4 bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded-lg text-sm"></div>
+
+                    <button id="submitBtn" type="button"
+                        class="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-colors duration-200">
+                        Enviar respuestas
+                    </button>
+
+                    <div id="scoreBox" class="hidden mt-6 text-center bg-green-100 border border-green-300 rounded-xl py-4">
+                        <p class="text-green-800 font-bold text-lg" id="scoreText"></p>
+                    </div>
                 </div>
             </div>
-
             <!-- Recursos -->
-            <div id="recursos" class="content-pane">
+            <div id="recursos" class="content-pane pb-28">
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Recursos para profundizar</h2>
                 <p class="text-slate-700 leading-relaxed mb-6">Para ampliar tu conocimiento sobre ecuaciones y
                     desigualdades, te recomendamos explorar los siguientes enlaces y documentos:</p>
@@ -820,35 +554,34 @@
                     <li
                         class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-green-700">Juego interactivo de falso y verdadero sobre características de la escucha activa.</h3>
-                            <a href="https://wordwall.net/es/resource/23253204/escucha-activa" target="_blank"
+                            <h3 class="font-bold text-green-700">🚀 El DIAGRAMA CONCEPTUAL del Modelo ENTIDAD-RELACIÓN 👉 TODO lo que necesitas SABER, explicado FÁCIL (Video)</h3>
+                            <a href="https://www.youtube.com/watch?v=6fcNDvQYZk0" target="_blank"
                                 class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
                         </div>
                         <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
                             <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
                                 style="width:2cm;height:2cm;">
-                                <img src="img/Qr1.png" alt="Solución ejercicio 1"
+                                <img src="img/qr1.png" alt="Solución ejercicio 1"
                                     class="max-w-full max-h-full object-contain expandable-image"
                                     style="object-fit:contain;" loading="lazy">
-                                <button class="expand-btn" data-img="img/Qr1.png">🔍</button>
+                                <button class="expand-btn" data-img="img/qr1.png">🔍</button>
                             </div>
                         </div>
                     </li>
                     <!-- Recurso 2 -->
-                    <li
-                        class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                    <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-green-700">Video explicativo: El poder de la escucha activa</h3>
-                            <a href="https://www.youtube.com/watch?v=JLi7dLJAEuU"
-                                target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                            <h3 class="font-bold text-green-700">Practicar con Educaplay (Preguntas sobre Modelado E-R).</h3>
+                            <a href="https://www.educaplay.com/learning-resources/3504249-modelo_entidad_relacion.html" target="_blank"
+                                class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
                         </div>
                         <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
                             <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
                                 style="width:2cm;height:2cm;">
-                                <img src="img/Qr2.png" alt="Solución ejercicio 1"
+                                <img src="img/qr2.png" alt="Solución ejercicio 1"
                                     class="max-w-full max-h-full object-contain expandable-image"
                                     style="object-fit:contain;" loading="lazy">
-                                <button class="expand-btn" data-img="img/Qr2.png">🔍</button>
+                                <button class="expand-btn" data-img="img/qr2.png">🔍</button>
                             </div>
                         </div>
                     </li>
@@ -856,9 +589,9 @@
                     <li
                         class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-green-700">Sopa de letras </h3>
-                            <a href="https://es.educaplay.com/recursos-educativos/?q=escucha+activa"
-                                target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                            <h3 class="font-bold text-green-700">Software para diseñar diagramas.</h3>
+                            <a href="https://lucid.co/lucidchart?gad_campaignid=23980550328&gad_source=1&gbraid=0AAAAADLdSjAaM52dwDo22kBpDepeW_0By&gclid=CjwKCAjw7KvTBhA6EiwAWnutYaEMbFCXwLlgpv0tWsnzovRHuvYRPf2RhIDnQUcdHk2mTGLw3gssZhoCPZAQAvD_BwE&km_CPC_CampaignId=20355615746&km_CPC_Country=9215851&km_CPC_Device=c&km_CPC_Network=x&utm_campaign=_chart_ol_allcountries_mixed_pmax_strategic_&utm_medium=cpc&utm_source=google" target="_blank"
+                                class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
                         </div>
                         <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
                             <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
@@ -870,67 +603,47 @@
                             </div>
                         </div>
                     </li>
+                   
                 </ul>
             </div>
 
             <!-- Bibliografía -->
-            <div id="bibliografia" class="content-pane">
+            <div id="bibliografia" class="content-pane pb-28">
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Bibliografía</h2>
                 <div class="space-y-6">
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            López, A. (2015). <i>Comunicación y habilidades sociales</i>. ESIC.
+                            Jiménez Capel, M. Y. (2024). Bases de datos relacionales y modelado de datos (UF1471). 
                         </span>
                     </div>
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            Ministerio de Educación Nacional de Colombia (MEN). (2010). <i>Competencias ciudadanas: Serie Guías No. 6</i>. Recuperado de <a href="https://www.mineducacion.gov.co/" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.mineducacion.gov.co/</a>
+                            IC Editorial. Núñez, R. (2023). Gestión de bases de datos. RA-MA Editorial. Galvis Lista, E. M., & Bustamante Martínez, A. (2023).
                         </span>
                     </div>
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            Eficacia de los padres. (2017, junio). <i>Historia de la escucha activa por el doctor Thomas Gordon</i> [Vídeo]. YouTube. Obtenido de <a href="https://www.youtube.com/watch?v=pcwjbvA4i08" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.youtube.com/watch?v=pcwjbvA4i08</a>
+                            Bases de datos relacionales: Un enfoque aplicado y orientado a resultados de aprendizaje.
                         </span>
                     </div>
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            Gordillo, M. &amp; Sánchez, M. (2018). <i>Habilidades comunicativas para la vida</i>. Editorial Trillas.<br>
-                            <span class="text-slate-600 text-sm mt-1 block">Contiene explicaciones prácticas sobre técnicas de escucha, comunicación empática y crítica.</span>
-                        </span>
-                    </div>
-                    <div
-                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
-                        <span class="block text-slate-700">
-                            Ministerio de Educación Nacional de Colombia (MEN). (2004). <i>Estándares Básicos de Competencias en Lenguaje</i>. Disponible en: <a href="https://www.mineducacion.gov.co/" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.mineducacion.gov.co/</a><br>
-                            <span class="text-slate-600 text-sm mt-1 block">Explica el desarrollo de competencias comunicativas, incluyendo la comprensión oral y la escucha crítica en el entorno escolar.</span>
-                        </span>
-                    </div>
-                    <div
-                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
-                        <span class="block text-slate-700">
-                            Pérez, R. (2012). <i>Comunicación efectiva y habilidades sociales</i>. Editorial ESIC.<br>
-                            <span class="text-slate-600 text-sm mt-1 block">Un texto claro sobre estrategias para mejorar la interacción con los demás desde la escucha y el diálogo.</span>
-                        </span>
-                    </div>
-                    <div
-                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
-                        <span class="block text-slate-700">
-                            Robertson, K. (2005). <i>Escucha activa: algo más que prestar atención</i>. <i>Australian family physician</i>, 34(12), 1053.
+                            Editorial Unimagdalena. <a href="https://doi.org/10.21676/9789587466133" target="_blank" class="underline text-slate-700 hover:text-green-700">https://doi.org/10.21676/9789587466133</a> López Montalbán, I. (2023). Bases de datos (3.ª ed.). Ediciones Garceta. 
                         </span>
                     </div>
                 </div>
-
-                <!-- Footer/Credits -->
-                <footer class="mt-12 pt-6 border-t-2 border-slate-200 text-center">
-                    <p class="text-slate-600 font-medium">Creado por:</p>
-                    <p class="text-green-800 font-bold text-lg">Centro de Innovación en TIC para el apoyo de la Docencia
-                        CINTIA</p>
-                    <p class="text-slate-500 text-sm">Universidad de Córdoba</p>
-                </footer>
+            </div>
+            <!-- Footer/Credits -->
+            <footer class="w-full mt-12 pt-6 border-t-2 border-slate-200 text-center absolute bottom-10 left-0 ">
+                <p class="text-slate-600 font-medium">Creado por:</p>
+                <p class="text-green-800 font-bold text-lg">Centro de Innovación en TIC para el apoyo de la Docencia
+                    CINTIA</p>
+                <p class="text-slate-500 text-sm">Universidad de Córdoba</p>
+            </footer>
         </main>
     </div>
 
@@ -942,6 +655,8 @@
         </div>
     </div>
 
+    <script src="js/flip-card.js"></script>
+    <script src="js/tabs.js"></script>
     <script src="js/speech.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/activities.js"></script>
@@ -949,6 +664,8 @@
     <script src="js/accordion.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/sopaletra.js"></script>
+    <script src="js/actividad2.js"></script>
 </body>
 
 </html>

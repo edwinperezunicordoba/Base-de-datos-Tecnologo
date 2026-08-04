@@ -1,123 +1,180 @@
-// --- Evaluación Quiz ---
-const quizData = [
+const questions = [
     {
-        question: "La escucha activa no es solo captar sonidos, sino que requiere atención consciente y completa. Los tres pasos o dimensiones fundamentales de este proceso para lograr una comprensión adecuada del mensaje son:",
-        options: [
-            "a. Distraer, interrumpir y juzgar.",
-            "b. Percibir, procesar y responder.",
-            "c. Contactar, hablar y solucionar.",
-            "d. Escucha pasiva, selectiva y activa."
-        ],
-        answer: "b. Percibir, procesar y responder."
+      q: "1. ¿Qué describe principalmente el modelo entidad-relación?",
+      options: [
+        "Cómo se almacenan físicamente los datos en un SGBD específico",
+        "La estructura lógica de la base de datos mediante entidades, atributos y relaciones",
+        "El lenguaje SQL necesario para consultar la base de datos",
+        "Las reglas de seguridad y acceso del sistema"
+      ],
+      correct: 1
     },
     {
-        question: "Uno de los elementos clave de la escucha activa requiere que la persona oyente suspenda el juicio sobre las palabras o acciones del interlocutor. Al hacerlo, se crea un espacio seguro para la expresión libre. ¿A qué elemento se refiere esta descripción?",
-        options: [
-            "a. Clarificar lo que se escuchó.",
-            "b. Retroalimentación.",
-            "c. Empatía.",
-            "d. No juzgar."
-        ],
-        answer: "d. No juzgar."
+      q: "2. En el modelo E-R, ¿qué representa una entidad?",
+      options: [
+        "Una característica o propiedad de un dato",
+        "Un conjunto de objetos similares del dominio del problema",
+        "Una operación que transforma datos",
+        "Un tipo de relación entre tablas"
+      ],
+      correct: 1
     },
     {
-        question: "Cuando una persona está enojada, ansiosa o triste mientras intenta escuchar a otra, puede que no logre entender bien el mensaje porque su atención está enfocada en sus sentimientos internos. Este obstáculo que impide la buena escucha activa es una barrera causada por:",
-        options: [
-            "a. Prejuicios.",
-            "b. Distracciones.",
-            "c. Emociones.",
-            "d. Querer hablar siempre."
-        ],
-        answer: "c. Emociones."
+      q: "3. ¿Cuál de estas opciones es un ejemplo de entidad débil?",
+      options: [
+        "CLIENTE",
+        "PRODUCTO",
+        "CUOTA de un préstamo",
+        "PAÍS"
+      ],
+      correct: 2
     },
     {
-        question: "La técnica de paráfrasis (o reformulación) se considera esencial en la escucha activa. Cuando utilizas esta técnica repitiendo el mensaje del emisor con tus propias palabras, ¿cuál es el objetivo principal que buscas?",
-        options: [
-            "a. Dar una solución inmediata al problema de la otra persona.",
-            "b. Demostrar que has escuchado y comprendido el mensaje.",
-            "c. Evaluar si la preocupación del compañero tiene lógica o evidencia.",
-            "d. Intentar cambiar el tema de la conversación para evitar un conflicto."
-        ],
-        answer: "b. Demostrar que has escuchado y comprendido el mensaje."
+      q: "4. ¿Cuál es la diferencia principal entre el modelo entidad-relación y el modelo relacional?",
+      options: [
+        "El modelo E-R es físico y el relacional es conceptual",
+        "El modelo E-R describe el diseño conceptual sin preocuparse por la implementación física",
+        "El modelo E-R usa SQL y el relacional no",
+        "No hay diferencia; son nombres del mismo modelo"
+      ],
+      correct: 1
     },
     {
-        question: "Estás en una situación donde tu actitud es de distanciamiento analítico y escepticismo razonable (por ejemplo, al revisar un informe o una propuesta). Esta actitud es propia de la escucha crítica porque tu propósito principal es:",
-        options: [
-            "a. Comprender la experiencia emocional y la perspectiva personal del orador.",
-            "b. Acompañar al emisor con validación y no juicio para fortalecer la relación.",
-            "c. Buscar apoyo socioemocional ante un conflicto o problema personal.",
-            "d. Evaluar la calidad de la información y la solidez de los argumentos."
-        ],
-        answer: "d. Evaluar la calidad de la información y la solidez de los argumentos."
+      q: "5. ¿Qué tipo de atributo puede dividirse en partes más pequeñas con significado propio?",
+      options: [
+        "Atributo simple",
+        "Atributo compuesto",
+        "Atributo monovaluado",
+        "Atributo derivado"
+      ],
+      correct: 1
+    },
+    {
+      q: "6. ¿Cuál de los siguientes es un atributo multivaluado?",
+      options: [
+        "Fecha de nacimiento",
+        "Número de documento",
+        "Números de teléfono de una persona",
+        "Género"
+      ],
+      correct: 2
+    },
+    {
+      q: "7. En una relación E-R, ¿qué es un atributo de relación?",
+      options: [
+        "Un atributo que describe la relación entre entidades y no pertenece solo a una entidad",
+        "Un atributo que identifica de manera única a una entidad",
+        "Un atributo que se deriva de otro atributo dentro de la misma entidad",
+        "Un atributo que representa una entidad débil"
+      ],
+      correct: 0
+    },
+    {
+      q: "8. Una relación binaria conecta: ",
+      options: [
+        "Dos entidades distintas",
+        "Tres entidades simultáneamente",
+        "Una sola entidad consigo misma",
+        "Ninguna entidad"
+      ],
+      correct: 0
+    },
+    {
+      q: "9. En el caso de una clínica veterinaria, ¿qué podría ser una entidad?",
+      options: [
+        "Cita médica",
+        "Dueño",
+        "Mascota",
+        "Todas las anteriores"
+      ],
+      correct: 3
+    },
+    {
+      q: "10. ¿Qué elemento del modelo E-R se dibuja habitualmente como un rombo?",
+      options: [
+        "Entidad",
+        "Atributo",
+        "Relación",
+        "Clave primaria"
+      ],
+      correct: 2
     }
-];
+  ];
 
-const quizContainer = document.getElementById('quiz-container');
-if(quizContainer) {
-    quizData.forEach((q, index) => {
-        const questionEl = document.createElement('div');
-        questionEl.className = 'mb-6';
-        questionEl.innerHTML = `<p class="font-semibold mb-2">${index + 1}. ${q.question}</p>`;
-        
-        const optionsContainer = document.createElement('div');
-        optionsContainer.className = 'space-y-2';
-        
-        q.options.forEach(option => {
-            const optionEl = document.createElement('div');
-            optionEl.className = 'quiz-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer';
-            optionEl.textContent = option;
-            optionEl.addEventListener('click', () => {
-                questionEl.querySelectorAll('.quiz-option').forEach(el => el.classList.remove('selected'));
-                optionEl.classList.add('selected');
-            });
-            optionsContainer.appendChild(optionEl);
-        });
-        
-        questionEl.appendChild(optionsContainer);
-        quizContainer.appendChild(questionEl);
+  const form = document.getElementById('quizForm');
+
+  questions.forEach((item, index) => {
+    const block = document.createElement('div');
+    block.className = "border border-green-100 rounded-xl p-4 bg-green-50/50";
+    block.id = `question-${index}`;
+
+    let optionsHtml = "";
+    item.options.forEach((opt, i) => {
+      optionsHtml += `
+        <label class="flex items-start gap-3 p-2 rounded-lg hover:bg-green-100 cursor-pointer transition-colors">
+          <input type="radio" name="q${index}" value="${i}" class="mt-1 accent-green-600">
+          <span class="text-gray-700 text-sm md:text-base">${opt}</span>
+        </label>
+      `;
     });
-}
 
-const submitQuizBtn = document.getElementById('submit-quiz-btn');
-if(submitQuizBtn){
-    submitQuizBtn.addEventListener('click', () => {
-        let score = 0;
-        const questions = quizContainer.querySelectorAll('.mb-6');
-        const feedbacks = [
-            'Correcto: Los tres pasos fundamentales de la escucha activa son percibir, procesar y responder.',
-            'Correcto: "No juzgar" es el elemento que crea un espacio seguro para la expresión libre.',
-            'Correcto: Las emociones intensas pueden impedir una buena escucha activa al desviar la atención.',
-            'Correcto: La paráfrasis demuestra que has escuchado y comprendido el mensaje del emisor.',
-            'Correcto: La escucha crítica busca evaluar la calidad de la información y la solidez de los argumentos.'
-        ];
-        const wrongFeedbacks = [
-            'Incorrecto. Los tres pasos fundamentales de la escucha activa son: percibir, procesar y responder.',
-            'Incorrecto. El elemento que crea un espacio seguro para la expresión libre es "No juzgar".',
-            'Incorrecto. Las emociones intensas (enojo, ansiedad, tristeza) son barreras que impiden la buena escucha activa.',
-            'Incorrecto. El objetivo principal de la paráfrasis es demostrar que has escuchado y comprendido el mensaje.',
-            'Incorrecto. La escucha crítica tiene como propósito evaluar la calidad de la información y la solidez de los argumentos.'
-        ];
-        questions.forEach((q, index) => {
-            const selectedOption = q.querySelector('.quiz-option.selected');
-            let feedbackDiv = q.querySelector('.quiz-feedback');
-            if (!feedbackDiv) {
-                feedbackDiv = document.createElement('div');
-                feedbackDiv.className = 'quiz-feedback mt-2 text-sm';
-                q.appendChild(feedbackDiv);
-            }
-            if (selectedOption && selectedOption.textContent === quizData[index].answer) {
-                score++;
-                feedbackDiv.innerHTML = `<span class='text-green-700 font-semibold'>✔️ ${feedbacks[index]}</span>`;
-            } else {
-                feedbackDiv.innerHTML = `<span class='text-red-700 font-semibold'>❌ ${wrongFeedbacks[index]}</span>`;
-            }
-        });
-        const resultEl = document.getElementById('quiz-result');
-        resultEl.textContent = `Tu puntuación es: ${score} de ${quizData.length}.`;
-        if (score / quizData.length >= 0.7) {
-            resultEl.className = 'mt-4 text-lg font-bold text-green-700';
-        } else {
-            resultEl.className = 'mt-4 text-lg font-bold text-red-700';
+    block.innerHTML = `
+      <p class="font-semibold text-green-800 mb-3">${item.q}</p>
+      <div class="space-y-1">${optionsHtml}</div>
+      <p class="feedback hidden mt-3 text-sm font-medium rounded-lg px-3 py-2"></p>
+    `;
+
+    form.appendChild(block);
+  });
+
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    const alertMsg = document.getElementById('alertMsg');
+    let missing = [];
+
+    questions.forEach((item, index) => {
+      const selected = form.querySelector(`input[name="q${index}"]:checked`);
+      if (!selected) missing.push(index + 1);
+    });
+
+    if (missing.length > 0) {
+      alertMsg.textContent = `Debes responder todas las preguntas antes de enviar. Faltan: ${missing.join(", ")}`;
+      alertMsg.classList.remove('hidden');
+      document.getElementById('scoreBox').classList.add('hidden');
+      return;
+    }
+
+    alertMsg.classList.add('hidden');
+
+    let correctCount = 0;
+
+    questions.forEach((item, index) => {
+      const selected = form.querySelector(`input[name="q${index}"]:checked`);
+      const selectedValue = parseInt(selected.value);
+      const feedbackEl = document.querySelector(`#question-${index} .feedback`);
+      const labels = document.querySelectorAll(`#question-${index} label`);
+
+      labels.forEach((label, i) => {
+        label.classList.remove('bg-green-200', 'bg-red-200');
+        if (i === item.correct) {
+          label.classList.add('bg-green-200');
+        } else if (i === selectedValue && selectedValue !== item.correct) {
+          label.classList.add('bg-red-200');
         }
+      });
+
+      feedbackEl.classList.remove('hidden');
+      if (selectedValue === item.correct) {
+        correctCount++;
+        feedbackEl.textContent = "✅ Correcto";
+        feedbackEl.className = "feedback mt-3 text-sm font-medium rounded-lg px-3 py-2 bg-green-100 text-green-800 border border-green-300";
+      } else {
+        feedbackEl.textContent = `❌ Incorrecto. La respuesta correcta es: "${item.options[item.correct]}"`;
+        feedbackEl.className = "feedback mt-3 text-sm font-medium rounded-lg px-3 py-2 bg-red-100 text-red-700 border border-red-300";
+      }
     });
-}
+
+    const scoreBox = document.getElementById('scoreBox');
+    const scoreText = document.getElementById('scoreText');
+    scoreBox.classList.remove('hidden');
+    scoreText.textContent = `Obtuviste ${correctCount} de ${questions.length} respuestas correctas.`;
+  });
