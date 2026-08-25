@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tailwind.min.css">
     <script src="https://elens.ecodestudio.dev/elens.js"></script>
 </head>
 
@@ -119,13 +120,16 @@
                 <div class="w-full max-w-8xl mx-auto">
                     <div class="flex flex-wrap gap-2">
                         <button class="tab-button active rounded-t-lg border border-green-500 bg-green-600 px-4 py-2 text-sm font-semibold text-white" data-tab="tab-definicion">
-                            Dato e información
+                            Definicion de modelo entidad relación
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-base-de-datos">
-                            Bases de datos
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-entidad">
+                            Entidad
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-sgbd">
-                            Sistema Gestor de Bases de Datos (SGBD)
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-atributo">
+                            Atributo
+                        </button>
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-relacion">
+                            Relación
                         </button>
                     </div>
                     <div id="tab-definicion" class="tab-panel rounded-b-lg border border-green-500 bg-white p-8 shadow-sm">
@@ -185,7 +189,7 @@
                         </div>
                     </div>
                     <!-- Tab: Base de Datos -->
-                    <div id="tab-base-de-datos" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                    <div id="tab-entidad" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
                         <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
                             <div>
                                 <p class="text-slate-700 leading-relaxed mb-4 text-justify">
@@ -294,7 +298,7 @@
                             </div>
                         </section>
                     </div>
-                    <div id="tab-sgbd" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                    <div id="tab-atributo" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
                         <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
                             <div>
                                 <p class="text-slate-700 leading-relaxed mb-4 text-justify">
@@ -463,8 +467,10 @@
                             </div>
                         </section>
                     </div>
+                    <div id="tab-relacion" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        Relacion
+                    </div>
                 </div>
-
             </section>
             <!-- Actividades Prácticas -->
             <div id="actividades" class="content-pane pb-28">
@@ -557,21 +563,37 @@
                     <li
                         class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-green-700">Fundamentos de bases de datos.</h3>
-                            <a href="https://www.gob.mx/cms/uploads/attachment/file/1001638/Fundamentos-de-bases-de-datos_a.pdf" target="_blank"
+                            <h3 class="font-bold text-green-700">Contenido de ¿Qué es la cardinalidad?</h3>
+                            <a href="https://informaticosinlimites.com/base-de-datos/cardinalidad/" target="_blank"
                                 class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
                         </div>
                         <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
                             <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
                                 style="width:2cm;height:2cm;">
-                                <img src="img/Qr1.png" alt="Solución ejercicio 1"
+                                <img src="img/qr1.png" alt="Solución ejercicio 1"
                                     class="max-w-full max-h-full object-contain expandable-image"
                                     style="object-fit:contain;" loading="lazy">
-                                <button class="expand-btn" data-img="img/Qr1.png">🔍</button>
+                                <button class="expand-btn" data-img="img/qr1.png">🔍</button>
                             </div>
                         </div>
                     </li>
-                   
+                    <li
+                            class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-green-700">Cardinalidad | Curso modelo entidad relación (Video).</h3>
+                                <a href="https://www.youtube.com/watch?v=sd62XypDjZI&t=62s" target="_blank"
+                                    class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                            </div>
+                            <div class="mt-4 sm:mt-0 sm:ml-6 flex-shrink-0">
+                                <div class="bg-green-50 border border-green-300 rounded flex items-center justify-center image-container"
+                                    style="width:2cm;height:2cm;">
+                                    <img src="img/qr2.png" alt="Solución ejercicio 1"
+                                        class="max-w-full max-h-full object-contain expandable-image"
+                                        style="object-fit:contain;" loading="lazy">
+                                    <button class="expand-btn" data-img="img/qr2.png">🔍</button>
+                                </div>
+                            </div>
+                        </li>
                 </ul>
             </div>
 

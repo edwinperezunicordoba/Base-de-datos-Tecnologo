@@ -44,3 +44,40 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
         });
     });
 });
+
+// Acordeones independientes: cada grupo controla únicamente su propio panel.
+document.querySelectorAll('.accordion-standalone-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const target = this.getAttribute('data-target');
+        const panel = target ? document.querySelector(target) : null;
+        const group = this.closest('[data-accordion-group]');
+
+        if (!panel || !group) {
+            return;
+        }
+
+        const isOpen = !panel.classList.contains('hidden');
+        const icon = this.querySelector('span:last-child');
+
+        group.querySelectorAll('.accordion-standalone-panel').forEach(otherPanel => {
+            otherPanel.classList.add('hidden');
+            otherPanel.classList.remove('block');
+        });
+        group.querySelectorAll('.accordion-standalone-btn').forEach(otherButton => {
+            otherButton.setAttribute('aria-expanded', 'false');
+            const otherIcon = otherButton.querySelector('span:last-child');
+            if (otherIcon) {
+                otherIcon.textContent = '➕';
+            }
+        });
+
+        if (!isOpen) {
+            panel.classList.remove('hidden');
+            panel.classList.add('block');
+            this.setAttribute('aria-expanded', 'true');
+            if (icon) {
+                icon.textContent = '➖';
+            }
+        }
+    });
+});
