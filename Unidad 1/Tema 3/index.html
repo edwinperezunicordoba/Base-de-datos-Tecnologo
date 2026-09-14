@@ -120,258 +120,207 @@
                 <div class="w-full max-w-8xl mx-auto">
                     <div class="flex flex-wrap gap-2">
                         <button class="tab-button active rounded-t-lg border border-green-500 bg-green-600 px-4 py-2 text-sm font-semibold text-white" data-tab="tab-definicion">
-                            Definicion de modelo entidad relación
+                            Definicion
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-entidad">
-                            Entidad
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-participacion">
+                            Participación
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-atributo">
-                            Atributo
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-claves">
+                            Claves
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-relacion">
-                            Relación
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-integridades">
+                            Integridades
                         </button>
                     </div>
                     <div id="tab-definicion" class="tab-panel rounded-b-lg border border-green-500 bg-white p-8 shadow-sm">
+                        <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Cardinalidad de las relaciones</h1>
                         <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                            En el desarrollo de software, esta distinción es constante los formularios capturan datos (lo que el usuario escribe en 
-                            cada campo), y el sistema, mediante su lógica de negocio, transforma esos datos en información significativa para el 
-                            usuario final, por ejemplo, un reporte de ventas o un historial de pedidos.
+                            La cardinalidad de una relación indica el número de ocurrencias de una entidad que pueden (o deben) asociarse con el número de ocurrencias de 
+                            otra entidad participante en esa relación. En términos simples, responde a la pregunta: “¿con cuántos elementos de la otra entidad se puede 
+                            relacionar cada elemento de esta entidad?”. Determinar correctamente la cardinalidad es una de las decisiones de diseño más importantes del 
+                            modelo entidad-relación, ya que de ella depende directamente cómo se estructurarán las tablas y las llaves foráneas más adelante.
                         </p>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-green-50 transition-all duration-300 hover:bg-green-100 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800">
+                            ✨ <strong>
+                                    Existen tres tipos básicos de cardinalidad para relaciones binarias (las más comunes en el diseño de bases de datos).
+                                </strong>
+                            </p>
+                        </div>
                         <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
                             <article class="sm:my-6 flex-shrink-0">
                                 <div class="space-y-3">
                                     <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-dato">
-                                        <span class="text-lg">➖</span>
-                                        <span class="font-semibold text-green-800">¿Qué es un dato?</span>
+                                        <span class="text-lg">➕</span>
+                                        <span class="font-semibold text-green-800">Uno a uno (1:1)</span>
                                     </button>
-                                    <div id="panel-dato" class="accordion-panel block rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div id="panel-dato" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                         <p class="text-slate-700 leading-relaxed">
-                                            Un dato es la unidad más básica y objetiva de representación de un hecho, un número, un texto, una fecha o un 
-                                            valor aislado que, por sí solo, no tiene un significado completo. Por ejemplo, el valor “19” o el texto “Pedro” 
-                                            son datos: existen, pero no comunican nada por sí mismos si no se sabe a qué corresponden.
+                                            Cada ocurrencia de la entidad A se relaciona con, como máximo, una ocurrencia de la entidad B, y viceversa. Por ejemplo, un EMPLEADO puede tener asignada una única OFICINA, y esa oficina pertenece a un único empleado.
                                         </p>
+                                         <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                            <img src="img/Cardinalidad 1-1.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/Cardinalidad 1-1.png">🔍</button>
+                                        </div>
                                     </div>
-
                                     <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-informacion">
                                         <span class="text-lg">➕</span>
-                                        <span class="font-semibold text-green-800">¿Qué es la información?</span>
+                                        <span class="font-semibold text-green-800">Uno a muchos (1:N)</span>
                                     </button>
                                     <div id="panel-informacion" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                         <p class="text-slate-700 leading-relaxed">
-                                            La información es el resultado de procesar, organizar y contextualizar datos para que adquieran significado y utilidad. 
-                                            Por ejemplo, si se sabe que el valor “19” corresponde a la edad de un usuario llamado “Pedro”, entonces se tiene información: 
-                                            “Pedro tiene 19 años”. La información permite tomar decisiones y comprender mejor la realidad, mientras que los datos son 
-                                            simplemente hechos aislados.
+                                            Cada ocurrencia de la entidad A puede relacionarse con varias ocurrencias de la entidad B, pero cada ocurrencia de B se relaciona con una sola ocurrencia de A. Por ejemplo, un DEPARTAMENTO puede tener muchos EMPLEADOS, pero cada empleado pertenece a un único departamento.
                                         </p>
+                                        <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                            <img src="img/Cardinalidad 1-N.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/Cardinalidad 1-N.png">🔍</button>
+                                        </div>
                                     </div>
                                 </div>
                             </article>
                             <div class="sm:my-6 flex-shrink-0">
-                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/Datos e Informacion.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
-                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                        style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/Datos e Informacion.png">🔍</button>
-                                </div>
-                            </div>
-                        </section>
-                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
-                            <p class="text-green-800">
-                            ✨ <strong>Además, es importante reconocer que los datos pueden clasificarse según su grado de organización. Los datos 
-                            estructurados son aquellos que siguen un formato fijo y predecible, como los campos de una tabla (nombre, edad, 
-                            correo electrónico); los datos semiestructurados poseen cierta organización, pero no un esquema rígido, como un 
-                            archivo JSON o XML y los datos no estructurados carecen de un formato predefinido, como una imagen, un audio o 
-                            un texto libre. Esta clasificación es relevante porque, más adelante en el curso, aprenderás que las bases de 
-                            datos relacionales están pensadas principalmente para gestionar datos estructurados.</strong>
-                            </p>
-                             <button class="expand-btn2" data-img="img/Diferencia entre datos.png">💡</button>
-                        </div>
-                    </div>
-                    <!-- Tab: Base de Datos -->
-                    <div id="tab-entidad" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
-                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                            <div>
-                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                Una base de datos es un conjunto organizado y estructurado de datos relacionados entre sí, que se almacena de 
-                                forma persistente en un medio digital y que puede ser consultado, actualizado y gestionado de manera eficiente. 
-                                <br><br>A diferencia de un simple archivo de texto o una hoja de cálculo, una base de datos está diseñada para evitar 
-                                redundancia, mantener la integridad de la información y permitir el acceso simultáneo de múltiples usuarios o procesos.
-                                </p>
-                            </div>
-                            <div class="my-6 sm:my-0 flex-shrink-0">
-                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/archivos vs base de datos.png" alt="Imagen que compara archivos y bases de datos"
-                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                        style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/archivos vs base de datos.png">🔍</button>
-                                </div>  
-                            </div>
-                        </section>
-                        <div class="max-w-full my-6">
-                            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                                <table class="w-full text-left border-collapse">
-                                <thead>
-                                    <tr class="bg-gradient-to-r from-green-700 to-green-600">
-                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Aspecto</th>
-                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Sistema de archivos tradicional</th>
-                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Base de datos</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Definición</td>
-                                    <td class="py-4 px-6 text-gray-700">Archivos planos independientes, gestionados directamente por cada programa</td>
-                                    <td class="py-4 px-6 text-gray-600">Conjunto organizado y estructurado de datos relacionados entre sí</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Almacenamiento</td>
-                                    <td class="py-4 px-6 text-gray-700">Disperso en archivos separados por programa</td>
-                                    <td class="py-4 px-6 text-gray-600">Centralizado, persistente en medio digital</td>
-                                    </tr>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Redundancia</td>
-                                    <td class="py-4 px-6 text-gray-700">Alta — la misma información se repite en varios archivos</td>
-                                    <td class="py-4 px-6 text-gray-600">Baja — diseñada para evitarla</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Consistencia</td>
-                                    <td class="py-4 px-6 text-gray-700">Propensa a inconsistencias (un dato se actualiza en un archivo pero no en otro)</td>
-                                    <td class="py-4 px-6 text-gray-600">Mantiene la integridad de la información</td>
-                                    </tr>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Acceso concurrente</td>
-                                    <td class="py-4 px-6 text-gray-700">Sin mecanismos adecuados para múltiples usuarios/procesos</td>
-                                    <td class="py-4 px-6 text-gray-600">Permite acceso simultáneo de múltiples usuarios o procesos</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Compartir información entre programas</td>
-                                    <td class="py-4 px-6 text-gray-700">Difícil</td>
-                                    <td class="py-4 px-6 text-gray-600">Facilitado por la gestión centralizada</td>
-                                    </tr>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Seguridad / control de acceso</td>
-                                    <td class="py-4 px-6 text-gray-700">Prácticamente ausente</td>
-                                    <td class="py-4 px-6 text-gray-600">Incluye mecanismos de gestión y control</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Gestión</td>
-                                    <td class="py-4 px-6 text-gray-700">Cada programa gestiona sus propios archivos</td>
-                                    <td class="py-4 px-6 text-gray-600">Delegada a un software especializado (SGBD)</td>
-                                    </tr>
-                                </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
-                            <p class="text-green-800 font-bold">
-                            ✨ <strong>Por ejemplo, en una aplicación de comercio electrónico, la base de datos almacena de forma organizada la 
-                                información de los clientes, los productos, los pedidos y los pagos, de manera que cada uno de estos conjuntos 
-                                de datos pueda relacionarse entre sí sin duplicar información innecesariamente.</strong>
-                            </p>
-                        </div>
-                        <section class="sm:my-6 flex-shrink-0">
-                            <div class="space-y-3" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-ejemplo" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Ejemplo</span>
-                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-muchos">
+                                    <span class="text-lg">➕</span>
+                                    <span class="font-semibold text-green-800">Muchos a muchos (N:M)</span>
                                 </button>
-                                <div id="panel-ejemplo" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                            Piensa en el proyecto de software que te gustaría desarrollar en un futuro (una app, un sistema web, un videojuego, etc.). 
-                                            Escribe una lista de al menos cuatro “conjuntos de datos” que dicho sistema necesitaría almacenar en una base de datos 
-                                            (por ejemplo: usuarios, productos, transacciones). No es necesario diseñar tablas todavía, solo identificar qué información 
-                                            se debería guardar. Adicionalmente, describe un problema que podría presentarse si esa información se manejara en 
-                                            archivos de Excel independientes en lugar de una base de datos.
-                                        </p>
-                                        <article class="sm:my-6 flex-shrink-0">
-                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/Ejemplo software clinica.png" alt="Solucion al ejemplo de software de clínica"
-                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                                    style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/Ejemplo software clinica.png">🔍</button>
-                                            </div>
-                                        </article>
+                                <div id="panel-muchos" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <p class="text-slate-700 leading-relaxed">
+                                        Varias ocurrencias de la entidad A pueden relacionarse con varias ocurrencias de la entidad B, y viceversa. Por ejemplo, un ESTUDIANTE puede matricularse en muchos CURSOS, y cada curso puede tener matriculados a muchos estudiantes.
+                                    </p>
+                                    <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                        <img src="img/Cardinalidad N-M.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                            class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                            style="object-fit:contain;" loading="lazy">
+                                        <button class="expand-btn" data-img="img/Cardinalidad N-M.png">🔍</button>
                                     </div>
                                 </div>
                             </div>
                         </section>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            ✨ <strong class="text-green-800">Ejemplo 1 práctico</strong>
+                            <p class="text-slate-700 leading-relaxed my-4 text-justify">
+                                Para cada uno de los siguientes pares de entidades, determinen y justifiquen cuál cardinalidad (1:1, 1:N o N:M) tendría la relación entre ellas: 
+                            </p>
+                            <ul class=" space-y-2 text-slate-700">
+                                <li>(a) PAÍS y CAPITAL; </li>
+                                <li>(b) AUTOR y LIBRO (considerando que un libro puede tener varios autores); </li>
+                                <li>(c) PERSONA y CÉDULA DE CIUDADANÍA; </li>
+                                <li>(d) CLIENTE y CUENTA BANCARIA (un cliente puede tener varias cuentas, pero cada cuenta pertenece a un único cliente). </li>
+                            </ul>
+                            <p class="text-slate-700 leading-relaxed my-4 text-justify">Escriban su justificación en una frase por cada caso.</p>
+                            <button class="solucion-btn" data-img="img/Ejemplo cardinalidad.png">Solucion 🔍</button>
+
+                        </div>
                     </div>
-                    <div id="tab-atributo" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
-                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                    <!-- Tab: participación -->
+                    <div id="tab-participacion" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-1 md:items-start">
                             <div>
+                                <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Cardinalidad mínima y máxima (participación)</h1>
                                 <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                Un Sistema Gestor de Bases de Datos (SGBD), conocido en inglés como DBMS (Database Management System), es el software especializado 
-                                que permite crear, administrar, consultar y proteger una base de datos. <br> <br> El SGBD actúa como intermediario entre el usuario o la aplicación 
-                                y los datos físicamente almacenados, ofreciendo mecanismos para garantizar la seguridad, la integridad, la concurrencia y el rendimiento 
-                                en el acceso a la información. En otras palabras, ninguna aplicación accede “directamente” a los archivos donde reposan los datos 
-                                siempre lo hace a través del SGBD, que traduce las solicitudes del programa (generalmente escritas en SQL) en operaciones sobre el 
-                                almacenamiento físico.
- 
-                                <br><br>Dado que este es uno de los conceptos más importantes del curso, a continuación, profundizaremos en sus funciones, su arquitectura, 
-                                los tipos de SGBD que existen y quiénes lo utilizan dentro de una organización.
+                                    Además de la cardinalidad máxima (1, N o M) que acabamos de estudiar, existe otro concepto 
+                                    complementario llamado cardinalidad mínima o participación, que indica si la relación es 
+                                    obligatoria o opcional para cada entidad. Se expresa generalmente como un par de números 
+                                    (mínimo, máximo), por ejemplo (0,N) o (1,1).
                                 </p>
                             </div>
-                            <div class="my-6 sm:my-0 flex-shrink-0">
-                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/Funciones del SGBD.png" alt="Imagen que compara archivos y bases de datos"
-                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                        style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/Funciones del SGBD.png">🔍</button>
-                                </div>  
+                        </section>
+                        <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-1 md:items-start my-6">
+                            <div>
+                                <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-1">
+                                    <span class="text-lg">➕</span>
+                                    <span class="font-semibold text-green-800">Participación total (obligatoria)</span>
+                                </button>
+                                <div id="panel-1" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <p class="text-slate-700 leading-relaxed">
+                                        Toda ocurrencia de la entidad debe participar necesariamente en la relación (cardinalidad mínima = 1). Por ejemplo, todo EMPLEADO debe estar asignado a un DEPARTAMENTO; no puede existir un empleado sin departamento.
+                                    </p>
+                                    <div class="bg-green-50 w-full md:w-[80%] lg:w-[50%] mx-auto border border-green-300 rounded flex items-center justify-center image-container">
+                                        <img src="img/Participacion total.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                            class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                            style="object-fit:contain;" loading="lazy">
+                                        <button class="expand-btn" data-img="img/Participacion total.png">🔍</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-2">
+                                    <span class="text-lg">➕</span>
+                                    <span class="font-semibold text-green-800">Participación parcial (opcional)</span>
+                                </button>
+                                <div id="panel-2" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <p class="text-slate-700 leading-relaxed">
+                                        Existen ocurrencias de la entidad que pueden no participar en la relación (cardinalidad mínima = 0). Por ejemplo, no todo CLIENTE ha realizado necesariamente un PEDIDO; puede estar registrado sin haber comprado nunca.
+                                    </p>
+                                    <div class="bg-green-50 w-full md:w-[80%] lg:w-[50%] mx-auto border border-green-300 rounded flex items-center justify-center image-container">
+                                        <img src="img/Participacion parcial.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                            class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                            style="object-fit:contain;" loading="lazy">
+                                        <button class="expand-btn" data-img="img/Participacion parcial.png">🔍</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800 font-bold">
+                            ✨ <strong>Distinguir entre cardinalidad máxima y mínima es fundamental porque, cuando se traduce este modelo al modelo relacional, la participación total u opcional determinará si un campo de llave foránea debe aceptar o no valores nulos, decisión que tiene implicaciones directas sobre la integridad de los datos.</strong>
+                            </p>
+                        </div>
+                         <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800 font-bold">
+                            ✨ <strong>Ejemplo</strong>
+                            </p>
+                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                En una plataforma de streaming, un USUARIO puede crear varias listas de reproducción, pero
+                                también puede existir un usuario recién registrado que todavía no ha creado ninguna. Por otro
+                                lado, toda lista de reproducción debe pertenecer obligatoriamente a un usuario (no puede existir
+                                una lista “huérfana”). Indica la cardinalidad máxima y mínima de esta relación desde ambos
+                                lados (USUARIO hacía lista y lista hacía USUARIO), expresándose en formato (mínimo,
+                                máximo).
+                            </p>
+                            <button class="solucion-btn" data-img="img/Ejemplo 2.png">Solucion 🔍</button>
+                        </div>
+                    </div>
+                    <!-- Tab: claves tab-claves -->
+                    <div id="tab-claves" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-2 w-full lg:grid-cols-1 md:items-start">
+                            <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">CLAVE</h2>
+                            <div>
+                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                Una clave (o llave) es uno o varios atributos cuyo valor permite identificar de manera única cada
+                                ocurrencia de una entidad, es decir, distinguir un registro de todos los demás dentro del mismo
+                                conjunto. Sin una clave bien definida, sería imposible garantizar que dos registros distintos no se
+                                confundan entre sí, lo cual comprometería gravemente la integridad de toda la base de datos.
+                                Existen varios tipos de claves, cada una con un rol específico.
+                                </p>
                             </div>
                         </section>
                         <section class="sm:my-6 flex-shrink-0">
                             <div class="space-y-3 mt-4" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-funciones" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Funciones principales de un SGBD</span>
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-superclave" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">SUPERCLAVE</span>
                                     <span class="text-lg transition-transform duration-200">➕</span>
                                 </button>
-                                <div id="panel-funciones" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                <div id="panel-superclave" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                     <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
                                         <div>
                                             <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                                Un SGBD no es simplemente un lugar donde se guardan datos es un software que cumple funciones muy específicas para garantizar que la información sea confiable, segura y esté siempre disponible. Las funciones más relevantes son:
+                                                Cualquier conjunto de uno o más atributos que, en conjunto, permite identificar de forma 
+                                                única cada ocurrencia de una entidad (aunque contenga atributos innecesarios). Por ejemplo, 
+                                                en la entidad ESTUDIANTE, el conjunto {número de documento, correo electrónico} es una 
+                                                superclave, aunque cada uno de esos atributos, por separado, ya sería suficiente.
                                             </p>
-                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li>
-                                                    <strong>Definición de datos:</strong> 
-                                                    <p>Permite crear y modificar la estructura de la base de datos (tablas, tipos de datos, relaciones) mediante un lenguaje de definición de datos (DDL).</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Manipulación de datos:</strong> 
-                                                    <p>Permite insertar, consultar, actualizar y eliminar información mediante un lenguaje de manipulación de datos (DML), como SQL.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Control de acceso y seguridad:</strong> 
-                                                    <p>Gestiona que múltiples usuarios o procesos puedan leer y escribir datos al mismo tiempo sin generar inconsistencias o pérdida de información.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Seguridad y control de acceso:</strong> 
-                                                    <p>Define qué usuarios pueden ver o modificar determinada información, mediante permisos y roles.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Integridad de los datos:</strong> 
-                                                    <p>Aplica reglas y restricciones (como llaves primarias o valores obligatorios) para evitar datos incorrectos o inconsistentes.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Respaldo y recuperación:</strong> 
-                                                    <p>permite generar copias de seguridad y restaurar la información en caso de fallas del sistema, errores humanos o desastres.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Independencia de los datos:</strong> 
-                                                    <p>Permite que los cambios en la estructura física de almacenamiento no afecten directamente a las aplicaciones que consultan la información.</p>
-                                                </li>
-                                            </ul>
                                         </div>
-                                        
                                         <article class="sm:my-6 flex-shrink-0">
                                             <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/SGBD.png" alt="Solucion al ejemplo de software de clínica"
+                                                <img src="img/superclave.png" alt="Solucion al ejemplo de software de clínica"
                                                     class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
                                                     style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/SGBD.png">🔍</button>
+                                                <button class="expand-btn" data-img="img/superclave.png">🔍</button>
                                             </div>
                                         </article>
                                     </div>
@@ -379,96 +328,240 @@
                             </div>
                             <div class="space-y-3 mt-4" data-accordion-group="independiente">
                                 <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-arquitectura" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Arquitectura de un SGBD</span>
+                                    <span class="font-semibold text-green-800">CLAVE CANDIDATA</span>
                                     <span class="text-lg transition-transform duration-200">➕</span>
                                 </button>
                                 <div id="panel-arquitectura" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                     <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
                                         <div>
                                             <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                                Para lograr la independencia de los datos mencionada anteriormente, la mayoría de los SGBD se basan en la arquitectura de tres niveles propuesta por el estándar ANSI/SPARC, la cual organiza la base de datos en tres capas o niveles de abstracción.
+                                                Es una superclave mínima, es decir, que no contiene atributos innecesarios si se elimina cualquier atributo de 
+                                                una clave candidata, esta deja de identificar de forma única a la entidad. Una entidad puede tener varias claves 
+                                                candidatas; por ejemplo, ESTUDIANTE podría tener como claves candidatas tanto el número de documento como el 
+                                                correo institucional, ya que ambos identifican de forma única a cada estudiante por separado.
+
                                             </p>
-                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li>
-                                                    <strong>Nivel interno (o físico):</strong> 
-                                                    <p>describe cómo se almacenan realmente los datos en el disco: archivos, índices, estructuras de almacenamiento. Es el nivel más 
-                                                        cercano al hardware.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Nivel conceptual (o lógico):</strong> 
-                                                    <p>Describe qué datos se almacenan y qué relaciones existen entre ellos, sin entrar en detalles de cómo se almacenan físicamente. 
-                                                        Es el nivel en el que trabajaremos principalmente durante este curso, mediante el modelo entidad-relación y el modelo relacional.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Nivel externo (o de vista del usuario):</strong> 
-                                                    <p>Describe cómo cada grupo de usuarios o aplicación específica “ve” una parte de la base de datos, de acuerdo con sus necesidades 
-                                                        (por ejemplo, un cajero solo ve la información de ventas, no la de nómina).</p>
-                                                </li>
-                                            </ul>
                                         </div>
                                         <article class="sm:my-6 flex-shrink-0">
                                             <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/arquitectura a 3 niveles.png" alt="Solucion al ejemplo de software de clínica"
+                                                <img src="img/Clave candidata.png" alt="Solucion al ejemplo de software de clínica"
                                                     class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
                                                     style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/arquitectura a 3 niveles.png">🔍</button>
+                                                <button class="expand-btn" data-img="img/Clave candidata.png">🔍</button>
                                             </div>
                                         </article>
                                     </div>
                                 </div>
                             </div>
                             <div class="space-y-3 mt-4" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-tipos" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Tipos de SGBD según el modelo de datos</span>
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-clave-primaria" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">CLAVE PRIMARIA (PRIMARY KEY, PK)</span>
                                     <span class="text-lg transition-transform duration-200">➕</span>
                                 </button>
-                                <div id="panel-tipos" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                <div id="panel-clave-primaria" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
                                     <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
                                         <div>
                                             <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                                No todos los SGBD organizan la información de la misma manera. Según el modelo de datos que utilizan para estructurar la información, se pueden clasificar en   .
+                                                Es la clave candidata que se selecciona, entre todas las disponibles, para identificar oficialmente cada registro 
+                                                de la entidad dentro del sistema. Debe cumplir con dos propiedades esenciales: <strong>Unicidad</strong> (no puede repetirse en dos 
+                                                registros distintos) y <strong>No Nulidad</strong> (no puede quedar vacía en ningún registro).
                                             </p>
-                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li>
-                                                    <strong>SGBD relacionales (RDBMS):</strong> 
-                                                    <p>
-                                                        Organizan la información en tablas compuestas por filas y columnas, relacionadas entre sí mediante llaves. Son el enfoque que 
-                                                        estudiaremos a profundidad en este curso. Ejemplos: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <strong>SGBD NoSQL (“Not only SQL”):</strong> 
-                                                    <p>
-                                                        Surgieron para manejar grandes volúmenes de datos y estructuras más flexibles. Se dividen a su vez en varios subtipos documentales 
-                                                        (almacenan documentos tipo JSON, ejemplo: MongoDB), clave-valor (almacenan pares simples de clave y valor, ejemplo: Redis), columnares 
-                                                        (optimizados para grandes volúmenes analíticos, ejemplo: Cassandra) y de grafos (representan datos como nodos y relaciones, ejemplo: Neo4j).
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <strong>SGBD jerárquicos y de red:</strong> 
-                                                    <p>
-                                                        Modelos más antiguos, hoy en desuso en nuevos desarrollos, que organizaban los datos en estructuras 
-                                                        de árbol o de red. Se mencionan por su valor histórico, ya que fueron el antecedente directo del modelo relacional.
-                                                    </p>
-                                                </li>
-                                            </ul>
                                         </div>
-                                        
                                         <article class="sm:my-6 flex-shrink-0">
                                             <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/tipo de sgbd segun el modelo de datos.png" alt="Solucion al ejemplo de software de clínica"
+                                                <img src="img/clave primaria.png" alt="Solucion al ejemplo de software de clínica"
                                                     class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
                                                     style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/tipo de sgbd segun el modelo de datos.png">🔍</button>
+                                                <button class="expand-btn" data-img="img/clave primaria.png">🔍</button>
                                             </div>
                                         </article>
                                     </div>
                                 </div>
                             </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-clave-alterna" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">CLAVE ALTERNA (O SECUNDARIA)</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-clave-alterna" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Son las claves candidatas que no fueron seleccionadas como clave primaria, pero que igualmente podrían usarse para 
+                                                identificar de forma única un registro. En el ejemplo anterior, si el número de documento se elige como clave primaria, 
+                                                el correo institucional pasaría a ser una clave alterna.
+                                            </p>
+                                        </div>
+                                        
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/Clave alterna.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/Clave alterna.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-clave-foranea" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">CLAVE FORÁNEA (FOREIGN KEY, FK)</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-clave-foranea" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Es un atributo (o conjunto de atributos) en una entidad que hace referencia a la clave primaria de otra entidad, con el propósito de 
+                                                establecer y mantener la relación entre ambas. Por ejemplo, en la entidad MATRÍCULA, el atributo “código de estudiante” sería una 
+                                                clave foránea que referencia la clave primaria de la entidad ESTUDIANTE.
+                                            </p>
+                                        </div>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/clave foranea.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/clave foranea.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                                <p class="text-green-800 font-bold">
+                                ✨ <strong>La correcta selección de la clave primaria es una decisión de diseño crítica. En muchos casos, se
+                                        recomienda utilizar un identificador artificial o sustituto, es decir, un valor generado
+                                        automáticamente por el sistema (como un número consecutivo o un identificador único universal,
+                                        UUID) en lugar de un atributo natural del negocio, ya que estos últimos pueden cambiar con el
+                                        tiempo (por ejemplo, un número de documento puede corregirse o un correo electrónico puede
+                                        modificarse), lo cual generaría inconsistencias si se hubiera usado como clave primaria.</strong>
+                                </p>
+                            </div>
                         </section>
                     </div>
-                    <div id="tab-relacion" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
-                        Relacion
+                    <!-- tab-integridades -->
+                    <div id="tab-integridades" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <section class="grid grid-cols-1 gap-2 w-full lg:grid-cols-1 md:items-start">
+                            <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">RESTRICCIONES DE INTEGRIDADES</h2>
+                            <div>
+                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                Las restricciones de integridad son reglas que el modelo de datos impone para garantizar que la información almacenada sea válida, 
+                                coherente y confiable a lo largo del tiempo, evitando estados inconsistentes que puedan afectar el correcto funcionamiento del sistema.
+                                </p>
+                            </div>
+                        </section>
+                        <section class="sm:my-6 flex-shrink-0">
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-integridad-entidad" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Restricción de integridad de entidad</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-integridad-entidad" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Establece que ningún atributo que forme parte de la clave primaria puede tener un valor nulo, ya que esto impediría 
+                                                identificar de forma única al registro. Por ejemplo, no puede existir un ESTUDIANTE sin número de documento 
+                                                si este es su clave primaria.
+                                            </p>
+                                        </div>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/Integridad de entidad.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/Integridad de entidad.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-integridad-referencial" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Restricción de integridad referencial</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-integridad-referencial" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Establece que el valor de una clave foránea debe coincidir con un valor existente en la clave primaria de la entidad 
+                                                referenciada, o bien ser nulo (si la relación lo permite). Esto evita, por ejemplo, que exista una MATRÍCULA que 
+                                                haga referencia a un estudiante que no existe en la entidad ESTUDIANTE.
+                                            </p>
+                                        </div>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/integridad referencial.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/integridad referencial.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-dominio" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Restricción de dominio</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-dominio" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Establece que el valor de un atributo debe pertenecer a un conjunto específico de valores válidos (su dominio), ya sea por 
+                                                tipo de dato (numérico, texto, fecha), por rango (por ejemplo, la nota final debe estar entre 0.0 y 5.0) o por una lista 
+                                                cerrada de opciones (por ejemplo, el estado de un pedido sólo puede ser “pendiente”, “en proceso” o “entregado”).
+                                            </p>
+                                        </div>
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/Restriccion de dominio.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/Restriccion de dominio.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
+                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-unicidad" aria-expanded="false">
+                                    <span class="font-semibold text-green-800">Restricción de unicidad</span>
+                                    <span class="text-lg transition-transform duration-200">➕</span>
+                                </button>
+                                <div id="panel-unicidad" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
+                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
+                                        <div>
+                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                                Establece que el valor de un atributo determinado no puede repetirse entre distintos registros, aunque dicho atributo no 
+                                                sea la clave primaria; por ejemplo, el correo electrónico de un usuario en un sistema de autenticación normalmente debe 
+                                                ser único, incluso si la clave primaria es un identificador numérico autogenerado.
+                                            </p>
+                                        </div>
+                                        
+                                        <article class="sm:my-6 flex-shrink-0">
+                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
+                                                <img src="img/Restricion de unicidad.png" alt="Solucion al ejemplo de software de clínica"
+                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                    style="object-fit:contain;" loading="lazy">
+                                                <button class="expand-btn" data-img="img/Restricion de unicidad.png">🔍</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                                <p class="text-green-800 font-bold">
+                                ✨ <strong>Estas restricciones no son un simple formalismo teórico son la base sobre la cual el SGBD podrá, en etapas posteriores del curso, 
+                                    rechazar automáticamente operaciones que pondrían en riesgo la calidad de los datos, como intentar eliminar un CLIENTE que todavía 
+                                    tiene PEDIDOS asociados, o insertar una calificación de “7.5” en un sistema donde las notas van de 0.0 a 5.0.</strong>
+                                </p>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
@@ -656,6 +749,7 @@
     <script src="js/animations.js"></script>
     <script src="js/sopaletra.js"></script>
     <script src="js/actividad2.js"></script>
+
 </body>
 
 </html>

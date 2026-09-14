@@ -44,3 +44,39 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
         });
     });
 });
+
+// Acordeones independientes del contenido de claves.
+document.querySelectorAll('.accordion-standalone-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const target = this.getAttribute('data-target');
+        const panel = document.querySelector(target);
+
+        if (!panel) {
+            return;
+        }
+
+        const isOpen = !panel.classList.contains('hidden');
+
+        document.querySelectorAll('.accordion-standalone-panel').forEach(otherPanel => {
+            otherPanel.classList.add('hidden');
+            otherPanel.classList.remove('block');
+        });
+        document.querySelectorAll('.accordion-standalone-btn').forEach(otherBtn => {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            const icon = otherBtn.querySelector('span:last-child');
+            if (icon) {
+                icon.textContent = '➕';
+            }
+        });
+
+        if (!isOpen) {
+            panel.classList.remove('hidden');
+            panel.classList.add('block');
+            this.setAttribute('aria-expanded', 'true');
+            const icon = this.querySelector('span:last-child');
+            if (icon) {
+                icon.textContent = '➖';
+            }
+        }
+    });
+});

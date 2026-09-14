@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const closeBtn = document.getElementById('closeModal');
-    const expandBtns = document.querySelectorAll('.expand-btn');
+    const expandBtns = document.querySelectorAll('.expand-btn, .solucion-btn');
     
     // Abrir modal al hacer clic en el botón de expandir
     expandBtns.forEach(btn => {
