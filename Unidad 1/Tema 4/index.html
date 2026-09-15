@@ -67,23 +67,20 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Levantamiento de requerimientos de datos
                 </h2>
                 <p class="text-slate-700 leading-relaxed mb-4 text-justify gap-4">
-                    Todo sistema de información que un desarrollador construye una aplicación web, un sistema de inventario, una red social o un 
-                    aplicativo móvil necesita, en algún momento, almacenar y recuperar datos de manera confiable. Antes de aprender a 
-                    diseñar o consultar una base de datos, es indispensable comprender con precisión cuatro conceptos que se usan constantemente 
-                    en el mundo del desarrollo de software: <i class="font-bold ">dato</i>, <i class="font-bold ">información</i>, <i class="font-bold ">base de datos</i> y <i class="font-bold ">Sistema Gestor de Bases de Datos (SGBD)</i>. 
-                </p>
-                <p>
-                    <strong class="text-gray-400 my-2">
-                        Aunque en el lenguaje cotidiano suelen usarse como sinónimos, en el contexto técnico cada uno tiene un significado específico y una 
-                    función distinta dentro de la arquitectura de un sistema.
-                    </strong>
+                    El levantamiento de requerimientos es, con frecuencia, la etapa más subestimada por los desarrolladores que recién inician 
+                    su carrera, quienes tienden a querer “pasar rápido” a la parte técnica (diseñar tablas, escribir SQL). Sin embargo, la 
+                    evidencia en la industria del desarrollo de software muestra reiteradamente que la mayoría de los errores costosos de un 
+                    proyecto bases de datos mal diseñadas, funcionalidades que no responden a la necesidad real del negocio, retrabajos constantes 
+                    se originan en un levantamiento de requerimientos deficiente o incompleto, y no en errores de programación o de sintaxis SQL.
                 </p>
                 <div class="mt-8 p-4 sm:p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
                     <p class="text-green-800">
-                    ✨ <strong>Comprender estas diferencias no es un ejercicio meramente teórico de ello depende que el futuro 
-                    tecnólogo en desarrollo de software, tomes decisiones acertadas sobre qué información almacenar, cómo estructurarla y 
-                    qué herramienta tecnológica utilizar para gestionarla. Este tema es la puerta de entrada al resto del curso, ya que todos los
-                     conceptos posteriores (modelo entidad-relación, normalización, SQL) se construyen sobre esta base conceptual.</strong>
+                    ✨ A lo largo de los tres temas anteriores aprendiste a modelar bases de datos: identificaste <i class="font-bold ">entidades</i>, <i class="font-bold ">atributos</i>, <i class="font-bold ">relaciones</i>, 
+                        <i class="font-bold ">cardinalidad</i>, <i class="font-bold ">claves</i> y <i class="font-bold ">restricciones</i>. Sin embargo, en todos los ejemplos y actividades trabajados hasta ahora, esa información 
+                        ya te fue entregada de forma clara dentro del enunciado del ejercicio. En un proyecto de software real, esta información casi 
+                        nunca llega así de organizada: es el propio desarrollador quien debe obtenerla, indagando directamente con el cliente, los 
+                        usuarios finales y los procesos existentes del negocio. A este proceso se le conoce como levantamiento de requerimientos de 
+                        datos, y es el punto de partida real de cualquier proyecto de base de datos.
                     </p>
                 </div>
             </section>
@@ -93,22 +90,22 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Objetivos de aprendizaje</h2>
                 <ul class="space-y-4">
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
-                        <span class="text-green-700 mr-3 text-2xl">🧠</span>
-                        <span>Comprender el propósito del modelo entidad-relación como herramienta de diseño conceptual de bases de datos.</span>
+                        <span class="text-green-700 mr-3 text-2xl">🔍</span>
+                        <span>Reconocer la importancia del levantamiento de requerimientos como etapa previa e indispensable al modelado de una base de datos.</span>
                     </li>
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
-                        <span class="text-green-700 mr-3 text-2xl">🔍</span>
-                        <span>Identificar correctamente entidades y sus atributos a partir de un contexto o requerimiento dado.</span>
+                        <span class="text-green-700 mr-3 text-2xl">🏗️</span>
+                        <span>Aplicar técnicas básicas de recolección de información (entrevistas, cuestionarios, observación y análisis documental) en un contexto de desarrollo de software.</span>
                     </li>
 
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
                         <span class="text-green-700 mr-3 text-2xl">📝</span>
-                        <span>Reconocer los distintos tipos de atributos (simples, compuestos, monovaluados, multivaluados, derivados y clave) en situaciones aplicadas al desarrollo de software.</span>
+                        <span>Redactar requerimientos de datos claros, verificables y libres de ambigüedad a partir de la información recolectada.</span>
                     </li>
                     
                     <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
-                        <span class="text-green-700 mr-3 text-2xl">📝</span>
-                        <span>Modelar relaciones básicas entre entidades utilizando la notación estándar del modelo entidad-relación.</span>
+                        <span class="text-green-700 mr-3 text-2xl">📐</span>
+                        <span>Traducir un conjunto de requerimientos de datos en un primer boceto de diagrama entidad-relación, teniendo en cuenta los conceptos estudiados a lo largo de la Unidad.</span>
                     </li>
                 </ul>
             </section>
@@ -119,349 +116,238 @@
                 <div class="w-full max-w-8xl mx-auto">
                     <div class="flex flex-wrap gap-2">
                         <button class="tab-button active rounded-t-lg border border-green-500 bg-green-600 px-4 py-2 text-sm font-semibold text-white" data-tab="tab-definicion">
-                            Dato e información
+                            Definición
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-base-de-datos">
-                            Bases de datos
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-recoleccion">
+                            Recolección de requerimientos
                         </button>
-                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-sgbd">
-                            Sistema Gestor de Bases de Datos (SGBD)
+                        <button class="tab-button rounded-t-lg border border-green-500 bg-white px-4 py-2 text-sm font-semibold text-green-700" data-tab="tab-clasificacion">
+                            Clasificación de requerimientos
                         </button>
                     </div>
                     <div id="tab-definicion" class="tab-panel rounded-b-lg border border-green-500 bg-white p-8 shadow-sm">
-                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                            En el desarrollo de software, esta distinción es constante los formularios capturan datos (lo que el usuario escribe en 
-                            cada campo), y el sistema, mediante su lógica de negocio, transforma esos datos en información significativa para el 
-                            usuario final, por ejemplo, un reporte de ventas o un historial de pedidos.
-                        </p>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">¿Qué es el levantamiento de requerimientos de datos?</h2>
                         <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                            <article class="sm:my-6 flex-shrink-0">
-                                <div class="space-y-3">
-                                    <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-dato">
-                                        <span class="text-lg">➖</span>
-                                        <span class="font-semibold text-green-800">¿Qué es un dato?</span>
-                                    </button>
-                                    <div id="panel-dato" class="accordion-panel block rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                        <p class="text-slate-700 leading-relaxed">
-                                            Un dato es la unidad más básica y objetiva de representación de un hecho, un número, un texto, una fecha o un 
-                                            valor aislado que, por sí solo, no tiene un significado completo. Por ejemplo, el valor “19” o el texto “Pedro” 
-                                            son datos: existen, pero no comunican nada por sí mismos si no se sabe a qué corresponden.
-                                        </p>
-                                    </div>
-
-                                    <button class="accordion-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-informacion">
-                                        <span class="text-lg">➕</span>
-                                        <span class="font-semibold text-green-800">¿Qué es la información?</span>
-                                    </button>
-                                    <div id="panel-informacion" class="accordion-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                        <p class="text-slate-700 leading-relaxed">
-                                            La información es el resultado de procesar, organizar y contextualizar datos para que adquieran significado y utilidad. 
-                                            Por ejemplo, si se sabe que el valor “19” corresponde a la edad de un usuario llamado “Pedro”, entonces se tiene información: 
-                                            “Pedro tiene 19 años”. La información permite tomar decisiones y comprender mejor la realidad, mientras que los datos son 
-                                            simplemente hechos aislados.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
+                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                                El levantamiento de requerimientos de datos es el proceso sistemático mediante el cual un analista o desarrollador identifica, 
+                                recopila, documenta y válida qué información necesita almacenar, consultar y gestionar un sistema, a partir de las necesidades 
+                                reales de la organización, del negocio o de los usuarios finales. Este proceso responde preguntas clave como: ¿qué información 
+                                es relevante para el negocio?, ¿quién la utiliza y para qué?, ¿con qué frecuencia se genera o se consulta?, ¿qué reglas de 
+                                negocio deben respetarse al almacenarla?
+                            </p>
                             <div class="sm:my-6 flex-shrink-0">
                                 <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/Datos e Informacion.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
+                                    <img src="img/levantamiento de problema.png" alt="Imagen en la que se muestra la diferencia entre dato e información"
                                         class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
                                         style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/Datos e Informacion.png">🔍</button>
+                                    <button class="expand-btn" data-img="img/levantamiento de problema.png">🔍</button>
                                 </div>
                             </div>
                         </section>
                         <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
                             <p class="text-green-800">
-                            ✨ <strong>Además, es importante reconocer que los datos pueden clasificarse según su grado de organización. Los datos 
-                            estructurados son aquellos que siguen un formato fijo y predecible, como los campos de una tabla (nombre, edad, 
-                            correo electrónico); los datos semiestructurados poseen cierta organización, pero no un esquema rígido, como un 
-                            archivo JSON o XML y los datos no estructurados carecen de un formato predefinido, como una imagen, un audio o 
-                            un texto libre. Esta clasificación es relevante porque, más adelante en el curso, aprenderás que las bases de 
-                            datos relacionales están pensadas principalmente para gestionar datos estructurados.</strong>
+                            ✨ <strong>Es importante distinguir el levantamiento de requerimientos de datos del levantamiento de requerimientos funcionales, más amplio,
+                                 que se estudia en asignaturas de ingeniería de software o análisis de sistemas. Mientras que los requerimientos funcionales describen 
+                                 qué debe hacer el sistema (por ejemplo, “el sistema debe permitir generar una factura en PDF”), los requerimientos de datos se enfocan 
+                                 específicamente en qué información debe existir y cómo se relaciona para que esas funcionalidades puedan cumplirse (por ejemplo, “para 
+                                 generar la factura, el sistema necesita almacenar los datos del cliente, los productos comprados, las cantidades y los precios”).</strong>
                             </p>
                              <button class="expand-btn2" data-img="img/Diferencia entre datos.png">💡</button>
                         </div>
                     </div>
-                    <!-- Tab: Base de Datos -->
-                    <div id="tab-base-de-datos" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
-                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                            <div>
-                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                Una base de datos es un conjunto organizado y estructurado de datos relacionados entre sí, que se almacena de 
-                                forma persistente en un medio digital y que puede ser consultado, actualizado y gestionado de manera eficiente. 
-                                <br><br>A diferencia de un simple archivo de texto o una hoja de cálculo, una base de datos está diseñada para evitar 
-                                redundancia, mantener la integridad de la información y permitir el acceso simultáneo de múltiples usuarios o procesos.
-                                </p>
+                    <!-- Tab: Recolección de Datos -->
+                    <div id="tab-recoleccion" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Tecnica para La recolección de requerimientos</h2>
+                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                           Existen diversas técnicas para recolectar información durante esta etapa, y en la práctica profesional es común combinar varias de ellas 
+                           dentro de un mismo proyecto, ya que cada una aporta un tipo de información distinto y compensa las limitaciones de las demás:
+
+                        </p>
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-3 md:items-start">
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Entrevista2.png" alt="Técnica de entrevista para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/Entrevista2.png">🔍</button>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Entrevista</span>
+                                            <h4 class="flip-card-title">¿Para qué sirve?</h4>
+                                            <p class="flip-card-text">Permite descubrir necesidades reales, dudas del usuario y reglas del negocio que no siempre aparecen en un documento escrito.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="my-6 sm:my-0 flex-shrink-0">
-                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/archivos vs base de datos.png" alt="Imagen que compara archivos y bases de datos"
-                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                        style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/archivos vs base de datos.png">🔍</button>
-                                </div>  
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/cuestionario y encuesta.png" alt="Técnica de cuestionario y encuesta para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/cuestionario y encuesta.png">🔍</button>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Cuestionario</span>
+                                            <h4 class="flip-card-title">¿Qué revela?</h4>
+                                            <p class="flip-card-text">Proporciona información detallada sobre las preferencias, actitudes y comportamientos de los usuarios, lo que ayuda a identificar áreas de mejora y oportunidades de innovación.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/observacion directa.png" alt="Técnica de observación directa para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/observacion directa.png">🔍</button>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Observación Directa</span>
+                                            <h4 class="flip-card-title">¿En que consiste?</h4>
+                                            <p class="flip-card-text">Consiste en observar y registrar el comportamiento de los usuarios en su entorno natural, para comprender cómo interactúan con el sistema o proceso.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Analisis de documentos existentes.png" alt="Técnica de análisis de documentos existentes para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/Analisis de documentos existentes.png">🔍</button>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Análisis de Documentos</span>
+                                            <h4 class="flip-card-title">Visión General</h4>
+                                            <p class="flip-card-text">Proporciona una visión general del estado actual del sistema o proceso, identificando aspectos clave y áreas de oportunidad.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Taller o dinamicas grupales.png" alt="Técnica de taller o dinámicas grupales para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/Taller o dinamicas grupales.png">🔍</button>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Taller o Dinámicas Grupales</span>
+                                            <h4 class="flip-card-title">Incorporación de Feedback</h4>
+                                            <p class="flip-card-text">Permite recopilar y analizar comentarios y sugerencias de los usuarios, lo que ayuda a mejorar el sistema o proceso.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
-                        <div class="max-w-full my-6">
-                            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                                <table class="w-full text-left border-collapse">
-                                <thead>
-                                    <tr class="bg-gradient-to-r from-green-700 to-green-600">
-                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Aspecto</th>
-                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Sistema de archivos tradicional</th>
-                                    <th class="text-white font-bold py-4 px-6 text-sm md:text-base">Base de datos</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Definición</td>
-                                    <td class="py-4 px-6 text-gray-700">Archivos planos independientes, gestionados directamente por cada programa</td>
-                                    <td class="py-4 px-6 text-gray-600">Conjunto organizado y estructurado de datos relacionados entre sí</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Almacenamiento</td>
-                                    <td class="py-4 px-6 text-gray-700">Disperso en archivos separados por programa</td>
-                                    <td class="py-4 px-6 text-gray-600">Centralizado, persistente en medio digital</td>
-                                    </tr>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Redundancia</td>
-                                    <td class="py-4 px-6 text-gray-700">Alta — la misma información se repite en varios archivos</td>
-                                    <td class="py-4 px-6 text-gray-600">Baja — diseñada para evitarla</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Consistencia</td>
-                                    <td class="py-4 px-6 text-gray-700">Propensa a inconsistencias (un dato se actualiza en un archivo pero no en otro)</td>
-                                    <td class="py-4 px-6 text-gray-600">Mantiene la integridad de la información</td>
-                                    </tr>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Acceso concurrente</td>
-                                    <td class="py-4 px-6 text-gray-700">Sin mecanismos adecuados para múltiples usuarios/procesos</td>
-                                    <td class="py-4 px-6 text-gray-600">Permite acceso simultáneo de múltiples usuarios o procesos</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Compartir información entre programas</td>
-                                    <td class="py-4 px-6 text-gray-700">Difícil</td>
-                                    <td class="py-4 px-6 text-gray-600">Facilitado por la gestión centralizada</td>
-                                    </tr>
-                                    <tr class="bg-green-50 hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Seguridad / control de acceso</td>
-                                    <td class="py-4 px-6 text-gray-700">Prácticamente ausente</td>
-                                    <td class="py-4 px-6 text-gray-600">Incluye mecanismos de gestión y control</td>
-                                    </tr>
-                                    <tr class="bg-white hover:bg-green-200 hover:scale-[1.01] transition-all duration-200 ease-out cursor-pointer">
-                                    <td class="py-4 px-6 font-semibold text-gray-800">Gestión</td>
-                                    <td class="py-4 px-6 text-gray-700">Cada programa gestiona sus propios archivos</td>
-                                    <td class="py-4 px-6 text-gray-600">Delegada a un software especializado (SGBD)</td>
-                                    </tr>
-                                </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        
                         <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
                             <p class="text-green-800 font-bold">
-                            ✨ <strong>Por ejemplo, en una aplicación de comercio electrónico, la base de datos almacena de forma organizada la 
-                                información de los clientes, los productos, los pedidos y los pagos, de manera que cada uno de estos conjuntos 
-                                de datos pueda relacionarse entre sí sin duplicar información innecesariamente.</strong>
+                            ✨ <strong>La elección de una u otra técnica depende de factores como el tamaño del proyecto, la disponibilidad de los interesados, el tiempo del 
+                                que se dispone y el nivel de madurez de los procesos actuales del negocio. En proyectos académicos y en desarrollos de pequeña escala, la 
+                                combinación de entrevistas breves con el análisis de documentos existentes suele ser suficiente y eficiente.</strong>
                             </p>
                         </div>
-                        <section class="sm:my-6 flex-shrink-0">
-                            <div class="space-y-3" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-ejemplo" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Ejemplo</span>
-                                    <span class="text-lg transition-transform duration-200">➕</span>
-                                </button>
-                                <div id="panel-ejemplo" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                            Piensa en el proyecto de software que te gustaría desarrollar en un futuro (una app, un sistema web, un videojuego, etc.). 
-                                            Escribe una lista de al menos cuatro “conjuntos de datos” que dicho sistema necesitaría almacenar en una base de datos 
-                                            (por ejemplo: usuarios, productos, transacciones). No es necesario diseñar tablas todavía, solo identificar qué información 
-                                            se debería guardar. Adicionalmente, describe un problema que podría presentarse si esa información se manejara en 
-                                            archivos de Excel independientes en lugar de una base de datos.
-                                        </p>
-                                        <article class="sm:my-6 flex-shrink-0">
-                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/Ejemplo software clinica.png" alt="Solucion al ejemplo de software de clínica"
-                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                                    style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/Ejemplo software clinica.png">🔍</button>
-                                            </div>
-                                        </article>
+                    </div>
+                    <div id="tab-clasificacion" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Clasificación de los requerimientos de datos</h2>
+                        <p class="text-slate-700 leading-relaxed mb-4 text-justify">
+                            Una vez redactados, es útil organizar los requerimientos de datos en distintas categorías, lo cual facilita su posterior traducción al modelo entidad-relación:
+                        </p>
+                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-3 md:items-start">
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Requirimientos de Entidad.png" alt="Técnica de entrevista para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <button class="expand-btn" data-img="img/Requirimientos de Entidad.png">🔍</button>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Requerimientos de entidades</span>
+                                            <h4 class="flip-card-title">¿Objetivo a cubrir?</h4>
+                                            <p class="flip-card-text">Identificar y definir las entidades principales del sistema, así como sus propiedades y relaciones con otras entidades.</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div id="tab-sgbd" class="tab-panel rounded-b-lg hidden border border-green-500 bg-white p-8 shadow-sm">
-                        <section class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                            <div>
-                                <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                Un Sistema Gestor de Bases de Datos (SGBD), conocido en inglés como DBMS (Database Management System), es el software especializado 
-                                que permite crear, administrar, consultar y proteger una base de datos. <br> <br> El SGBD actúa como intermediario entre el usuario o la aplicación 
-                                y los datos físicamente almacenados, ofreciendo mecanismos para garantizar la seguridad, la integridad, la concurrencia y el rendimiento 
-                                en el acceso a la información. En otras palabras, ninguna aplicación accede “directamente” a los archivos donde reposan los datos 
-                                siempre lo hace a través del SGBD, que traduce las solicitudes del programa (generalmente escritas en SQL) en operaciones sobre el 
-                                almacenamiento físico.
- 
-                                <br><br>Dado que este es uno de los conceptos más importantes del curso, a continuación, profundizaremos en sus funciones, su arquitectura, 
-                                los tipos de SGBD que existen y quiénes lo utilizan dentro de una organización.
-                                </p>
                             </div>
                             <div class="my-6 sm:my-0 flex-shrink-0">
-                                <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                    <img src="img/Funciones del SGBD.png" alt="Imagen que compara archivos y bases de datos"
-                                        class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                        style="object-fit:contain;" loading="lazy">
-                                    <button class="expand-btn" data-img="img/Funciones del SGBD.png">🔍</button>
-                                </div>  
-                            </div>
-                        </section>
-                        <section class="sm:my-6 flex-shrink-0">
-                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-funciones" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Funciones principales de un SGBD</span>
-                                    <span class="text-lg transition-transform duration-200">➕</span>
-                                </button>
-                                <div id="panel-funciones" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <div>
-                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                                Un SGBD no es simplemente un lugar donde se guardan datos es un software que cumple funciones muy específicas para garantizar que la información sea confiable, segura y esté siempre disponible. Las funciones más relevantes son:
-                                            </p>
-                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li>
-                                                    <strong>Definición de datos:</strong> 
-                                                    <p>Permite crear y modificar la estructura de la base de datos (tablas, tipos de datos, relaciones) mediante un lenguaje de definición de datos (DDL).</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Manipulación de datos:</strong> 
-                                                    <p>Permite insertar, consultar, actualizar y eliminar información mediante un lenguaje de manipulación de datos (DML), como SQL.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Control de acceso y seguridad:</strong> 
-                                                    <p>Gestiona que múltiples usuarios o procesos puedan leer y escribir datos al mismo tiempo sin generar inconsistencias o pérdida de información.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Seguridad y control de acceso:</strong> 
-                                                    <p>Define qué usuarios pueden ver o modificar determinada información, mediante permisos y roles.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Integridad de los datos:</strong> 
-                                                    <p>Aplica reglas y restricciones (como llaves primarias o valores obligatorios) para evitar datos incorrectos o inconsistentes.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Respaldo y recuperación:</strong> 
-                                                    <p>permite generar copias de seguridad y restaurar la información en caso de fallas del sistema, errores humanos o desastres.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Independencia de los datos:</strong> 
-                                                    <p>Permite que los cambios en la estructura física de almacenamiento no afecten directamente a las aplicaciones que consultan la información.</p>
-                                                </li>
-                                            </ul>
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Requirimientos de atributo.png" alt="Técnica de cuestionario y encuesta para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <!-- <button class="expand-btn" data-img="img/Requirimientos de atributo.png">🔍</button> -->
                                         </div>
-                                        
-                                        <article class="sm:my-6 flex-shrink-0">
-                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/SGBD.png" alt="Solucion al ejemplo de software de clínica"
-                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                                    style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/SGBD.png">🔍</button>
-                                            </div>
-                                        </article>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Requerimientos de atributos</span>
+                                            <h4 class="flip-card-title">¿Qué características tienen?</h4>
+                                            <p class="flip-card-text">Definir las propiedades específicas de cada entidad, incluyendo tipos de datos, restricciones y valores permitidos.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-arquitectura" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Arquitectura de un SGBD</span>
-                                    <span class="text-lg transition-transform duration-200">➕</span>
-                                </button>
-                                <div id="panel-arquitectura" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <div>
-                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                                Para lograr la independencia de los datos mencionada anteriormente, la mayoría de los SGBD se basan en la arquitectura de tres niveles propuesta por el estándar ANSI/SPARC, la cual organiza la base de datos en tres capas o niveles de abstracción.
-                                            </p>
-                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li>
-                                                    <strong>Nivel interno (o físico):</strong> 
-                                                    <p>describe cómo se almacenan realmente los datos en el disco: archivos, índices, estructuras de almacenamiento. Es el nivel más 
-                                                        cercano al hardware.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Nivel conceptual (o lógico):</strong> 
-                                                    <p>Describe qué datos se almacenan y qué relaciones existen entre ellos, sin entrar en detalles de cómo se almacenan físicamente. 
-                                                        Es el nivel en el que trabajaremos principalmente durante este curso, mediante el modelo entidad-relación y el modelo relacional.</p>
-                                                </li>
-                                                <li>
-                                                    <strong>Nivel externo (o de vista del usuario):</strong> 
-                                                    <p>Describe cómo cada grupo de usuarios o aplicación específica “ve” una parte de la base de datos, de acuerdo con sus necesidades 
-                                                        (por ejemplo, un cajero solo ve la información de ventas, no la de nómina).</p>
-                                                </li>
-                                            </ul>
+
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Requirimientos de relaciones.png" alt="Técnica de observación directa para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <!-- <button class="expand-btn" data-img="img/observacion directa.png">🔍</button> -->
                                         </div>
-                                        <article class="sm:my-6 flex-shrink-0">
-                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/arquitectura a 3 niveles.png" alt="Solucion al ejemplo de software de clínica"
-                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                                    style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/arquitectura a 3 niveles.png">🔍</button>
-                                            </div>
-                                        </article>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Requerimientos de relaciones</span>
+                                            <h4 class="flip-card-title">¿En que consiste?</h4>
+                                            <p class="flip-card-text">Identificar y definir las relaciones entre las entidades del sistema, incluyendo tipos de relación y cardinalidades.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="space-y-3 mt-4" data-accordion-group="independiente">
-                                <button class="accordion-standalone-btn w-full flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-left shadow-sm" data-target="#panel-tipos" aria-expanded="false">
-                                    <span class="font-semibold text-green-800">Tipos de SGBD según el modelo de datos</span>
-                                    <span class="text-lg transition-transform duration-200">➕</span>
-                                </button>
-                                <div id="panel-tipos" class="accordion-standalone-panel hidden rounded-lg border border-green-200 bg-white p-4 shadow-sm">
-                                    <div class="grid grid-cols-1 gap-4 w-full lg:grid-cols-2 md:items-start">
-                                        <div>
-                                            <p class="text-slate-700 leading-relaxed mb-4 text-justify">
-                                                No todos los SGBD organizan la información de la misma manera. Según el modelo de datos que utilizan para estructurar la información, se pueden clasificar en   .
-                                            </p>
-                                            <ul class="list-decimal pl-6 space-y-2 text-slate-700">
-                                                <li>
-                                                    <strong>SGBD relacionales (RDBMS):</strong> 
-                                                    <p>
-                                                        Organizan la información en tablas compuestas por filas y columnas, relacionadas entre sí mediante llaves. Son el enfoque que 
-                                                        estudiaremos a profundidad en este curso. Ejemplos: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <strong>SGBD NoSQL (“Not only SQL”):</strong> 
-                                                    <p>
-                                                        Surgieron para manejar grandes volúmenes de datos y estructuras más flexibles. Se dividen a su vez en varios subtipos documentales 
-                                                        (almacenan documentos tipo JSON, ejemplo: MongoDB), clave-valor (almacenan pares simples de clave y valor, ejemplo: Redis), columnares 
-                                                        (optimizados para grandes volúmenes analíticos, ejemplo: Cassandra) y de grafos (representan datos como nodos y relaciones, ejemplo: Neo4j).
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <strong>SGBD jerárquicos y de red:</strong> 
-                                                    <p>
-                                                        Modelos más antiguos, hoy en desuso en nuevos desarrollos, que organizaban los datos en estructuras 
-                                                        de árbol o de red. Se mencionan por su valor histórico, ya que fueron el antecedente directo del modelo relacional.
-                                                    </p>
-                                                </li>
-                                            </ul>
+
+                            <div class="my-6 sm:my-0 flex-shrink-0">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front image-container">
+                                            <img src="img/Requirimientos de restricciones.png" alt="Técnica de análisis de documentos existentes para levantamiento de requerimientos"
+                                                class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
+                                                style="object-fit:contain;" loading="lazy">
+                                            <!-- <button class="expand-btn" data-img="img/Requirimientos de restricciones.png">🔍</button> -->
                                         </div>
-                                        
-                                        <article class="sm:my-6 flex-shrink-0">
-                                            <div class="bg-green-50 w-full border border-green-300 rounded flex items-center justify-center image-container">
-                                                <img src="img/tipo de sgbd segun el modelo de datos.png" alt="Solucion al ejemplo de software de clínica"
-                                                    class="max-w-full max-h-full object-contain expandable-image hover:scale-[1.01] transition-all duration-200 ease-out"
-                                                    style="object-fit:contain;" loading="lazy">
-                                                <button class="expand-btn" data-img="img/tipo de sgbd segun el modelo de datos.png">🔍</button>
-                                            </div>
-                                        </article>
+                                        <div class="flip-card-back">
+                                            <span class="flip-card-badge">Requerimientos de restricciones</span>
+                                            <h4 class="flip-card-title">Visión General</h4>
+                                            <p class="flip-card-text">Definir las limitaciones y condiciones que deben cumplirse en el sistema, incluyendo reglas de negocio y restricciones técnicas.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
+
+                        <div class="relative mt-8 p-4 sm:p-6 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:bg-green-50 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
+                            <p class="text-green-800 font-bold">
+                            ✨ <strong>Esta clasificación no es un ejercicio puramente académico: en la práctica, organizar los requerimientos de esta manera 
+                                acelera enormemente la construcción del diagrama entidad-relación, ya que cada categoría se traduce casi directamente en un 
+                                elemento específico del modelo (entidad, atributo, relación con su cardinalidad, o restricción).</strong>
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
@@ -471,7 +357,7 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Actividades prácticas</h2>
                  <div class="max-w-full mx-auto mb-4 ">
                     <div class="bg-white rounded-2xl shadow-lg border border-green-200 p-6 md:p-8 rounded-r-lg border-l-4 border-green-200 bg-white transition-all duration-300 hover:border-green-500 hover:shadow-md hover:shadow-green-100">
-                        <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Sopa de Letras: Bases de Datos y SGBD</h1>
+                        <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">Sopa de Letras: Levantamiento de Requerimientos</h1>
                         <p class="text-green-600 mb-6 text-sm md:text-base">
                             Arrastra el mouse sobre las letras (horizontal, vertical o diagonal) para encontrar las palabras.
                         </p>
@@ -582,25 +468,25 @@
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            López, A. (2015). <i>Comunicación y habilidades sociales</i>. ESIC.
+                            Laudon, K. C., & Laudon, J. P. (2016). Sistemas de información gerencial (14.ª ed.). Pearson Educación.
                         </span>
                     </div>
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            Reis, J., & Housley, M. (2022). Fundamentals of data engineering: Plan and build robust data systems. O'Reilly Media.
+                            Reis, J., & Housley, M. (2023). Fundamentos de ingeniería de datos: Planificación y creación de sistemas de datos sólidos. Marcombo.
                         </span>
                     </div>
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            PostgreSQL Global Development Group. (2026). PostgreSQL 18 documentation. Obtenido de <a href="https://www.postgresql.org/docs/current/" target="_blank" class="text-green-600 hover:text-green-800 underline">https://www.postgresql.org/docs/current/</a>
+                            Coronel, C., & Morris, S. (2011). Bases de datos: Diseño, implementación y administración (9.ª ed.). Cengage Learning.
                         </span>
                     </div>
                     <div
                         class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                         <span class="block text-slate-700">
-                            Elmasri, R., & Navathe, S. B. (2017). Fundamentals of database systems (7.ª ed.). Pearson.
+                            International Institute of Business Analysis. (2015). Guía del cuerpo de conocimiento del análisis de negocio (Guía BABOK) (v3). IIBA.
                         </span>
                     </div>
                 </div>

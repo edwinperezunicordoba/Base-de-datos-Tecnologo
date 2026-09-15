@@ -1,63 +1,68 @@
-const questions = [
+  const questions = [
     {
-      q: "1. ¿Qué es el levantamiento de requerimientos de datos?",
+      q: "1. ¿Qué describe mejor el levantamiento de requerimientos de datos?",
       options: [
-        "El proceso de identificar, recopilar, documentar y validar la información que debe almacenar un sistema",
-        "La implementación física de la base de datos en un SGBD",
-        "La redacción de código para la interfaz de usuario",
-        "La instalación de servidores para almacenar datos"
+        "El proceso sistemático de identificar, recopilar, documentar y validar la información que necesita un sistema",
+        "La instalación del SGBD y la configuración de sus servidores",
+        "La creación de las pantallas de una aplicación",
+        "La escritura de consultas SQL sin consultar a los usuarios"
       ],
       correct: 0
     },
     {
-      q: "2. ¿En qué se diferencia principalmente el levantamiento de requerimientos de datos del levantamiento de requerimientos funcionales?",
+      q: "2. ¿Qué pregunta forma parte del levantamiento de requerimientos de datos?",
       options: [
-        "Los requerimientos de datos se enfocan en la información necesaria, mientras que los funcionales describen qué debe hacer el sistema",
-        "No hay diferencia, son lo mismo",
-        "Los requerimientos funcionales solo definen la seguridad",
-        "Los de datos son más técnicos y no requieren usuarios"
+        "¿Qué información es relevante para el negocio y quién la utiliza?",
+        "¿Qué color debe tener el logotipo de la aplicación?",
+        "¿Qué lenguaje de programación debe aprender el usuario?",
+        "¿Qué marca de computador debe comprar el equipo?"
       ],
       correct: 0
     },
     {
-      q: "3. ¿Qué técnica es la más adecuada para recolectar información de un gran número de usuarios de forma estandarizada?",
-      options: ["Entrevistas individuales","Cuestionarios/encuestas","Talleres JAD","Observación directa"],
+      q: "3. ¿Cuál es la diferencia principal entre los requerimientos de datos y los funcionales?",
+      options: [
+        "Los de datos describen qué información debe existir y cómo se relaciona; los funcionales describen qué debe hacer el sistema",
+        "Los de datos solo describen la interfaz y los funcionales solo describen las tablas",
+        "No existe ninguna diferencia entre ambos tipos de requerimientos",
+        "Los requerimientos funcionales no necesitan validarse con los usuarios"
+      ],
+      correct: 0
+    },
+    {
+      q: "4. ¿Qué técnica es útil para recolectar información de muchos usuarios de forma rápida y estandarizada?",
+      options: ["Entrevistas individuales", "Cuestionarios o encuestas", "Observación directa", "Talleres JAD"],
       correct: 1
     },
     {
-      q: "4. ¿Qué técnica permite acelerar el consenso entre varios interesados mediante sesiones colaborativas?",
-      options: ["Entrevistas","Análisis de documentos","JAD (talleres grupales)","Cuestionarios"],
-      correct: 2
-    },
-    {
-      q: "5. ¿Cuál de las siguientes es una característica de un buen requerimiento de datos?",
-      options: ["Vago y amplio","Ambiguo","Claro, específico, atómico y verificable","Imposible de verificar"],
-      correct: 2
-    },
-    {
-      q: "6. Clasifica: 'El sistema debe gestionar información de proveedores.'",
-      options: ["Entidad","Atributo","Relación/Regla","Restricción"],
+      q: "5. ¿Qué técnica permite descubrir necesidades que los usuarios no mencionan por considerarlas obvias?",
+      options: ["Observación directa", "Cuestionarios únicamente", "Análisis de código fuente", "Diseño de la interfaz"],
       correct: 0
     },
     {
-      q: "7. Clasifica: 'Cada proveedor debe tener un NIT único registrado en el sistema.'",
-      options: ["Entidad","Atributo","Relación/Regla","Restricción"],
+      q: "6. ¿Qué técnica revisa formularios, reportes, hojas de cálculo y manuales existentes?",
+      options: ["Entrevistas", "Talleres JAD", "Análisis de documentos existentes", "Observación directa"],
+      correct: 2
+    },
+    {
+      q: "7. ¿Cuál de estas características corresponde a un buen requerimiento de datos?",
+      options: ["Es vago y permite varias interpretaciones", "Es claro, específico, atómico y verificable", "Mezcla varias necesidades sin detalle", "No puede comprobarse en el diseño final"],
+      correct: 1
+    },
+    {
+      q: "8. Clasifica: 'El sistema debe gestionar información de proveedores.'",
+      options: ["Entidad", "Atributo", "Relación o regla de negocio", "Restricción"],
+      correct: 0
+    },
+    {
+      q: "9. Clasifica: 'De cada proveedor se debe guardar el nombre, el teléfono y la ciudad.'",
+      options: ["Entidad", "Atributo", "Relación o regla de negocio", "Restricción"],
+      correct: 1
+    },
+    {
+      q: "10. Clasifica: 'El stock de un producto no puede ser negativo.'",
+      options: ["Entidad", "Atributo", "Relación o regla de negocio", "Restricción"],
       correct: 3
-    },
-    {
-      q: "8. Clasifica: 'De cada proveedor se debe guardar nombre, teléfono y ciudad.'",
-      options: ["Entidad","Atributo","Relación/Regla","Restricción"],
-      correct: 1
-    },
-    {
-      q: "9. Clasifica: 'Un proveedor puede suministrar muchos productos, pero cada producto proviene de un único proveedor.'",
-      options: ["Entidad","Atributo","Relación/Regla","Restricción"],
-      correct: 2
-    },
-    {
-      q: "10. ¿Qué técnica es especialmente útil para detectar necesidades de información que los usuarios no mencionan explícitamente?",
-      options: ["Cuestionarios","Observación directa","Solo entrevistas","Solo análisis de documentos"],
-      correct: 1
     }
   ];
 

@@ -1,16 +1,12 @@
-const pairBank2 = [
-    { id: "levantamiento", term: "Levantamiento de requerimientos", def: "Proceso de identificar, recopilar, documentar y validar la información que necesita almacenar un sistema" },
-    { id: "diferencia", term: "Requerimientos de datos vs funcionales", def: "Los de datos especifican qué información existe y cómo se relaciona; los funcionales describen qué hace el sistema" },
-    { id: "entrevistas", term: "Entrevistas", def: "Técnica para indagar en profundidad con interesados clave sobre sus necesidades de información" },
-    { id: "cuestionarios", term: "Cuestionarios/encuestas", def: "Instrumentos escritos para recolectar información de muchos usuarios de forma estandarizada" },
-    { id: "observacion", term: "Observación directa", def: "Presenciar procesos reales para descubrir necesidades que los usuarios no mencionan" },
-    { id: "documentos", term: "Análisis de documentos", def: "Revisión de formularios, reportes y hojas de cálculo existentes para identificar datos usados actualmente" },
-    { id: "talleres", term: "Talleres JAD", def: "Sesiones grupales colaborativas para acelerar consenso entre interesados y el equipo técnico" },
-    { id: "claro", term: "Requerimiento claro", def: "Debe evitar ambigüedades y describir la necesidad de información con precisión" },
-    { id: "atomico", term: "Requerimiento atómico", def: "Describe una sola necesidad de información, no varias mezcladas" },
-    { id: "verificable", term: "Requerimiento verificable", def: "Debe poder comprobarse objetivamente si se cumple o no en la implementación" },
-    { id: "clasificacion", term: "Clasificación de requerimientos", def: "Organizar en entidades, atributos, relaciones/reglas y restricciones para facilitar el diseño" },
-    { id: "ejemplo", term: "Ejemplo: factura", def: "Para generar una factura se requieren cliente, productos, cantidades, precios y estado de pedido" }
+  const pairBank2 = [
+    { id: "entrevistas", term: "Entrevistas", def: "Conversaciones con interesados clave para indagar en profundidad sobre sus necesidades de información" },
+    { id: "cuestionarios", term: "Cuestionarios o encuestas", def: "Instrumentos escritos para recolectar información de muchos usuarios de forma estandarizada" },
+    { id: "observacion", term: "Observación directa", def: "Presenciar procesos reales para detectar necesidades que los usuarios no mencionan explícitamente" },
+    { id: "documentos", term: "Análisis de documentos", def: "Revisar formularios, reportes y hojas de cálculo para identificar los datos utilizados" },
+    { id: "entidad", term: "Requerimiento de entidad", def: "Identifica los objetos o conceptos sobre los que el sistema debe almacenar información" },
+    { id: "atributo", term: "Requerimiento de atributo", def: "Especifica las características o datos concretos que se necesitan de una entidad" },
+    { id: "relacion", term: "Relación o regla de negocio", def: "Describe cómo se conectan las entidades y qué reglas aplican a esa conexión" },
+    { id: "restriccion", term: "Requerimiento de restricción", def: "Expresa reglas o límites que los datos deben cumplir siempre" }
   ];
 
   const PAIRS_TO_USE2 = 8;

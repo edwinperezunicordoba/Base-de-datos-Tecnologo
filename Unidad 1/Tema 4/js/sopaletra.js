@@ -1,8 +1,8 @@
-  // Banco de palabras (sin tildes/espacios) relacionadas con levantamiento de requerimientos de datos
+  // Banco de palabras (sin tildes/espacios) relacionadas con el tema
   const wordBank = [
-    "LEVANTAMIENTO","REQUERIMIENTOS","DATOS","ENTREVISTAS","ENCUESTAS","OBSERVACION",
-    "JAD","DOCUMENTOS","ENTIDAD","ATRIBUTO","RELACION","RESTRICCION","CLARO","ATOMICO",
-    "VERIFICABLE","FACTURA","CLIENTE","PRODUCTOS","NIT","UNICO"
+    "LEVANTAMIENTO","REQUERIMIENTOS","DATOS","FUNCIONALES","ENTREVISTAS","ENCUESTAS",
+    "OBSERVACION","DOCUMENTOS","TALLERES","JAD","ENTIDAD","ATRIBUTO","RELACION",
+    "RESTRICCION","CLARO","ATOMICO","VERIFICABLE","AMBIGUO","NEGOCIO","USUARIOS"
   ];
 
   const GRID_SIZE = 15;
